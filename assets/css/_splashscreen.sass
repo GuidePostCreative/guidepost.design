@@ -3,6 +3,7 @@
 .splash-screen
   position: relative
   height: 100%
+  min-height: 600px
   width: 100%
   overflow: hidden
 
@@ -32,6 +33,40 @@
     background-repeat: no-repeat
     background-size: cover
 
+.splash-elements
+  position: relative
+
+$logo-width: 600px
+
+#splashscreen-logo
+  width: $logo-width
+  margin: 40px ($page-width - $logo-width) / 2 0
+
 .landing-blackboard
   background: $secondary_color_2
   height: 600px
+
+
+@media (max-width: $page_width)
+
+  #splashscreen-logo
+    width: 80%
+    margin: 0 10%
+
+$splash-max-height-mobile: 400px
+@media (max-width: 500px)
+  .splash-screen
+    height: $splash-max-height-mobile
+    max-height: $splash-max-height-mobile
+    .background
+      height: $splash-max-height-mobile
+      max-height: $splash-max-height-mobile
+      background-position: 50% 20%
+      background-repeat: no-repeat
+      background-size: 140%
+
+  #splashscreen-logo
+    width: 80%
+    margin: 0 10%
+
+

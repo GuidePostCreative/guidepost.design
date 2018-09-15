@@ -97,6 +97,7 @@ body, html {
 .splash-screen {
   position: relative;
   height: 100%;
+  min-height: 600px;
   width: 100%;
   overflow: hidden; }
   .splash-screen .blur {
@@ -124,10 +125,35 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover; }
 
+.splash-elements {
+  position: relative; }
+
+#splashscreen-logo {
+  width: 600px;
+  margin: 40px 150px 0; }
+
 .landing-blackboard {
   background: #4FB0BB;
   height: 600px; }
 
+@media (max-width: 900px) {
+  #splashscreen-logo {
+    width: 80%;
+    margin: 0 10%; } }
+@media (max-width: 500px) {
+  .splash-screen {
+    height: 400px;
+    max-height: 400px; }
+    .splash-screen .background {
+      height: 400px;
+      max-height: 400px;
+      background-position: 50% 20%;
+      background-repeat: no-repeat;
+      background-size: 140%; }
+
+  #splashscreen-logo {
+    width: 80%;
+    margin: 0 10%; } }
 .breadcrumbs {
   padding: 15px;
   background: #E5E5E5;
