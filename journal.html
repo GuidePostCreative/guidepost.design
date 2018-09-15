@@ -1,0 +1,18 @@
+---
+title: GuidePost's Log
+description: adasda
+active_menu: journal
+---
+<div class="page">
+  <div class="container">
+    <h1>Journal</h1>
+    {% assign journal_items = site.journal | reverse %}
+
+    {% for item in journal_items %}
+      <div class="journal-listing">
+        <h3><a href="{{ item.url }}"">{{ item.title}}</a></h3>
+        <p>{{ item.excerpt }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>

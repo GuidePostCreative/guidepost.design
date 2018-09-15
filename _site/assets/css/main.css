@@ -59,9 +59,9 @@ body, html {
   margin: 60px 0; }
 
 .navbar {
-  height: 80px;
+  height: 90px;
   transition: transform 0.5s ease-in-out;
-  background: white;
+  background: #E5E5E5;
   z-index: 1000; }
   .navbar.hiddable {
     position: fixed;
@@ -69,25 +69,24 @@ body, html {
     left: 0;
     right: 0; }
   .navbar.unpin {
-    transform: translateY(-80px); }
+    transform: translateY(-90px); }
   .navbar.pin {
     transform: translateY(0); }
   .navbar .inner-navbar {
     display: flex;
     justify-content: space-between; }
-    .navbar .inner-navbar .logo-container {
-      height: 40px;
-      width: 100px;
-      background: red; }
+  .navbar #navbar-logo {
+    margin-top: 7.5px;
+    height: 75px; }
   .navbar .menu ul {
-    height: 80px; }
+    height: 90px; }
     .navbar .menu ul li {
       display: inline-block;
       height: 100%;
-      line-height: 80px; }
+      line-height: 90px; }
       .navbar .menu ul li a {
         color: #0C2C2D;
-        height: 80px;
+        height: 90px;
         display: block;
         padding: 0 15px; }
         .navbar .menu ul li a:hover {
@@ -143,8 +142,9 @@ body, html {
     .breadcrumbs li:last-child:after {
       content: ""; }
 
-.log {
-  margin: 15px 0; }
+.journal-entry {
+  margin: 15px 0;
+  max-width: 600px; }
 
 .footer {
   padding: 30px 0;

@@ -3,7 +3,7 @@
 .navbar
   height: $navbar-height
   transition: transform 0.5s ease-in-out
-  background: white
+  background: $navbar-background-color
   z-index: 1000
 
   &.hiddable
@@ -21,10 +21,9 @@
     display: flex
     justify-content: space-between
 
-    .logo-container
-      height: 40px
-      width: 100px
-      background: red
+  #navbar-logo
+    margin-top: $gutter / 2
+    height: $navbar-height - ($gutter)
 
   .menu
     ul

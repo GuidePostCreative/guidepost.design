@@ -24,9 +24,9 @@ defaults:
       hiddable_header: "false"
 
 collections:
-  log:
+  journal:
     output: true
-    permalink: /log/:path/
+    permalink: /journal/:path/
   portfolio:
     output: true
     permalink: /portfolio/:path/
