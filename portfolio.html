@@ -1,15 +1,15 @@
 ---
 title: Portfolio
 description: adasda
-lang: en
+active_menu: portfolio
 ---
-
-<div class="container">
-    <h1>Portfolio</h1>
-
-    <ul>
-    {% for item in site.portfolio %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
+<div class="page">
+    <div class="container">
+        <h1>Portfolio</h1>
+        <ul>
+        {% for item in site.portfolio %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
 </div>

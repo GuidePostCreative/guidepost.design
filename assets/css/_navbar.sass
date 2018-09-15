@@ -1,6 +1,5 @@
 @import 'variables'
 
-
 .navbar
   height: $navbar-height
   transition: transform 0.5s ease-in-out
@@ -29,5 +28,19 @@
 
   .menu
     ul
+      height: $navbar-height
       li
-        display: inline
+        display: inline-block
+        height: 100%
+        line-height: $navbar-height
+
+        a
+          color: $title-color
+          height: $navbar-height
+          display: block
+          padding: 0 $gutter
+          &:hover
+            color: $link_color
+        &.active
+          a
+            border-bottom: 2px solid $link-color

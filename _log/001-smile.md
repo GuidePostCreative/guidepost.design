@@ -1,7 +1,7 @@
 ---
 layout: log_item
 title:  "Smile :)"
-date:   2018-09-03 13:13:33 +0700
+active_menu: log
 tags: jekyll update
 ---
 # Smile :)

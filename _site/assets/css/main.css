@@ -44,6 +44,10 @@ h1 {
   font-size: 64px;
   font-weight: 700; }
 
+a {
+  text-decoration: none;
+  color: #4FB0BB; }
+
 body, html {
   height: 100%; }
 
@@ -51,8 +55,11 @@ body, html {
   width: 900px;
   margin: 0 auto; }
 
+.page {
+  margin: 60px 0; }
+
 .navbar {
-  height: 120px;
+  height: 80px;
   transition: transform 0.5s ease-in-out;
   background: white;
   z-index: 1000; }
@@ -62,7 +69,7 @@ body, html {
     left: 0;
     right: 0; }
   .navbar.unpin {
-    transform: translateY(-120px); }
+    transform: translateY(-80px); }
   .navbar.pin {
     transform: translateY(0); }
   .navbar .inner-navbar {
@@ -72,8 +79,21 @@ body, html {
       height: 40px;
       width: 100px;
       background: red; }
-  .navbar .menu ul li {
-    display: inline; }
+  .navbar .menu ul {
+    height: 80px; }
+    .navbar .menu ul li {
+      display: inline-block;
+      height: 100%;
+      line-height: 80px; }
+      .navbar .menu ul li a {
+        color: #0C2C2D;
+        height: 80px;
+        display: block;
+        padding: 0 15px; }
+        .navbar .menu ul li a:hover {
+          color: #4FB0BB; }
+      .navbar .menu ul li.active a {
+        border-bottom: 2px solid #4FB0BB; }
 
 .splash-screen {
   position: relative;
