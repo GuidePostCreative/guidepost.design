@@ -58,6 +58,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.3)
+  jekyll-sass-converter (~> 1.5.2)
   tzinfo-data
 
 BUNDLED WITH

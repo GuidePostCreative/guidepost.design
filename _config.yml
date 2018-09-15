@@ -4,6 +4,9 @@ url: "https://guidepost.design" # the base hostname & protocol for your site, e.
 # Build settings
 markdown: kramdown
 
+sass:
+  sass_dir: assets/css
+
 collections:
   log:
     output: true
