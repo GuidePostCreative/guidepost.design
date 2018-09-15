@@ -26,10 +26,10 @@ defaults:
 collections:
   journal:
     output: true
-    permalink: /journal/:path/
+    permalink: /journal/:path
   portfolio:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /portfolio/:path
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
