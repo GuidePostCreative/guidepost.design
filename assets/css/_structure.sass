@@ -2,11 +2,21 @@
 
 body, html
   height: 100%
-  background: $body-background
+
+body
+  display: flex
+  flex-direction: column
 
 .container
   width: $page_width
   margin: 0 auto
 
+.content
+  padding: 0 $gutter
+
 .page
   margin: 4 * $gutter 0
+  flex: 1 0 auto
+
+.footer
+  flex-shrink: 0

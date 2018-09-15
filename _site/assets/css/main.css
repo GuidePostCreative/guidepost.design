@@ -51,18 +51,30 @@ a {
 body, html {
   height: 100%; }
 
+body {
+  display: flex;
+  flex-direction: column; }
+
 .container {
   width: 900px;
   margin: 0 auto; }
 
+.content {
+  padding: 0 15px; }
+
 .page {
-  margin: 60px 0; }
+  margin: 60px 0;
+  flex: 1 0 auto; }
+
+.footer {
+  flex-shrink: 0; }
 
 .navbar {
   height: 90px;
   transition: transform 0.5s ease-in-out;
   background: #E5E5E5;
-  z-index: 1000; }
+  z-index: 1000;
+  padding: 0 15px; }
   .navbar.hiddable {
     position: fixed;
     top: 0;
@@ -99,7 +111,8 @@ body, html {
   height: 100%;
   min-height: 600px;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  flex: 1 0 auto; }
   .splash-screen .blur {
     position: absolute;
     top: -15px;
@@ -134,7 +147,8 @@ body, html {
 
 .landing-blackboard {
   background: #4FB0BB;
-  height: 600px; }
+  height: 600px;
+  flex: 1 0 auto; }
 
 @media (max-width: 900px) {
   #splashscreen-logo {
@@ -142,18 +156,18 @@ body, html {
     margin: 0 10%; } }
 @media (max-width: 500px) {
   .splash-screen {
-    height: 400px;
-    max-height: 400px; }
+    height: 600px;
+    max-height: 600px; }
     .splash-screen .background {
-      height: 400px;
-      max-height: 400px;
-      background-position: 50% 20%;
+      height: 600px;
+      max-height: 600px;
+      background-position: 50% 40%;
       background-repeat: no-repeat;
       background-size: 140%; }
 
   #splashscreen-logo {
     width: 80%;
-    margin: 0 10%; } }
+    margin: 20px 10%; } }
 .breadcrumbs {
   padding: 15px;
   background: #E5E5E5;
@@ -169,10 +183,9 @@ body, html {
       content: ""; }
 
 .journal-entry {
-  margin: 15px 0;
   max-width: 600px; }
 
 .footer {
-  padding: 30px 0;
+  padding: 30px 15px;
   background: #333333;
   color: #E5E5E5; }

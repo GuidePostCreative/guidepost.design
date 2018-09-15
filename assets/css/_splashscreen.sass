@@ -6,7 +6,7 @@
   min-height: 600px
   width: 100%
   overflow: hidden
-
+  flex: 1 0 auto
   .blur
     position: absolute
     top: -15px
@@ -45,6 +45,7 @@ $logo-width: 600px
 .landing-blackboard
   background: $secondary_color_2
   height: 600px
+  flex: 1 0 auto
 
 
 @media (max-width: $page_width)
@@ -53,7 +54,7 @@ $logo-width: 600px
     width: 80%
     margin: 0 10%
 
-$splash-max-height-mobile: 400px
+$splash-max-height-mobile: 600px
 @media (max-width: 500px)
   .splash-screen
     height: $splash-max-height-mobile
@@ -61,12 +62,12 @@ $splash-max-height-mobile: 400px
     .background
       height: $splash-max-height-mobile
       max-height: $splash-max-height-mobile
-      background-position: 50% 20%
+      background-position: 50% 40%
       background-repeat: no-repeat
       background-size: 140%
 
   #splashscreen-logo
     width: 80%
-    margin: 0 10%
+    margin: 20px 10%
 
 
