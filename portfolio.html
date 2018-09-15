@@ -1,0 +1,13 @@
+---
+layout: page
+title: Portfolio
+description: adasda
+lang: en
+---
+<h1>Portfolio</h1>
+
+<ul>
+{% for item in site.portfolio %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% endfor %}
+</ul>

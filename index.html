@@ -1,0 +1,26 @@
+---
+layout: landing
+title: GuidePost | Independent Creative Partners
+description: We design digital experiences. If you are about to change the world and need help with that, contact us.
+lang: en
+---
+<h1>GuidePost</h1>
+
+<h3><a href="/about-us/">About</a></h3>
+
+<h3><a href="/lets-talk/">Let's talk</a></h3>
+
+<h3><a href="/log/">Log</a></h3>
+
+<ul>
+{% for item in site.log %}
+<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% endfor %}
+</ul>
+
+<h3><a href="/portfolio/">Portfolio</a></h3>
+<ul>
+{% for item in site.portfolio %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% endfor %}
+</ul>
