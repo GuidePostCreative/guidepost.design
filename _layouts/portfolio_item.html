@@ -1,4 +1,13 @@
 ---
-layout: page
+layout: base
 ---
-{{ content }}
+
+<div class="container">
+  <ul class="breadcrumbs">
+    <li><a href="/">Home</a></li>
+    <li><a href="/portfolio/">Porftolio</a></li>
+    <li>{{ page.title }}</li>
+  </ul>
+
+  {{ content }}
+</div>

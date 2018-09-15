@@ -1,4 +1,13 @@
 ---
-layout: page
+layout: base
 ---
-{{ content }}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li><a href="/">Home</a></li>
+    <li><a href="/log/">GuidePost's Log</a></li>
+    <li>{{ page.title }}</li>
+  </ul>
+  <div class="section">
+    {{ content }}
+  </div>
+</div>

@@ -4,7 +4,11 @@ title: GuidePost's Log
 description: adasda
 lang: en
 ---
-<h1>GuidePost's Log</h1>
-{% for item in site.log %}
-<h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-{% endfor %}
+
+<div class="container">
+  <h1>GuidePost's Log</h1>
+  {% for item in site.log %}
+    <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
+  {% endfor %}
+</div>
+

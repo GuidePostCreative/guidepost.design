@@ -1,0 +1,19 @@
+@import 'variables'
+
+.breadcrumbs
+  padding: $gutter
+  background: $breadcrumbs_background
+  color: $breadcrumbs_color
+
+  li
+    display: inline
+    a
+      text-decoration: none
+
+    &:after
+      content: "/"
+      margin-left: 5px
+
+    &:last-child
+      &:after
+        content: ""
