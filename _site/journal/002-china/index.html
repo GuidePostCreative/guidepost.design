@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>China :)</title>
+    <title>The Great Wallfire of China</title>
     <meta name="description" content="" />
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css" />
@@ -20,11 +20,22 @@
                     </a>
                 </div>
                 <div class="menu">
-                    <ul>
+                    <div class="tablet-or-smaller">
+                        <img src="/assets/img/icons/menu.png" id="mobile-menu-btn" onclick="javascript: document.getElementById('menu').classList.add('open');" />
+                    </div>
+                    <ul class="menu-links" id="menu">
+                        <li class="mobile-only">
+                            <a onclick="javascript: document.getElementById('menu').classList.remove('open');">
+                                <img src="/assets/img/icons/close.png" class="close-btn"/>
+                            </a>
+                        </li>
+                        <li class="mobile-only">
+                            <a href="/">Home</a>
+                        </li>
                         <li >
                             <a href="/about-us/">About us</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/journal/">Journal</a>
                         </li>
                         <li >
@@ -42,7 +53,7 @@
   <div class="container">
     <div class="content">
       <div class="journal-title">
-  <h1>China :)</h1>
+  <h1>The Great Wallfire of China</h1>
   <p class="number">Entry #002</p>
 </div>
 <div class="journal-entry">

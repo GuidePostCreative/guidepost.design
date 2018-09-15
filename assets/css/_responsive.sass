@@ -1,0 +1,19 @@
+@import 'variables'
+
+.mobile-only
+  display: none
+
+.tablet-or-smaller
+  display: none
+
+@media (max-width: $page-width)
+  .desktop-only
+    display: none
+
+  .tablet-or-smaller
+    display: inherit
+
+
+@media (max-width: 500px)
+  .mobile-only
+    display: inherit

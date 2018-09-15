@@ -42,7 +42,9 @@ h1, h2, h3 {
 
 h1 {
   font-size: 64px;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 1.2em;
+  margin-bottom: 48px; }
 
 a {
   text-decoration: none;
@@ -56,56 +58,88 @@ body {
   flex-direction: column; }
 
 .container {
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto; }
 
 .content {
-  padding: 0 15px; }
+  padding: 0 16px; }
 
 .page {
-  margin: 60px 0;
+  margin: 64px 0;
   flex: 1 0 auto; }
 
 .footer {
   flex-shrink: 0; }
 
 .navbar {
-  height: 90px;
+  height: 96px;
   transition: transform 0.5s ease-in-out;
   background: #E5E5E5;
-  z-index: 1000;
-  padding: 0 15px; }
+  z-index: 1000; }
   .navbar.hiddable {
     position: fixed;
     top: 0;
     left: 0;
     right: 0; }
   .navbar.unpin {
-    transform: translateY(-90px); }
+    transform: translateY(-96px); }
   .navbar.pin {
-    transform: translateY(0); }
+    transform: none; }
   .navbar .inner-navbar {
+    padding: 0 16px;
     display: flex;
     justify-content: space-between; }
   .navbar #navbar-logo {
-    margin-top: 7.5px;
-    height: 75px; }
-  .navbar .menu ul {
-    height: 90px; }
-    .navbar .menu ul li {
-      display: inline-block;
+    margin-top: 8px;
+    margin-left: -10px;
+    height: 80px; }
+  .navbar .menu .menu-links {
+    height: 96px;
+    display: flex;
+    transition: all 0.5s; }
+    .navbar .menu .menu-links li {
       height: 100%;
-      line-height: 90px; }
-      .navbar .menu ul li a {
+      line-height: 96px; }
+      .navbar .menu .menu-links li a {
         color: #0C2C2D;
-        height: 90px;
+        height: 96px;
         display: block;
-        padding: 0 15px; }
-        .navbar .menu ul li a:hover {
+        padding: 0 16px; }
+        .navbar .menu .menu-links li a:hover {
           color: #4FB0BB; }
-      .navbar .menu ul li.active a {
+      .navbar .menu .menu-links li.active a {
         border-bottom: 2px solid #4FB0BB; }
+  .navbar #mobile-menu-btn {
+    height: 32px;
+    margin: 32px 16px; }
+  .navbar .close-btn {
+    height: 32px; }
 
+@media (max-width: 900px) {
+  .menu .menu-links {
+    display: none !important;
+    padding: 16px; }
+    .menu .menu-links.open {
+      display: flex !important;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      height: 100%;
+      z-index: 100000; }
+      .menu .menu-links.open li {
+        display: block;
+        font-size: 20px;
+        text-align: right;
+        background: white; }
+        .menu .menu-links.open li a {
+          height: auto; }
+        .menu .menu-links.open li.active a {
+          border: none;
+          color: #4FB0BB; } }
 .splash-screen {
   position: relative;
   height: 100%;
@@ -169,7 +203,7 @@ body {
     width: 80%;
     margin: 20px 10%; } }
 .breadcrumbs {
-  padding: 15px;
+  padding: 16px;
   background: #E5E5E5;
   color: #0C2C2D; }
   .breadcrumbs li {
@@ -186,6 +220,22 @@ body {
   max-width: 600px; }
 
 .footer {
-  padding: 30px 15px;
+  padding: 32px 16px;
   background: #333333;
   color: #E5E5E5; }
+
+.mobile-only {
+  display: none; }
+
+.tablet-or-smaller {
+  display: none; }
+
+@media (max-width: 900px) {
+  .desktop-only {
+    display: none; }
+
+  .tablet-or-smaller {
+    display: inherit; } }
+@media (max-width: 500px) {
+  .mobile-only {
+    display: inherit; } }

@@ -20,7 +20,18 @@
                     </a>
                 </div>
                 <div class="menu">
-                    <ul>
+                    <div class="tablet-or-smaller">
+                        <img src="/assets/img/icons/menu.png" id="mobile-menu-btn" onclick="javascript: document.getElementById('menu').classList.add('open');" />
+                    </div>
+                    <ul class="menu-links" id="menu">
+                        <li class="mobile-only">
+                            <a onclick="javascript: document.getElementById('menu').classList.remove('open');">
+                                <img src="/assets/img/icons/close.png" class="close-btn"/>
+                            </a>
+                        </li>
+                        <li class="mobile-only">
+                            <a href="/">Home</a>
+                        </li>
                         <li >
                             <a href="/about-us/">About us</a>
                         </li>
@@ -46,7 +57,7 @@
 
 
   <div class="journal-listing">
-    <h3><a href="/journal/002-china/"">China :)</a></h3>
+    <h3><a href="/journal/002-china/"">The Great Wallfire of China</a></h3>
     <p><p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 </p>

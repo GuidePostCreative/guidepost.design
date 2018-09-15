@@ -5,7 +5,6 @@
   transition: transform 0.5s ease-in-out
   background: $navbar-background-color
   z-index: 1000
-  padding: 0 $gutter
 
   &.hiddable
     position: fixed
@@ -16,21 +15,25 @@
   &.unpin
     transform: translateY(-$navbar-height)
   &.pin
-    transform: translateY(0)
+    transform: none
 
   .inner-navbar
+    padding: 0 $gutter
     display: flex
     justify-content: space-between
 
   #navbar-logo
     margin-top: $gutter / 2
+    margin-left: -10px
     height: $navbar-height - ($gutter)
 
   .menu
-    ul
+    .menu-links
       height: $navbar-height
+      display: flex
+      transition: all 0.5s
+
       li
-        display: inline-block
         height: 100%
         line-height: $navbar-height
 
@@ -44,3 +47,39 @@
         &.active
           a
             border-bottom: 2px solid $link-color
+
+  #mobile-menu-btn
+    height: $navbar-height - 4 * $gutter
+    margin: ($gutter * 2) $gutter
+
+  .close-btn
+    height: $navbar-height - 4 * $gutter
+
+@media (max-width: $page-width)
+  .menu
+    .menu-links
+      display: none !important
+      padding: $gutter
+
+      &.open
+        display: flex !important
+        flex-direction: column
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: white
+        height: 100%
+        z-index: 100000
+        li
+          display: block
+          font-size: 20px
+          text-align: right
+          background: white
+          a
+            height: auto
+          &.active
+            a
+              border: none
+              color: $link_color

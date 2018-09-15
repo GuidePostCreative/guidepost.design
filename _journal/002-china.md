@@ -1,8 +1,8 @@
 ---
 layout: journal_item
-title:  "China :)"
+title:  "The Great Wallfire of China"
 number: "002"
-active_menu: log
+active_menu: journal
 tags: jekyll update
 ---
 
