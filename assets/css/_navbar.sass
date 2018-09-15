@@ -1,0 +1,33 @@
+@import 'variables'
+
+
+.navbar
+  height: $navbar-height
+  transition: transform 0.5s ease-in-out
+  background: white
+  z-index: 1000
+
+  &.hiddable
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+
+  &.unpin
+    transform: translateY(-$navbar-height)
+  &.pin
+    transform: translateY(0)
+
+  .inner-navbar
+    display: flex
+    justify-content: space-between
+
+    .logo-container
+      height: 40px
+      width: 100px
+      background: red
+
+  .menu
+    ul
+      li
+        display: inline

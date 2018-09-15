@@ -7,6 +7,22 @@ markdown: kramdown
 sass:
   sass_dir: assets/css
 
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "base"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      hiddable_header: "false"
+
 collections:
   log:
     output: true
