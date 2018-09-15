@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.description }}" />
+    <link href="https://fonts.googleapis.com/css?family=Glegoo:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 </head>
 <body>
-    <div class="navbar {% if page.hiddable_header %}hiddable unpin{% endif %}" id="navbar">
+    <div class="navbar {% if page.hiddable_header == true %}hiddable unpin{% endif %}" id="navbar">
         <div class="container">
             <div class="inner-navbar">
                 <div class="logo-container">

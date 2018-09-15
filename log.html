@@ -2,12 +2,12 @@
 layout: base
 title: GuidePost's Log
 description: adasda
-lang: en
 ---
 
 <div class="container">
   <h1>GuidePost's Log</h1>
-  {% for item in site.log %}
+  {% assign log_items = site.log | reverse %}
+  {% for item in log_items %}
     <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
   {% endfor %}
 </div>

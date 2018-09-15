@@ -6,32 +6,92 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GuidePost | Independent Creative Partners</title>
     <meta name="description" content="We design digital experiences. If you are about to change the world and need help with that, contact us." />
+    <link href="https://fonts.googleapis.com/css?family=Glegoo:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
-    <h1>GuidePost</h1>
+    <div class="navbar hiddable unpin" id="navbar">
+        <div class="container">
+            <div class="inner-navbar">
+                <div class="logo-container">
+                    <img src="" id="navbar-logo" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/about-us/">About us</a></li>
+                        <li><a href="/log/">Log</a></li>
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                        <li><a href="/lets-talk/">Let's talk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="splash-screen">
+  <div class="blur">
 
-<h3><a href="/about-us/">About</a></h3>
+  </div>
+  <div class="background">
 
-<h3><a href="/contact/">Contact</a></h3>
+  </div>
+</div>
 
-<h3><a href="/log/">Log</a></h3>
+<div class="landing-blackboard">
+  <div class="container">
 
-<ul>
+  </div>
+</div>
 
-<li><a href="/log/001-smile/">Smile :)</a></li>
-
-</ul>
-
-<h3><a href="/portfolio/">Portfolio</a></h3>
-<ul>
-
-    <li><a href="/portfolio/001-beeinfluencer/">BeeInfluencer</a></li>
-
-    <li><a href="/portfolio/002-zarathustra/">Zarathustra</a></li>
-
-</ul>
-    <footer>
-
+<script>
+var lastKnownScrollY = 0;
+var currentScrollY = 0;
+var ticking = false;
+var idOfHeader = 'navbar';
+var eleHeader = null;
+var threashold = 300;
+const classes = {
+  pinned: 'pin',
+  unpinned: 'unpin',
+};
+function onScroll() {
+  currentScrollY = window.pageYOffset;
+  requestTick();
+}
+function requestTick() {
+  if (!ticking) {
+    requestAnimationFrame(update);
+  }
+  ticking = true;
+}
+function update() {
+  if (currentScrollY > threashold) {
+    pin();
+  } else {
+    unpin();
+  }
+  ticking = false;
+}
+function pin() {
+  if (eleHeader.classList.contains(classes.unpinned)) {
+    eleHeader.classList.remove(classes.unpinned);
+    eleHeader.classList.add(classes.pinned);
+  }
+}
+function unpin() {
+  if (eleHeader.classList.contains(classes.pinned) || !eleHeader.classList.contains(classes.unpinned)) {
+    eleHeader.classList.remove(classes.pinned);
+    eleHeader.classList.add(classes.unpinned);
+  }
+}
+window.onload = function() {
+  eleHeader = document.getElementById(idOfHeader);
+  document.addEventListener('scroll', onScroll, false);
+}
+</script>
+    <footer class="footer">
+        <div class="container">
+            <p>All rights reserved</p>
+        </div>
     </footer>
 </body>
 </html>
