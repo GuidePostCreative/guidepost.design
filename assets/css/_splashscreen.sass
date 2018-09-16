@@ -1,5 +1,7 @@
 @import 'variables'
 
+$splash-height-mobile: 812px
+
 .splash-screen
   position: relative
   height: 100%
@@ -35,12 +37,8 @@
 
 .splash-elements
   position: relative
-
-$logo-width: 600px
-
-#splashscreen-logo
-  width: $logo-width
-  margin: 40px ($page-width - $logo-width) / 2 0
+  height: 100%
+  width: 100%
 
 .landing-blackboard
   background: $secondary_color_2
@@ -48,26 +46,141 @@ $logo-width: 600px
   flex: 1 0 auto
 
 
+$logo-width: 600px
+$slogan-width: $logo-width * 0.8
+$brand-message-width: $page-width * 0.9
+
+#splash-logo
+  width: $logo-width
+  margin: 20px ($page-width - $logo-width) / 2 0
+
+#splash-slogan
+  width: $slogan-width
+  margin: 0 ($page-width - $slogan-width ) / 2 0
+
+
+#splash-team
+  display: flex
+  height: 300px
+  .splash-team-member
+    flex: 50%
+    position: relative
+    .arrow, .description, .name
+      position: absolute
+    .arrow
+      width: 100px
+    .description
+      width: 200px
+    .name
+      height: 40px
+
+  #splash-developer
+    .arrow
+      right: 220px
+      top: 200px
+    .description
+      width: 220px
+      right: 200px
+      top: 80px
+    .name
+      top: 200px
+      right: 330px
+
+  #splash-designer
+    .arrow
+      left: 120px
+      top: 120px
+    .description
+      width: 220px
+      left: 175px
+      top: 200px
+    .name
+      top: 300px
+      left: 215px
+
+
 @media (max-width: $page_width)
-
-  #splashscreen-logo
+  #splash-logo
     width: 80%
-    margin: 0 10%
+    margin: 100px 10% 0
+  #splash-slogan
+    width: 70%
+    margin: 0 15% 0
 
-$splash-max-height-mobile: 600px
+  #splash-team
+    margin-top: 120px
+
+    #splash-developer
+      .arrow
+        right: 120px
+        top: 90px
+      .description
+        width: 220px
+        right: 200px
+        top: 80px
+      .name
+        top: 90px
+        right: 190px
+
+    #splash-designer
+      .arrow
+        left: 60px
+        top: 30px
+      .description
+        width: 160px
+        left: 75px
+        top: 80px
+      .name
+        top: 160px
+        left: 120px
+
 @media (max-width: 500px)
   .splash-screen
-    height: $splash-max-height-mobile
-    max-height: $splash-max-height-mobile
+    height: $splash-height-mobile
+    min-height: $splash-height-mobile
     .background
-      height: $splash-max-height-mobile
-      max-height: $splash-max-height-mobile
-      background-position: 50% 40%
+      height: $splash-height-mobile
+      min-height: $splash-height-mobile
+      background-position: 43% 60%
       background-repeat: no-repeat
-      background-size: 140%
+      background-size: 220%
 
-  #splashscreen-logo
+  .splash-elements
+    height: $splash-height-mobile
+
+  #splash-logo
+    width: 90%
+    margin: 60px 5% 0
+
+  #splash-slogan
     width: 80%
-    margin: 20px 10%
+    margin: 0 10% 0
 
+  #splash-team
+    margin-top: 128px
+    .splash-team-member
+      .arrow
+        display: none
+      .description
+        width: 100px
+      .name
+        height: 32px
+
+    #splash-developer
+      .description
+        width: 150px
+        right: 0px
+        top: 30px
+      .name
+        top: 120px
+        right: 16px
+
+    #splash-designer
+      .description
+        width: 140px
+        left: 20px
+        top: 80px
+      .name
+        top: 150px
+        left: 43px
 

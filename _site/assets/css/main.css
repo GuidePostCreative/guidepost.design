@@ -51,14 +51,16 @@ a {
   color: #4FB0BB; }
 
 body, html {
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 body {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow-x: hidden; }
 
 .container {
-  max-width: 900px;
+  max-width: 1060px;
   margin: 0 auto; }
 
 .content {
@@ -71,6 +73,9 @@ body {
 .footer {
   flex-shrink: 0; }
 
+@media (max-width: 1060px) {
+  .container {
+    width: 1060px; } }
 .navbar {
   height: 96px;
   transition: transform 0.5s ease-in-out;
@@ -115,7 +120,7 @@ body {
   .navbar .close-btn {
     height: 32px; }
 
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   .menu .menu-links {
     display: none !important;
     padding: 16px; }
@@ -165,7 +170,7 @@ body {
     z-index: -1; }
   .splash-screen .background {
     height: 100%;
-    max-width: 900px;
+    max-width: 1060px;
     margin: 0 auto;
     background: url("/assets/img/francisco_and_isabel.jpg");
     background-position: center;
@@ -173,35 +178,133 @@ body {
     background-size: cover; }
 
 .splash-elements {
-  position: relative; }
-
-#splashscreen-logo {
-  width: 600px;
-  margin: 40px 150px 0; }
+  position: relative;
+  height: 100%;
+  width: 100%; }
 
 .landing-blackboard {
   background: #4FB0BB;
   height: 600px;
   flex: 1 0 auto; }
 
-@media (max-width: 900px) {
-  #splashscreen-logo {
+#splash-logo {
+  width: 600px;
+  margin: 20px 230px 0; }
+
+#splash-slogan {
+  width: 480px;
+  margin: 0 290px 0; }
+
+#splash-team {
+  display: flex;
+  height: 300px; }
+  #splash-team .splash-team-member {
+    flex: 50%;
+    position: relative; }
+    #splash-team .splash-team-member .arrow, #splash-team .splash-team-member .description, #splash-team .splash-team-member .name {
+      position: absolute; }
+    #splash-team .splash-team-member .arrow {
+      width: 100px; }
+    #splash-team .splash-team-member .description {
+      width: 200px; }
+    #splash-team .splash-team-member .name {
+      height: 40px; }
+  #splash-team #splash-developer .arrow {
+    right: 220px;
+    top: 200px; }
+  #splash-team #splash-developer .description {
+    width: 220px;
+    right: 200px;
+    top: 80px; }
+  #splash-team #splash-developer .name {
+    top: 200px;
+    right: 330px; }
+  #splash-team #splash-designer .arrow {
+    left: 120px;
+    top: 120px; }
+  #splash-team #splash-designer .description {
+    width: 220px;
+    left: 175px;
+    top: 200px; }
+  #splash-team #splash-designer .name {
+    top: 300px;
+    left: 215px; }
+
+@media (max-width: 1060px) {
+  #splash-logo {
     width: 80%;
-    margin: 0 10%; } }
+    margin: 100px 10% 0; }
+
+  #splash-slogan {
+    width: 70%;
+    margin: 0 15% 0; }
+
+  #splash-team {
+    margin-top: 120px; }
+    #splash-team #splash-developer .arrow {
+      right: 120px;
+      top: 90px; }
+    #splash-team #splash-developer .description {
+      width: 220px;
+      right: 200px;
+      top: 80px; }
+    #splash-team #splash-developer .name {
+      top: 90px;
+      right: 190px; }
+    #splash-team #splash-designer .arrow {
+      left: 60px;
+      top: 30px; }
+    #splash-team #splash-designer .description {
+      width: 160px;
+      left: 75px;
+      top: 80px; }
+    #splash-team #splash-designer .name {
+      top: 160px;
+      left: 120px; } }
 @media (max-width: 500px) {
   .splash-screen {
-    height: 600px;
-    max-height: 600px; }
+    height: 812px;
+    min-height: 812px; }
     .splash-screen .background {
-      height: 600px;
-      max-height: 600px;
-      background-position: 50% 40%;
+      height: 812px;
+      min-height: 812px;
+      background-position: 43% 60%;
       background-repeat: no-repeat;
-      background-size: 140%; }
+      background-size: 220%; }
 
-  #splashscreen-logo {
+  .splash-elements {
+    height: 812px; }
+
+  #splash-logo {
+    width: 90%;
+    margin: 60px 5% 0; }
+
+  #splash-slogan {
     width: 80%;
-    margin: 20px 10%; } }
+    margin: 0 10% 0; }
+
+  #splash-team {
+    margin-top: 128px; }
+    #splash-team .splash-team-member .arrow {
+      display: none; }
+    #splash-team .splash-team-member .description {
+      width: 100px; }
+    #splash-team .splash-team-member .name {
+      height: 32px; }
+    #splash-team #splash-developer .description {
+      width: 150px;
+      right: 0px;
+      top: 30px; }
+    #splash-team #splash-developer .name {
+      top: 120px;
+      right: 16px; }
+    #splash-team #splash-designer .description {
+      width: 140px;
+      left: 20px;
+      top: 80px; }
+    #splash-team #splash-designer .name {
+      top: 150px;
+      left: 43px; } }
 .breadcrumbs {
   padding: 16px;
   background: #E5E5E5;
@@ -230,7 +333,7 @@ body {
 .tablet-or-smaller {
   display: none; }
 
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   .desktop-only {
     display: none; }
 
