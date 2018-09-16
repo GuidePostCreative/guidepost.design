@@ -1,6 +1,10 @@
 @import 'variables'
 
-$splash-height-mobile: 812px
+$logo-width: 600px
+$logo-width-tablet: 400px
+$brand-message-width: $page-width * 0.9
+$splash-height-mobile: 700px
+
 
 .splash-screen
   position: relative
@@ -45,19 +49,15 @@ $splash-height-mobile: 812px
   height: 600px
   flex: 1 0 auto
 
-
-$logo-width: 600px
-$slogan-width: $logo-width * 0.8
-$brand-message-width: $page-width * 0.9
-
 #splash-logo
   width: $logo-width
-  margin: 20px ($page-width - $logo-width) / 2 0
+  display: table-cell
+  margin: 0 auto
 
 #splash-slogan
-  width: $slogan-width
-  margin: 0 ($page-width - $slogan-width ) / 2 0
-
+  width: $logo-width * 0.8
+  display: table-cell
+  margin: 0 auto
 
 #splash-team
   display: flex
@@ -101,38 +101,33 @@ $brand-message-width: $page-width * 0.9
 
 @media (max-width: $page_width)
   #splash-logo
-    width: 80%
-    margin: 100px 10% 0
+    width: $logo-width-tablet
+    padding-top: 80px
   #splash-slogan
-    width: 70%
-    margin: 0 15% 0
+    width: $logo-width-tablet * 0.8
 
   #splash-team
-    margin-top: 120px
-
-    #splash-developer
+    margin-top: 100px
+    .splash-team-member
       .arrow
-        right: 120px
-        top: 90px
+        display: none
+    #splash-developer
       .description
-        width: 220px
-        right: 200px
-        top: 80px
+        width: 200px
+        right: 30px
+        top: 40px
       .name
-        top: 90px
-        right: 190px
+        top: 170px
+        right: 60px
 
     #splash-designer
-      .arrow
-        left: 60px
-        top: 30px
       .description
         width: 160px
-        left: 75px
-        top: 80px
+        left: 0px
+        top: 100px
       .name
-        top: 160px
-        left: 120px
+        top: 190px
+        left: 20px
 
 @media (max-width: 500px)
   .splash-screen
@@ -150,14 +145,15 @@ $brand-message-width: $page-width * 0.9
 
   #splash-logo
     width: 90%
-    margin: 60px 5% 0
+    margin: 0 5%
+    padding-top: 60px
 
   #splash-slogan
     width: 80%
-    margin: 0 10% 0
+    margin: 0 10%
 
   #splash-team
-    margin-top: 128px
+    margin-top: 70px
     .splash-team-member
       .arrow
         display: none
