@@ -191,7 +191,7 @@ $splash-height-mobile: 700px
 
 .brand-message
   width: 100%
-  margin: 60px 0
+  margin: 30px 0 60px
 
 #blackboard-left-behind
   width: 80%
@@ -201,7 +201,6 @@ $splash-height-mobile: 700px
   width: 80%
   margin: 20px 10%
 
-
 #blackboard-let-team-up
   width: 90%
   margin-left: 5%
@@ -210,3 +209,18 @@ $splash-height-mobile: 700px
 #blackboard-email
   width: 90%
   margin-left: 5%
+
+@media (max-width: 500px)
+  .landing-blackboard
+    .row
+      flex-direction: column
+      .column
+        flex: 1
+
+  #blackboard-left-behind
+    width: 90%
+    margin: 20px 5%
+
+  #blackboard-call-to-action
+    width: 90%
+    margin: 20px 5%
