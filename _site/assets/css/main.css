@@ -73,9 +73,6 @@ body {
 .footer {
   flex-shrink: 0; }
 
-@media (max-width: 1060px) {
-  .container {
-    width: 1060px; } }
 .navbar {
   height: 96px;
   transition: transform 0.5s ease-in-out;
@@ -184,7 +181,6 @@ body {
 
 .landing-blackboard {
   background: #4FB0BB;
-  height: 600px;
   flex: 1 0 auto; }
 
 #splash-logo {
@@ -283,8 +279,6 @@ body {
 
   #splash-team {
     margin-top: 70px; }
-    #splash-team .splash-team-member .arrow {
-      display: none; }
     #splash-team .splash-team-member .description {
       width: 100px; }
     #splash-team .splash-team-member .name {
@@ -303,6 +297,40 @@ body {
     #splash-team #splash-designer .name {
       top: 150px;
       left: 43px; } }
+.landing-blackboard {
+  height: auto;
+  color: #E5E5E5;
+  padding: 60px 0; }
+  .landing-blackboard p {
+    margin: 0 0 20px;
+    font-weight: 400; }
+  .landing-blackboard .row {
+    display: flex; }
+    .landing-blackboard .row .column {
+      flex: 50%;
+      padding: 0 16px; }
+
+.brand-message {
+  width: 100%;
+  margin: 60px 0; }
+
+#blackboard-left-behind {
+  width: 80%;
+  margin: 20px 10%; }
+
+#blackboard-call-to-action {
+  width: 80%;
+  margin: 20px 10%; }
+
+#blackboard-let-team-up {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 40px; }
+
+#blackboard-email {
+  width: 90%;
+  margin-left: 5%; }
+
 .breadcrumbs {
   padding: 16px;
   background: #E5E5E5;

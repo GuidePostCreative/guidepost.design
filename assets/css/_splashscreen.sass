@@ -5,7 +5,6 @@ $logo-width-tablet: 400px
 $brand-message-width: $page-width * 0.9
 $splash-height-mobile: 700px
 
-
 .splash-screen
   position: relative
   height: 100%
@@ -46,7 +45,6 @@ $splash-height-mobile: 700px
 
 .landing-blackboard
   background: $secondary_color_2
-  height: 600px
   flex: 1 0 auto
 
 #splash-logo
@@ -97,7 +95,6 @@ $splash-height-mobile: 700px
     .name
       top: 300px
       left: 215px
-
 
 @media (max-width: $page_width)
   #splash-logo
@@ -155,8 +152,6 @@ $splash-height-mobile: 700px
   #splash-team
     margin-top: 70px
     .splash-team-member
-      .arrow
-        display: none
       .description
         width: 100px
       .name
@@ -180,3 +175,38 @@ $splash-height-mobile: 700px
         top: 150px
         left: 43px
 
+.landing-blackboard
+  height: auto
+  color: $primary_color_1
+  padding: 60px 0
+  p
+    margin: 0 0 20px
+    font-weight: 400
+  .row
+    display: flex
+    .column
+      flex: 50%
+      padding: 0 $gutter
+
+
+.brand-message
+  width: 100%
+  margin: 60px 0
+
+#blackboard-left-behind
+  width: 80%
+  margin: 20px 10%
+
+#blackboard-call-to-action
+  width: 80%
+  margin: 20px 10%
+
+
+#blackboard-let-team-up
+  width: 90%
+  margin-left: 5%
+  margin-top: 40px
+
+#blackboard-email
+  width: 90%
+  margin-left: 5%
