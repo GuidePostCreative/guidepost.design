@@ -186,11 +186,6 @@ $splash-height-mobile: 700px
   p
     margin: 0 0 20px
     font-weight: 400
-  .row
-    display: flex
-    .column
-      flex: 50%
-      padding: 0 $gutter
 
 
 /***************************/
@@ -198,11 +193,11 @@ $splash-height-mobile: 700px
 /***************************/
 .brand-message
   width: 100%
-  margin: 30px 0 60px
+  margin: 0px 0 30px
 
 #blackboard-left-behind
-  width: 80%
-  margin: 20px 10%
+  width: 90%
+  margin: 20px 5%
 
 #blackboard-call-to-action
   width: 90%
@@ -216,20 +211,3 @@ $splash-height-mobile: 700px
 #blackboard-email
   width: 90%
   margin-left: 5%
-
-@media (max-width: $page_width)
-  #blackboard-left-behind
-    width: 90%
-    margin: 20px 5%
-
-
-@media (max-width: 500px)
-  .landing-blackboard
-    .row
-      flex-direction: column
-      .column
-        flex: 1
-
-  #blackboard-left-behind
-    width: 90%
-    margin: 20px 5%

@@ -46,9 +46,11 @@ function unpin() {
   }
 }
 
+if(document.getElementById(idOfHeader).classList.contains('hiddable')) {
+  window.addEventListener('load', function() {
+    eleHeader = document.getElementById(idOfHeader);
+    document.addEventListener('scroll', onScroll);
+    // update();
+  });
+};
 
-window.addEventListener('load', function() {
-  eleHeader = document.getElementById(idOfHeader);
-  document.addEventListener('scroll', onScroll);
-  // update();
-})
