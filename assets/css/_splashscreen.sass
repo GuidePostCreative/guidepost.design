@@ -5,6 +5,9 @@ $logo-width-tablet: 400px
 $brand-message-width: $page-width * 0.9
 $splash-height-mobile: 700px
 
+/***************************/
+/*      SPLASHSREEN        */
+/***************************/
 .splash-screen
   position: relative
   height: 100%
@@ -18,7 +21,7 @@ $splash-height-mobile: 700px
     right: -15px
     bottom: -15px
     left: -15px
-    background: url('/assets/img/francisco_and_isabel.jpg')
+    background: url('/assets/img/splashscreen/francisco_and_isabel-compressor.jpg')
     background-position: center
     background-repeat: no-repeat
     background-size: cover
@@ -33,7 +36,7 @@ $splash-height-mobile: 700px
     height: 100%
     max-width: $page_width
     margin: 0 auto
-    background: url('/assets/img/francisco_and_isabel.jpg')
+    background: url('/assets/img/splashscreen/francisco_and_isabel-compressor.jpg')
     background-position: center
     background-repeat: no-repeat
     background-size: cover
@@ -51,6 +54,7 @@ $splash-height-mobile: 700px
   width: $logo-width
   display: table-cell
   margin: 0 auto
+  padding-top: 20px
 
 #splash-slogan
   width: $logo-width * 0.8
@@ -189,6 +193,9 @@ $splash-height-mobile: 700px
       padding: 0 $gutter
 
 
+/***************************/
+/*       BLACKBOARD        */
+/***************************/
 .brand-message
   width: 100%
   margin: 30px 0 60px
@@ -198,8 +205,8 @@ $splash-height-mobile: 700px
   margin: 20px 10%
 
 #blackboard-call-to-action
-  width: 80%
-  margin: 20px 10%
+  width: 90%
+  margin: 20px 5%
 
 #blackboard-let-team-up
   width: 90%
@@ -210,6 +217,12 @@ $splash-height-mobile: 700px
   width: 90%
   margin-left: 5%
 
+@media (max-width: $page_width)
+  #blackboard-left-behind
+    width: 90%
+    margin: 20px 5%
+
+
 @media (max-width: 500px)
   .landing-blackboard
     .row
@@ -218,9 +231,5 @@ $splash-height-mobile: 700px
         flex: 1
 
   #blackboard-left-behind
-    width: 90%
-    margin: 20px 5%
-
-  #blackboard-call-to-action
     width: 90%
     margin: 20px 5%

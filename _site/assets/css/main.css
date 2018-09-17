@@ -142,6 +142,9 @@ body {
         .menu .menu-links.open li.active a {
           border: none;
           color: #4FB0BB; } }
+/************************** */
+/*      SPLASHSREEN        */
+/************************** */
 .splash-screen {
   position: relative;
   height: 100%;
@@ -155,7 +158,7 @@ body {
     right: -15px;
     bottom: -15px;
     left: -15px;
-    background: url("/assets/img/francisco_and_isabel.jpg");
+    background: url("/assets/img/splashscreen/francisco_and_isabel-compressor.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -169,7 +172,7 @@ body {
     height: 100%;
     max-width: 1060px;
     margin: 0 auto;
-    background: url("/assets/img/francisco_and_isabel.jpg");
+    background: url("/assets/img/splashscreen/francisco_and_isabel-compressor.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -186,7 +189,8 @@ body {
 #splash-logo {
   width: 600px;
   display: table-cell;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 20px; }
 
 #splash-slogan {
   width: 480px;
@@ -310,6 +314,9 @@ body {
       flex: 50%;
       padding: 0 16px; }
 
+/************************** */
+/*       BLACKBOARD        */
+/************************** */
 .brand-message {
   width: 100%;
   margin: 30px 0 60px; }
@@ -319,8 +326,8 @@ body {
   margin: 20px 10%; }
 
 #blackboard-call-to-action {
-  width: 80%;
-  margin: 20px 10%; }
+  width: 90%;
+  margin: 20px 5%; }
 
 #blackboard-let-team-up {
   width: 90%;
@@ -331,6 +338,10 @@ body {
   width: 90%;
   margin-left: 5%; }
 
+@media (max-width: 1060px) {
+  #blackboard-left-behind {
+    width: 90%;
+    margin: 20px 5%; } }
 @media (max-width: 500px) {
   .landing-blackboard .row {
     flex-direction: column; }
@@ -338,10 +349,6 @@ body {
       flex: 1; }
 
   #blackboard-left-behind {
-    width: 90%;
-    margin: 20px 5%; }
-
-  #blackboard-call-to-action {
     width: 90%;
     margin: 20px 5%; } }
 .breadcrumbs {
@@ -380,4 +387,7 @@ body {
     display: inherit; } }
 @media (max-width: 500px) {
   .mobile-only {
-    display: inherit; } }
+    display: inherit; }
+
+  .tablet-or-bigger {
+    display: none; } }
