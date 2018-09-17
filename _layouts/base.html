@@ -8,9 +8,11 @@
     <meta name="description" content="{{ page.description }}" />
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-    <link rel="icon" href="/assets/img/logos/Favicon_Color_763x763.png" type="image/gif" />
+    <link rel="icon" href="/assets/img/logos/Favicon_Color_763x763-compressor.png" type="image/gif" />
+    {% include loader_css.html %}
 </head>
-<body>
+<body id="body">
+    {% include loader.html %}
     <div class="navbar {% if page.hiddable_header == true %}hiddable unpin{% endif %}" id="navbar">
         <div class="container">
             <div class="inner-navbar">
@@ -58,5 +60,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="/assets/js/menu.js"></script>
+    {% include loader_js.html %}
 </body>
 </html>
