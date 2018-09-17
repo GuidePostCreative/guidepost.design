@@ -1,4 +1,27 @@
 @import 'variables'
 
-.journal-entry
-  max-width: 600px
+.journal-item
+  border-left: 2px solid $primary_color_1
+  position: relative
+  margin-left: -50px
+  padding-left: 50px
+  padding-top: 10px
+  padding-bottom: 100px
+  .journal-number
+    font-size: 2 * $font-size
+    background: white
+    padding: 0 5px
+    background: white
+    text-align: relative
+    position: absolute
+    line-height: 4 * $font-size
+    left: -24px
+    top: -30px
+
+  .journal-date
+    color: $link-color
+    margin-top: $gutter
+  .journal-caption
+    text-align: center
+  img
+    max-width: 100%

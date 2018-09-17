@@ -1,7 +1,7 @@
 ---
 layout: journal_item
 title:  "Smile :)"
-number: "001"
+number: "01"
 active_menu: journal
 categories: jekyll update
 ---

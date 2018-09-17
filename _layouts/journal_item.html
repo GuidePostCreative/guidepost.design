@@ -1,20 +1,7 @@
 ---
 layout: content
 ---
-<div class="journal-title">
-  <h1>{{ page.title }}</h1>
-  <p class="number">Entry #{{ page.number }}</p>
-</div>
-<div class="journal-entry">
-  <div class="main-content">
-    {{ content }}
-  </div>
-  <div class="sidebar">
-    <h3>Categories</h3>
-    <ul>
-      {% for category in page.categories %}
-        <li>{{ category }}</li>
-      {% endfor %}
-    </ul>
-  </div>
+<div class="journal-item">
+  <span class="journal-number">{{ page.number }}</span>
+  {{ content }}
 </div>

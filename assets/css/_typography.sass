@@ -4,9 +4,10 @@ body
   font-family: 'Bitter', serif
   font-size: $font-size
   line-height: 1.6em
+  color: $text-color
 
 h1, h2, h3
-  color: $title_color
+  color: $title-color
   line-height: 1.6em
 
 h1
@@ -17,4 +18,19 @@ h1
 
 a
   text-decoration: none
-  color: $link_color
+  color: $text-color
+  // border-bottom: 3px solid $link-color
+  text-decoration: underline
+  text-decoration-color: $link-color
+  text-decoration-style: solid
+  &:hover
+    color: $link-color
+
+p
+  margin-bottom: $gutter
+
+strong
+  font-weight: bold
+
+em
+  font-style: italic
