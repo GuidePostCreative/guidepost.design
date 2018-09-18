@@ -5,22 +5,41 @@ number: "01"
 active_menu: journal
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+{::options parse_block_html="true" /}
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+<div class="row">
+<div class="col-6">
 
-Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+# Digital Nomads
+{: .journal-title}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+<figure>
+
+![Great Wall of China](/assets/img/journal/002/raj-eiamworakul-386769-unsplash.jpg){: .modal-image}
+
+
+**Credits:** Photo by Robert Nyman on Unsplash.
+{: .journal-caption}
+
+</figure>
+
+</div>
+<div class="col-6">
+
+September / 20 / 2018
+{: .journal-date}
+
+We haven't decided yet from which co-work we'll be working in Bangkok where we are staying for 10 days before going to China for a month. We need to find time to visit the places we want to visit, go to a thai cooking class and study for the [online courses][product] we are [enrolled in][crypto]. We have meetings in London, Sydney & Santiago timezones with our clients. Oh, and in two more week, we will become Estonia e-residents.
+
+I've got to be honest, I hate the term "digital nomad". It's one of those terms that is used and over used to the point where words loose their meaning, but then again, I think it perfectly describe our lifestyle at the moment. Computer, cellphone, credit cards & backpacks.
+
+That's the Digital Nomad lifestyle.
+
+Register for our newsletter and we'll keep you up to date with our latest journal entries which will have everything from studies we make, projects we are working on, interesting things related to design we find in our journey and anything we think is worth sharing.
+
+[product]: https://www.udacity.com/course/product-design--ud509
+[crypto]: https://www.coursera.org/learn/cryptocurrency/
+</div>
+</div>
