@@ -2695,8 +2695,8 @@ body {
       .navbar .menu .menu-links li.active a {
         border-bottom: 2px solid #4FB0BB; }
   .navbar #mobile-menu-btn {
-    height: 32px;
-    margin: 32px 16px; }
+    height: 25px;
+    margin: 36px 16px; }
   .navbar .close-btn {
     height: 32px; }
 
