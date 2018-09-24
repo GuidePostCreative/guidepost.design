@@ -3009,7 +3009,8 @@ body {
       content: ""; }
 
 .journal-body {
-  background: #0C2C2D; }
+  background: #0C2C2D;
+  background-image: url(/assets/img/footer/pattern_dot.svg); }
   .journal-body .page {
     margin: 0;
     padding: 0; }
@@ -3019,6 +3020,8 @@ body {
       background-size: 100% 1.6em;
       padding: 64px 0;
       border-radius: 0 0 50px 50px; }
+  .journal-body .footer {
+    background: none; }
 
 .journal-header .title {
   font-size: 96px;
