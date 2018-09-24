@@ -5,6 +5,7 @@ $logo-width-tablet: 400px
 $brand-message-width: $page-width * 0.9
 $splash-height-mobile: 700px
 
+
 /***************************/
 /*      SPLASHSREEN        */
 /***************************/
@@ -60,6 +61,7 @@ $splash-height-mobile: 700px
   width: $logo-width * 0.8
   display: table-cell
   margin: 0 auto
+  position: relative
 
 #splash-team
   display: flex
@@ -186,6 +188,52 @@ $splash-height-mobile: 700px
   p
     margin: 0 0 20px
     font-weight: 400
+
+
+
+/***************************/
+/*      ANIMATION        */
+/***************************/
+$animation-write-delay: 2s
+$animation-write-speed: 0.5s
+
+
+@keyframes write
+  100%
+    stroke-dashoffset: 100
+
+.pen-stroke
+  stroke: white
+  stroke-dashoffset: 1000
+  stroke-dasharray: 1000
+  stroke-width: 6px
+  fill: none
+
+.loaded
+  @for $i from 1 through 19
+    #path_slogan_#{$i}
+      animation: write $animation-write-speed linear forwards $animation-write-delay + (0.1s * $i)
+
+
+
+.loaded
+
+  #splash-logo
+    transform: translate3d(0, -100%, 0)
+    animation: slideInDown 0.75s ease forwards 1s
+
+  #splash-developer
+    .name
+      animation-delay: 1s
+      opacity: 0
+      animation-fill-mode: forwards
+
+  #splash-designer
+    .name
+      animation-delay: 2s
+      opacity: 0
+      animation-fill-mode: forwards
+
 
 
 /***************************/
