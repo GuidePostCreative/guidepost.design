@@ -1,7 +1,9 @@
 ---
 layout: journal_item
-title:  "Smile :)"
+title:  "Digital Nomads"
 number: "01"
+ddate: "17 | September | 2018"
+summary: We have meetings in London, Sydney & Santiago timezones with our clients. Oh, and in two more week, we will become Estonia e-residents.
 active_menu: journal
 categories: jekyll update
 ---
