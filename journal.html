@@ -3,14 +3,41 @@ layout: content
 title: Journal | GuidePost
 description: This is a place where we write about people, things and ideas we find interesting.
 active_menu: journal
+body_class: journal-body
 ---
-<h1>Journal</h1>
-<p></p>
-{% assign journal_items = site.journal | reverse %}
-
-{% for item in journal_items %}
-  <div class="journal-listing">
-    <h3><a href="{{ item.url }}"">{{ item.title}}</a></h3>
-    <p>{{ item.excerpt }}</p>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div class="journal-header">
+        <h1 class="title">Journal</h1>
+        <p class="slogan">Monthly posts that we feel in need to share and pass by, it you feel like it do!</p>
+    </div>
   </div>
-{% endfor %}
+</div>
+{% assign journal_items = site.journal | reverse %}
+<div class="entry-previews">
+  {% for item in journal_items %}
+    <div class="entry-preview {% if forloop.last %}last{% endif %}">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4">
+          <h3 class="number">{{ item.number }}</h3>
+        </div>
+        <div class="col-4">
+          <h2 class="title"><a href="{{ item.url }}">{{ item.title }}</a></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <p class="date">{{ item.ddate }}</p>
+            <p class="summary">{{ item.summary }}</p>
+            <a href="{{ item.url }}" class="read-more-btn">
+              <span>Read more</span>
+              <img src="/assets/img/icons/arrow.svg" alt="red arrow" class="arrow-link"/>
+            </a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

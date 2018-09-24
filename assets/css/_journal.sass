@@ -1,5 +1,75 @@
 @import 'variables'
 
+$journal-line-space: 1.5em
+$journal-line-width: 0.1em
+$jounral-line-color: lighten($secondary_color_2, 45%)
+
+.journal-body
+  background: $primary_color_2
+
+  .page
+    margin: 0
+    padding: 0
+    .content
+      background-color: white
+      background-image: linear-gradient(0deg, transparent $journal-line-space, $jounral-line-color $journal-line-space, $jounral-line-color $journal-line-space + $journal-line-width)
+      background-size: 100% $journal-line-space + $journal-line-width
+      padding: 4 * $gutter 0
+      border-radius: 0 0 50px 50px
+
+.journal-header
+  .title
+    font-size: 6 * $font-size
+    text-align: center
+    margin-bottom: $gutter
+    color: $secondary_color_1
+  .slogan
+    font-size: $font-size
+    text-align: center
+
+.entry-preview
+  padding: 6 * $gutter 0
+  border-bottom: 1px dashed $secondary_color_2
+  &.last
+    border-bottom: none
+
+  .number
+    color: $primary_color_1
+    font-size: 15 * $font-size
+    font-weight: bold
+    line-height: 0.7em
+
+  .title
+    font-size: 3 * $font-size
+    line-height: 1.3em
+    font-weight: bold
+    margin: 0
+
+    a
+      color: $title-color
+      text-decoration: none
+      transition: all .2s ease-in-out
+      &:hover
+        color: $secondary_color_2
+
+  .date
+    margin: 2 * $gutter 0 0
+    color: $secondary_color_2
+
+  .read-more-btn
+    color: $primary_color_3
+    text-decoration: none
+    font-style: italic
+    .arrow-link
+      display: block
+      transform-origin: 0 50%
+      transition: all .2s ease-in-out
+
+    &:hover
+      .arrow-link
+        transform: scale(1.5, 1)
+
+
 .journal-item
   border-left: 2px solid $primary_color_1
   position: relative

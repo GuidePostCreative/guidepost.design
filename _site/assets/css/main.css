@@ -2601,7 +2601,7 @@ body {
   font-family: "Bitter", serif;
   font-size: 16px;
   line-height: 1.6em;
-  color: #414042; }
+  color: #4F4F4F; }
 
 h1, h2, h3 {
   color: #0C2C2D;
@@ -2615,7 +2615,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #414042;
+  color: #4F4F4F;
   text-decoration: underline;
   text-decoration-color: #4FB0BB;
   text-decoration-style: solid; }
@@ -2648,7 +2648,7 @@ body {
   padding: 0 16px; }
 
 .page {
-  margin: 64px 0;
+  padding: 64px 0;
   flex: 1 0 auto; }
 
 .footer {
@@ -2690,9 +2690,9 @@ body {
         text-decoration: none;
         transition: all 0.3s; }
         .navbar .menu .menu-links li a:hover {
-          color: #4FB0BB; }
+          color: #1B708A; }
       .navbar .menu .menu-links li.active a {
-        border-bottom: 2px solid #4FB0BB; }
+        border-bottom: 2px solid #1B708A; }
   .navbar #mobile-menu-btn {
     height: 25px;
     margin: 36px 16px; }
@@ -3007,6 +3007,62 @@ body {
       margin-left: 5px; }
     .breadcrumbs li:last-child:after {
       content: ""; }
+
+.journal-body {
+  background: #0C2C2D; }
+  .journal-body .page {
+    margin: 0;
+    padding: 0; }
+    .journal-body .page .content {
+      background-color: white;
+      background-image: linear-gradient(0deg, transparent 1.5em, #f5fafb 1.5em, #f5fafb 1.6em);
+      background-size: 100% 1.6em;
+      padding: 64px 0;
+      border-radius: 0 0 50px 50px; }
+
+.journal-header .title {
+  font-size: 96px;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #1B708A; }
+.journal-header .slogan {
+  font-size: 16px;
+  text-align: center; }
+
+.entry-preview {
+  padding: 96px 0;
+  border-bottom: 1px dashed #4FB0BB; }
+  .entry-preview.last {
+    border-bottom: none; }
+  .entry-preview .number {
+    color: #E5E5E5;
+    font-size: 240px;
+    font-weight: bold;
+    line-height: 0.7em; }
+  .entry-preview .title {
+    font-size: 48px;
+    line-height: 1.3em;
+    font-weight: bold;
+    margin: 0; }
+    .entry-preview .title a {
+      color: #0C2C2D;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out; }
+      .entry-preview .title a:hover {
+        color: #4FB0BB; }
+  .entry-preview .date {
+    margin: 32px 0 0;
+    color: #4FB0BB; }
+  .entry-preview .read-more-btn {
+    color: #D83830;
+    text-decoration: none;
+    font-style: italic; }
+    .entry-preview .read-more-btn .arrow-link {
+      display: block;
+      transform-origin: 0 50%;
+      transition: all 0.2s ease-in-out; }
+    .entry-preview .read-more-btn:hover .arrow-link {
+      transform: scale(1.5, 1); }
 
 .journal-item {
   border-left: 2px solid #E5E5E5;

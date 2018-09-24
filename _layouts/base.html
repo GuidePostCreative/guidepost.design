@@ -13,7 +13,7 @@
     {% include loader_css.html %}
     {% include google_analytics.html %}
 </head>
-<body id="body">
+<body id="body" class="{{ page.body_class }}">
     {% include loader.html %}
     <div class="navbar {% if page.hiddable_header == true %}hiddable unpin{% endif %}" id="navbar">
         <div class="container">
