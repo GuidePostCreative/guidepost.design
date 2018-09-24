@@ -3035,7 +3035,8 @@ body {
 
 .footer {
   padding: 32px 16px;
-  background: #0C2C2D;
+  background-color: #0C2C2D;
+  background-image: url(/assets/img/footer/pattern_dot.svg);
   color: #E5E5E5; }
 
 .modal-image {
