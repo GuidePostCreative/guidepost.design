@@ -2888,7 +2888,7 @@ body {
 .landing-blackboard {
   height: auto;
   color: #E5E5E5;
-  padding: 60px 0; }
+  padding: 0 0 60px; }
   .landing-blackboard p {
     margin: 0 0 20px;
     font-weight: 400; }
@@ -2981,6 +2981,20 @@ body {
   width: 90%;
   margin-left: 5%; }
 
+#blackboard-top-curve {
+  height: 100px;
+  display: block;
+  overflow: visible;
+  transform: scale(-1, -1);
+  margin-top: -100px; }
+  #blackboard-top-curve path {
+    fill: #4FB0BB;
+    stroke: #4FB0BB; }
+
+@media (max-width: 500px) {
+  #blackboard-top-curve {
+    height: 50px;
+    margin-top: -50px; } }
 .breadcrumbs {
   padding: 16px;
   background: #E5E5E5;

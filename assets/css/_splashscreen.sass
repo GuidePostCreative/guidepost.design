@@ -184,7 +184,7 @@ $splash-height-mobile: 700px
 .landing-blackboard
   height: auto
   color: $primary_color_1
-  padding: 60px 0
+  padding: 0 0 60px
   p
     margin: 0 0 20px
     font-weight: 400
@@ -213,8 +213,6 @@ $animation-write-speed: 0.5s
   @for $i from 1 through 19
     #path_slogan_#{$i}
       animation: write $animation-write-speed linear forwards $animation-write-delay + (0.1s * $i)
-
-
 
 .loaded
 
@@ -259,3 +257,18 @@ $animation-write-speed: 0.5s
 #blackboard-email
   width: 90%
   margin-left: 5%
+
+#blackboard-top-curve
+  height: 100px
+  display: block
+  overflow: visible
+  transform: scale(-1, -1)
+  margin-top: -100px
+  path
+    fill: $secondary_color_2
+    stroke: $secondary_color_2
+
+@media (max-width: 500px)
+  #blackboard-top-curve
+    height: 50px
+    margin-top: -50px
