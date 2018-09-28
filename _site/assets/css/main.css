@@ -2828,7 +2828,7 @@ body {
     #splash-team .splash-team-member .arrow {
       display: none; }
     #splash-team #splash-developer .description {
-      width: 200px;
+      width: 150px;
       right: 30px;
       top: 40px; }
     #splash-team #splash-developer .name {
@@ -2873,7 +2873,7 @@ body {
     #splash-team #splash-developer .description {
       width: 150px;
       right: 0px;
-      top: 30px; }
+      top: 40px; }
     #splash-team #splash-developer .name {
       top: 120px;
       right: 16px; }
@@ -2977,8 +2977,8 @@ body {
   margin-top: 40px; }
 
 #blackboard-email {
-  width: 90%;
-  margin-left: 5%; }
+  width: 60%;
+  margin-left: 20%; }
 
 #blackboard-top-curve {
   height: 100px;
