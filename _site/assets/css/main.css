@@ -2944,6 +2944,19 @@ body {
 .loaded #path_slogan_19 {
   animation: write 0.5s linear forwards 3.9s; }
 
+.loaded #text_developer #path_he {
+  animation: write 0.5s linear forwards 2s; }
+.loaded #text_developer #path_is {
+  animation: write 0.5s linear forwards 2.1s; }
+.loaded #text_developer #path_the {
+  animation: write 0.5s linear forwards 2.2s; }
+.loaded #text_developer #path_de {
+  animation: write 0.5s linear forwards 2.5s; }
+.loaded #text_developer #path_velo {
+  animation: write 0.5s linear forwards 2.6s; }
+.loaded #text_developer #path_per {
+  animation: write 0.5s linear forwards 2.7s; }
+
 .loaded #splash-logo {
   transform: translate3d(0, -100%, 0);
   animation: slideInDown 0.75s ease forwards 1s; }

@@ -194,9 +194,11 @@ $splash-height-mobile: 700px
 /***************************/
 /*      ANIMATION        */
 /***************************/
-$animation-write-delay: 2s
-$animation-write-speed: 0.5s
+$animation-slogan-delay: 2s
+$animation-slogan-speed: 0.5s
 
+$animation-dev-delay: 2s
+$animation-dev-speed: 0.5s
 
 @keyframes write
   100%
@@ -212,7 +214,23 @@ $animation-write-speed: 0.5s
 .loaded
   @for $i from 1 through 19
     #path_slogan_#{$i}
-      animation: write $animation-write-speed linear forwards $animation-write-delay + (0.1s * $i)
+      animation: write $animation-slogan-speed linear forwards $animation-slogan-delay + (0.1s * $i)
+
+
+.loaded
+  #text_developer
+    #path_he
+      animation: write $animation-dev-speed linear forwards $animation-dev-delay
+    #path_is
+      animation: write $animation-dev-speed linear forwards $animation-dev-delay + 0.1s
+    #path_the
+      animation: write $animation-dev-speed linear forwards $animation-dev-delay + 0.2s
+    #path_de
+      animation: write $animation-dev-speed linear forwards $animation-dev-delay + 0.5s
+    #path_velo
+      animation: write $animation-dev-speed linear forwards $animation-dev-delay + 0.6s
+    #path_per
+      animation: write $animation-dev-speed linear forwards $animation-dev-delay + 0.7s
 
 .loaded
 
