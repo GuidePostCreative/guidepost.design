@@ -10,13 +10,15 @@ $jounral-line-color: lighten($secondary_color_2, 45%)
 
   .page
     margin: 0
-    padding: 0
+    padding-top: 0
     .content
       background-color: white
       background-image: linear-gradient(0deg, transparent $journal-line-space, $jounral-line-color $journal-line-space, $jounral-line-color $journal-line-space + $journal-line-width)
       background-size: 100% $journal-line-space + $journal-line-width
-      padding: 4 * $gutter 0
-      border-radius: 0 0 50px 50px
+      padding-top: 4 * $gutter
+      padding-bottom: 4 * $gutter
+      border-radius: 50px
+      margin: 6 * $gutter 0 0
   .footer
     background: none
 
@@ -134,10 +136,45 @@ $journal-number-height: $journal-number-size + (2 * $journal-number-margin)
 
 
 @media (max-width: $page_width)
+  .journal-body
+    background: none
+    .page
+      .content
+        margin-top: 0
+    .footer
+      background-color: $footer_background
+      background-image: url(/assets/img/footer/pattern_dot.svg)
+
+  .entry-preview
+    padding: $gutter 0 2 * $gutter
+    &.last
+      border-bottom: none
+
+    .number
+      font-size: 15 * $font-size
+      text-align: left
+      margin-bottom: $gutter
+      margin-left: -$gutter
+
+    .title
+      font-size: 3 * $font-size
+      margin: 0
+    .date
+      margin: 0 0 $gutter
+
+
+  .journal-header
+    margin-bottom: 2 * $gutter
+    .title
+      font-size: 4 * $font-size
+      text-align: center
+    .slogan
+      font-size: $font-size
+      text-align: center
+
   .journal-entry
     .journal-number
       .left-body
         width: 0
       .counter
-
         padding: 0 20px 0 10px

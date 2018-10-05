@@ -19,7 +19,7 @@ body_class: journal-body
   {% for item in journal_items %}
     <div class="entry-preview {% if forloop.last %}last{% endif %}">
       <div class="row">
-        <div class="col-2"></div>
+        <div class="col-2 tablet-or-bigger"></div>
         <div class="col-4">
           <h3 class="number">{{ item.number }}</h3>
         </div>

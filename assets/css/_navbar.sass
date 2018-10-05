@@ -26,7 +26,6 @@
     margin: $gutter 0 0 $gutter
     height: $navbar-height - (2* $gutter)
 
-
   .menu
     .menu-links
       height: $navbar-height
@@ -39,7 +38,7 @@
 
         a
           color: $navbar-color
-          height: $navbar-height
+          height: $navbar-height - 2px
           display: block
           padding: 0 $gutter
           text-decoration: none
@@ -58,6 +57,14 @@
     height: $navbar-height - 4 * $gutter
 
 @media (max-width: $page-width)
+  .navbar
+    height: $navbar-height-mobile
+    #navbar-logo
+      margin: $gutter 0 0 $gutter
+      height: $navbar-height-mobile - (2* $gutter)
+    #mobile-menu-btn
+      height: 20px
+      margin: 30px $gutter
   .menu
     .menu-links
       display: none !important
