@@ -194,22 +194,22 @@ $splash-height-mobile: 700px
 /***************************/
 /*      ANIMATION        */
 /***************************/
-$animation-slogan-speed: 0.5s
-$animation-dev-text-speed: 2.5s
-$animation-dev-arrow-speed: 0.5s
+$animation-slogan-speed: 3.8s
+$animation-dev-text-speed: 2.0s
+$animation-dev-arrow-speed: 0.7s
 $animation-des-text-speed: 1.25s
-$animation-des-arrow-speed: 0.5s
+$animation-des-arrow-speed: 0.7s
 
 
 $logo-placed: 0.8s
 $animation-dev-arrow-delay: 0.8s + $logo-placed
-$animation-dev-text-delay: -0.9s + $animation-dev-arrow-delay + $animation-dev-arrow-speed
-$animation-dev-name-delay: 0.1s + $animation-dev-text-delay + $animation-dev-text-speed
+$animation-dev-text-delay: -0.2s + $animation-dev-arrow-delay + $animation-dev-arrow-speed
+$animation-dev-name-delay: -0.5s + $animation-dev-text-delay + $animation-dev-text-speed
 
 
-$animation-des-arrow-delay: 0.3s + $animation-dev-name-delay
-$animation-des-text-delay: 0.2s + $animation-des-arrow-delay + $animation-des-arrow-speed
-$animation-des-name-delay: 0.2s + $animation-des-text-delay + $animation-des-text-speed
+$animation-des-arrow-delay: 0.5s + $animation-dev-name-delay
+$animation-des-text-delay: -0.2s + $animation-des-arrow-delay + $animation-des-arrow-speed
+$animation-des-name-delay: -0.0s + $animation-des-text-delay + $animation-des-text-speed
 
 $animation-slogan-delay: 0.5s + $animation-des-name-delay
 
@@ -226,16 +226,17 @@ $animation-slogan-delay: 0.5s + $animation-des-name-delay
   fill: none
 
 .loaded
-  @for $i from 1 through 19
-    #path_slogan_#{$i}
-      animation: write $animation-slogan-speed linear forwards $animation-slogan-delay + (0.1s * $i)
+  #path_slogan
+    stroke-dashoffset: 3000
+    stroke-dasharray: 3000
+    animation: write $animation-slogan-speed linear forwards $animation-slogan-delay
 
 
 .loaded
   #text_developer
     #path_text_developer
       stroke-width: 4px
-      animation: write $animation-dev-text-speed linear forwards $animation-dev-text-delay + 0.7s
+      animation: write $animation-dev-text-speed linear forwards $animation-dev-text-delay
 
 .loaded
   #arrow_developer

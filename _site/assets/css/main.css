@@ -2905,69 +2905,35 @@ body {
   stroke-width: 6px;
   fill: none; }
 
-.loaded #path_slogan_1 {
-  animation: write 0.5s linear forwards 6.85s; }
-.loaded #path_slogan_2 {
-  animation: write 0.5s linear forwards 6.95s; }
-.loaded #path_slogan_3 {
-  animation: write 0.5s linear forwards 7.05s; }
-.loaded #path_slogan_4 {
-  animation: write 0.5s linear forwards 7.15s; }
-.loaded #path_slogan_5 {
-  animation: write 0.5s linear forwards 7.25s; }
-.loaded #path_slogan_6 {
-  animation: write 0.5s linear forwards 7.35s; }
-.loaded #path_slogan_7 {
-  animation: write 0.5s linear forwards 7.45s; }
-.loaded #path_slogan_8 {
-  animation: write 0.5s linear forwards 7.55s; }
-.loaded #path_slogan_9 {
-  animation: write 0.5s linear forwards 7.65s; }
-.loaded #path_slogan_10 {
-  animation: write 0.5s linear forwards 7.75s; }
-.loaded #path_slogan_11 {
-  animation: write 0.5s linear forwards 7.85s; }
-.loaded #path_slogan_12 {
-  animation: write 0.5s linear forwards 7.95s; }
-.loaded #path_slogan_13 {
-  animation: write 0.5s linear forwards 8.05s; }
-.loaded #path_slogan_14 {
-  animation: write 0.5s linear forwards 8.15s; }
-.loaded #path_slogan_15 {
-  animation: write 0.5s linear forwards 8.25s; }
-.loaded #path_slogan_16 {
-  animation: write 0.5s linear forwards 8.35s; }
-.loaded #path_slogan_17 {
-  animation: write 0.5s linear forwards 8.45s; }
-.loaded #path_slogan_18 {
-  animation: write 0.5s linear forwards 8.55s; }
-.loaded #path_slogan_19 {
-  animation: write 0.5s linear forwards 8.65s; }
+.loaded #path_slogan {
+  stroke-dashoffset: 3000;
+  stroke-dasharray: 3000;
+  animation: write 3.8s linear forwards 6.35s; }
 
 .loaded #text_developer #path_text_developer {
   stroke-width: 4px;
-  animation: write 2.5s linear forwards 1.9s; }
+  animation: write 2s linear forwards 2.1s; }
 
 .loaded #arrow_developer #path_arrow_developer {
-  animation: write 0.5s linear forwards 1.6s; }
+  animation: write 0.7s linear forwards 1.6s; }
 
 .loaded #text_designer #path_text_designer {
   stroke-dashoffset: 2000;
   stroke-dasharray: 2000;
-  animation: write 1.25s linear forwards 4.8s; }
+  animation: write 1.25s linear forwards 4.6s; }
 
 .loaded #arrow_designer #path_arrow_designer {
-  animation: write 0.5s linear forwards 4.1s; }
+  animation: write 0.7s linear forwards 4.1s; }
 
 .loaded #splash-logo {
   transform: translate3d(0, -100%, 0);
   animation: slideInDown 0.35s ease forwards 1s; }
 .loaded #splash-developer .name {
-  animation-delay: 3.8s;
+  animation-delay: 3.6s;
   opacity: 0;
   animation-fill-mode: forwards; }
 .loaded #splash-designer .name {
-  animation-delay: 6.25s;
+  animation-delay: 5.85s;
   opacity: 0;
   animation-fill-mode: forwards; }
 
