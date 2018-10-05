@@ -2957,6 +2957,9 @@ body {
 .loaded #text_developer #path_per {
   animation: write 0.5s linear forwards 2.7s; }
 
+.loaded #arrow_developer #path_arrow_developer {
+  animation: write 0.5s linear forwards 2s; }
+
 #text_designer #path_text_designer {
   stroke-dashoffset: 2000;
   stroke-dasharray: 2000;
