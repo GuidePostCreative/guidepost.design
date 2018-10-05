@@ -3169,6 +3169,26 @@ body {
     width: 0; }
   .journal-entry .journal-number .counter {
     padding: 0 20px 0 10px; } }
+.about-us-background {
+  height: 320px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$from-color+0,adadad+100 */
+  background: #F5f5f5;
+  background: -moz-linear-gradient(left, #F5f5f5 0%, #b3b3b3 100%);
+  background: -webkit-linear-gradient(left, #F5f5f5 0%, #b3b3b3 100%);
+  background: linear-gradient(to right, #F5f5f5 0%, #b3b3b3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color',GradientType=1 ); }
+
+.about-us-picture {
+  height: 320px;
+  background-image: url("/assets/img/about-us/pictures/picture_up_about-us.jpg");
+  background-size: 1060px auto;
+  background-position: 50% 0%;
+  background-repeat: no-repeat; }
+
+.about-us-title {
+  color: #4FB0BB;
+  font-size: 96px; }
+
 .footer {
   padding: 32px 16px;
   background-color: #0C2C2D;
