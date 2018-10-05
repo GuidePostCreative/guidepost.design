@@ -3067,31 +3067,65 @@ body {
     .entry-preview .read-more-btn:hover .arrow-link {
       transform: scale(1.5, 1); }
 
-.journal-item {
-  border-left: 2px solid #E5E5E5;
-  position: relative;
-  margin-left: -50px;
-  padding-left: 50px;
-  padding-top: 10px;
-  padding-bottom: 100px; }
-  .journal-item .journal-number {
-    font-size: 32px;
-    background: white;
-    padding: 0 5px;
-    background: white;
-    text-align: relative;
-    position: absolute;
-    line-height: 64px;
-    left: -24px;
-    top: -30px; }
-  .journal-item .journal-date {
-    color: #4FB0BB;
-    margin-top: 16px; }
-  .journal-item .journal-caption {
-    text-align: center; }
-  .journal-item img {
+.journal-entry {
+  position: relative; }
+  .journal-entry .journal-number {
+    height: 42px; }
+    .journal-entry .journal-number .left-body {
+      background: #4FB0BB;
+      width: 10%;
+      float: left;
+      height: 42px; }
+    .journal-entry .journal-number .counter {
+      float: left;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      height: 42px;
+      background: #4FB0BB;
+      padding: 0 20px; }
+      .journal-entry .journal-number .counter span {
+        position: relative;
+        top: 5px;
+        line-height: 0.9em; }
+    .journal-entry .journal-number .point {
+      float: left;
+      width: 0;
+      height: 0;
+      border-top: 21px solid transparent;
+      border-bottom: 21px solid transparent;
+      border-left: 21px solid #4FB0BB; }
+    .journal-entry .journal-number:after {
+      content: "";
+      clear: both; }
+  .journal-entry .journal-title {
+    font-size: 64px;
+    margin: 16px 0; }
+  .journal-entry .journal-content {
+    margin-bottom: 96px; }
+  .journal-entry .journal-date {
+    margin: 32px 0 0;
+    color: #4FB0BB; }
+  .journal-entry .modal-image {
+    max-width: 100%; }
+  .journal-entry .journal-caption {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 11px; }
+  .journal-entry figure {
+    margin-bottom: 16px; }
+    .journal-entry figure p {
+      margin: 0; }
+  .journal-entry img {
     max-width: 100%; }
 
+@media (max-width: 1060px) {
+  .journal-entry .journal-number .left-body {
+    width: 0; }
+  .journal-entry .journal-number .counter {
+    padding: 0 20px 0 10px; } }
 .footer {
   padding: 32px 16px;
   background-color: #0C2C2D;

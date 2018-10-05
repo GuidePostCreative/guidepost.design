@@ -1,8 +1,29 @@
 ---
 layout: content
 ---
-<div class="journal-item">
-  <span class="journal-number">{{ page.number }}</span>
-  {{ content }}
-  {% include disqus.html %}
+<div class="journal-entry">
+  <div class="journal-number">
+      <div class="left-body"></div>
+      <div class="counter">
+        <span>{{ page.number }}</span>
+      </div>
+      <div class="point"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <div class="row">
+          <div class="col-12">
+              <h1 class="journal-title">{{ page.title }}</h1>
+              <p class="journal-date">{{ page.ddate }}</p>
+          </div>
+        </div>
+        <div class="journal-content">
+          {{ content }}
+        </div>
+        {% include disqus.html %}
+      </div>
+    </div>
+  </div>
 </div>

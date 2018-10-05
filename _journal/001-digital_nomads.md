@@ -6,6 +6,7 @@ ddate: "17 | September | 2018"
 summary: We have meetings in London, Sydney & Santiago timezones with our clients. Oh, and in two more week, we will become Estonia e-residents.
 active_menu: journal
 categories: jekyll update
+body_class: journal-body
 ---
 {::options parse_block_html="true" /}
 
@@ -13,25 +14,17 @@ categories: jekyll update
 <div class="col-6">
 
 
-# Digital Nomads
-{: .journal-title}
-
-
 <figure>
 
-![Great Wall of China](/assets/img/journal/002/raj-eiamworakul-386769-unsplash.jpg){: .modal-image}
+![Photo by Robert Nyman on Unsplash.](/assets/img/journal/002/raj-eiamworakul-386769-unsplash.jpg){: .modal-image}
 
-
-**Credits:** Photo by Robert Nyman on Unsplash.
+Photo by Robert Nyman on Unsplash.
 {: .journal-caption}
 
 </figure>
 
 </div>
 <div class="col-6">
-
-September / 20 / 2018
-{: .journal-date}
 
 We haven't decided yet from which co-work we'll be working in Bangkok where we are staying for 10 days before going to China for a month. We need to find time to visit the places we want to visit, go to a thai cooking class and study for the [online courses][product] we are [enrolled in][crypto]. We have meetings in London, Sydney & Santiago timezones with our clients. Oh, and in two more week, we will become Estonia e-residents.
 

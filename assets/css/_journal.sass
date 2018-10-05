@@ -72,29 +72,72 @@ $jounral-line-color: lighten($secondary_color_2, 45%)
       .arrow-link
         transform: scale(1.5, 1)
 
+$journal-number-size: 2 * $font-size
+$journal-number-margin: 5px
+$journal-number-height: $journal-number-size + (2 * $journal-number-margin)
 
-.journal-item
-  border-left: 2px solid $primary_color_1
+.journal-entry
   position: relative
-  margin-left: -50px
-  padding-left: 50px
-  padding-top: 10px
-  padding-bottom: 100px
   .journal-number
-    font-size: 2 * $font-size
-    background: white
-    padding: 0 5px
-    background: white
-    text-align: relative
-    position: absolute
-    line-height: 4 * $font-size
-    left: -24px
-    top: -30px
+    height: $journal-number-height
+    .left-body
+      background: $secondary_color_2
+      width: percentage(1/10)
+      float: left
+      height: $journal-number-height
+    .counter
+      float: left
+      font-size: $journal-number-size
+      font-weight: bold
+      color: white
+      height: $journal-number-height
+      background: $secondary_color_2
+      padding: 0 20px
+      span
+        position: relative
+        top: $journal-number-margin
+        line-height: 0.9em
 
+    .point
+      float: left
+      width: 0
+      height: 0
+      border-top: $journal-number-height / 2 solid transparent
+      border-bottom: $journal-number-height / 2 solid transparent
+      border-left: $journal-number-height / 2 solid $secondary_color_2
+    &:after
+      content: ""
+      clear: both
+
+  .journal-title
+    font-size: $font-size * 4
+    margin: $gutter 0
+  .journal-content
+    margin-bottom: $gutter * 6
   .journal-date
-    color: $link-color
-    margin-top: $gutter
+    margin: 2 * $gutter 0 0
+    color: $secondary_color_2
+  .modal-image
+    max-width: 100%
   .journal-caption
-    text-align: center
+    text-align: left
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: normal
+    font-size: round($font-size * 0.7)
+  figure
+    margin-bottom: $gutter
+    p
+      margin: 0
   img
     max-width: 100%
+
+
+@media (max-width: $page_width)
+  .journal-entry
+    .journal-number
+      .left-body
+        width: 0
+      .counter
+
+        padding: 0 20px 0 10px
