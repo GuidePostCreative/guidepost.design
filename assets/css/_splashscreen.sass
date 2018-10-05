@@ -203,6 +203,9 @@ $animation-dev-text-speed: 0.5s
 $animation-dev-arrow-delay: 2s
 $animation-dev-arrow-speed: 0.5s
 
+$animation-des-arrow-delay: 2s
+$animation-des-arrow-speed: 0.5s
+
 @keyframes write
   100%
     stroke-dashoffset: 100
@@ -245,6 +248,11 @@ $animation-dev-arrow-speed: 0.5s
       stroke-dashoffset: 2000
       stroke-dasharray: 2000
       animation: write 2s linear forwards $animation-dev-text-delay
+
+.loaded
+  #arrow_designer
+    #path_arrow_designer   
+      animation: write $animation-des-arrow-speed linear forwards $animation-des-arrow-delay      
 
 
 .loaded
