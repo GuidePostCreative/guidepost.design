@@ -3159,25 +3159,80 @@ body {
     width: 0; }
   .journal-entry .journal-number .counter {
     padding: 0 20px 0 10px; } }
-.about-us-background {
-  height: 320px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$from-color+0,adadad+100 */
-  background: #F5f5f5;
-  background: -moz-linear-gradient(left, #F5f5f5 0%, #b3b3b3 100%);
-  background: -webkit-linear-gradient(left, #F5f5f5 0%, #b3b3b3 100%);
-  background: linear-gradient(to right, #F5f5f5 0%, #b3b3b3 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from-color', endColorstr='$to-color',GradientType=1 ); }
+.about-us-header {
+  height: 280px; }
 
 .about-us-picture {
-  height: 320px;
+  height: 280px;
   background-image: url("/assets/img/about-us/pictures/picture_up_about-us.jpg");
-  background-size: 1060px auto;
-  background-position: 50% 0%;
-  background-repeat: no-repeat; }
+  background-size: cover;
+  background-position: 0% 60%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-blend-mode: saturation; }
 
 .about-us-title {
-  color: #4FB0BB;
-  font-size: 96px; }
+  font-size: 160px;
+  text-align: center; }
+  .about-us-title.top {
+    margin: 165px 0 0;
+    color: #0C2C2D; }
+  .about-us-title.bottom {
+    color: #4FB0BB;
+    margin-top: -115px;
+    z-index: -1; }
+
+.page.about-us {
+  padding-top: 0;
+  background-image: url("/assets/img/about-us/icons/background_toolbox_web.svg");
+  background-size: cover;
+  background-position: center bottom; }
+
+.profile .profile-picture-container {
+  border: 6px solid #1B708A;
+  border-radius: 50%;
+  width: 236px;
+  height: 236px; }
+  .profile .profile-picture-container .profile-picture {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 8px solid white; }
+.profile .profile-header {
+  height: 70px;
+  margin: 32px 0; }
+  .profile .profile-header .profile-name.francisco img {
+    height: 28px;
+    position: relative;
+    bottom: 2px; }
+  .profile .profile-header .profile-name.isabel img {
+    height: 36px; }
+  .profile .profile-header .profile-social-networks li {
+    display: inline;
+    list-style-type: none; }
+    .profile .profile-header .profile-social-networks li a {
+      text-decoration: none;
+      margin-right: 10px; }
+      .profile .profile-header .profile-social-networks li a:hover {
+        opacity: 0.8; }
+  .profile .profile-header .profile-social-networks .social-network-icon {
+    width: 32px; }
+.profile .profile-content .profile-bio {
+  line-height: 1.5em; }
+.profile .profile-content .profile-tools-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1B708A; }
+.profile .profile-content .profile-tools-text {
+  font-size: 16px;
+  color: #1B708A; }
+.profile .profile-content .profile-tools-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .profile .profile-content .profile-tools-icons .profile-tools-icon {
+    display: inline;
+    margin: 0 12px 12px 0; }
 
 .footer {
   padding: 64px 0;
