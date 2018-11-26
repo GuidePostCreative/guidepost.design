@@ -2631,6 +2631,15 @@ strong {
 em {
   font-style: italic; }
 
+.align-right {
+  align: right; }
+
+.align-left {
+  align: left; }
+
+.align-center {
+  align: center; }
+
 body, html {
   height: 100%;
   width: 100%; }
@@ -3171,11 +3180,136 @@ body {
   font-size: 96px; }
 
 .footer {
-  padding: 32px 16px;
+  padding: 64px 0;
   background-color: #0C2C2D;
   background-image: url(/assets/img/footer/pattern_dot.svg);
   color: #E5E5E5; }
+  .footer .mountains {
+    background-size: cover;
+    background-position: center;
+    height: 460px;
+    margin-bottom: -128px; }
+    .footer .mountains.step-1 {
+      background-image: url(/assets/img/footer/mountain-climbing-1.svg); }
+    .footer .mountains.step-2 {
+      background-image: url(/assets/img/footer/mountain-climbing-2.svg); }
+    .footer .mountains.step-3 {
+      background-image: url(/assets/img/footer/mountain-climbing-3.svg); }
+    .footer .mountains.step-4 {
+      background-image: url(/assets/img/footer/mountain-climbing-4.svg); }
+    .footer .mountains.step-5 {
+      background-image: url(/assets/img/footer/mountain-climbing-5.svg); }
+  .footer .contact {
+    margin: 0 0 96px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; }
+    .footer .contact .col {
+      height: 100%; }
+    .footer .contact .newsletter .newsletter-title {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 16px; }
+    .footer .contact .newsletter .newsletter-slide {
+      position: relative;
+      height: 80px; }
+      .footer .contact .newsletter .newsletter-slide .newsletter-icon {
+        height: 80px; }
+      .footer .contact .newsletter .newsletter-slide .newsletter-form {
+        position: absolute;
+        left: -1000px;
+        top: 0;
+        height: 80px;
+        width: 400px;
+        background: #E5E5E5;
+        transition: all 0.3s; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
+          content: " ";
+          position: absolute;
+          height: 0;
+          width: 0;
+          left: 400px;
+          top: 0;
+          border: 40px solid transparent;
+          border-left: 26.6666666667px solid #E5E5E5;
+          z-index: 1; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
+          border: none;
+          width: 370px;
+          padding: 30px 15px;
+          color: #1B708A;
+          font-style: italic;
+          font-size: 24px;
+          background: none;
+          height: 20px; }
+          .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input:focus {
+            outline: none; }
+      .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
+        left: 0; }
+    .footer .contact .clock {
+      text-align: right; }
+      .footer .contact .clock .location {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1em; }
+      .footer .contact .clock .time {
+        font-size: 64px;
+        font-weight: bold;
+        line-height: 1em; }
+        .footer .contact .clock .time .time-divider.on {
+          opacity: 1; }
+        .footer .contact .clock .time .time-divider.off {
+          opacity: 0.3; }
+      .footer .contact .clock .date {
+        font-size: 16px;
+        text-transform: uppercase; }
+    .footer .contact #footer-guidepost-clock {
+      margin-bottom: 20px; }
+      .footer .contact #footer-guidepost-clock .location {
+        color: #D83830; }
+  .footer .credits {
+    text-align: center; }
+    .footer .credits a {
+      text-decoration: none;
+      color: inherit; }
+      .footer .credits a:hover {
+        text-decoration: underline; }
+    .footer .credits .footer-logo {
+      height: 24px;
+      width: 24px;
+      position: relative;
+      top: 5px; }
 
+@media (max-width: 500px) {
+  .footer .mountains {
+    height: 300px;
+    background-position-x: 25%;
+    margin-bottom: 0; }
+    .footer .mountains.step-3 {
+      background-position-x: 50%; }
+    .footer .mountains.step-4 {
+      background-position-x: 75%; }
+    .footer .mountains.step-5 {
+      background-position-x: 100%; }
+  .footer .contact {
+    flex-direction: column-reverse; }
+    .footer .contact .col {
+      width: 100%; }
+    .footer .contact .newsletter {
+      margin-top: 64px; }
+      .footer .contact .newsletter .newsletter-slide .newsletter-form {
+        left: 0;
+        width: 90%; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
+          left: 100%;
+          top: 0; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
+          width: 90%;
+          padding: 30px 15px; }
+      .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
+        left: 0; }
+    .footer .contact .clock {
+      text-align: center; } }
 .modal-image {
   cursor: pointer; }
 

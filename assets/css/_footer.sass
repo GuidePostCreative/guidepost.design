@@ -1,7 +1,160 @@
 @import 'variables'
 
+$footer-logo-height: 50px
+$newsletter-height: 80px
+$newsletter-width: 400px
+$newsletter-bg-color: $footer-color
+
+$newsletter-btn-height: 70px
+$newsletter-btn-width: 0
+
 .footer
-  padding: (2 * $gutter) $gutter
-  background-color: $footer_background
+  padding: (4 * $gutter) 0
+  background-color: $footer-background
   background-image: url(/assets/img/footer/pattern_dot.svg)
-  color: $footer_color
+  color: $footer-color
+
+  .mountains
+    background-size: cover
+    background-position: center
+    height: 460px
+    margin-bottom: -8 * $gutter
+
+    &.step-1
+      background-image: url(/assets/img/footer/mountain-climbing-1.svg)
+    &.step-2
+      background-image: url(/assets/img/footer/mountain-climbing-2.svg)
+    &.step-3
+      background-image: url(/assets/img/footer/mountain-climbing-3.svg)
+    &.step-4
+      background-image: url(/assets/img/footer/mountain-climbing-4.svg)
+    &.step-5
+      background-image: url(/assets/img/footer/mountain-climbing-5.svg)
+
+
+  .contact
+    margin: 0 0 6 * $gutter
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    .col
+      height: 100%
+    .newsletter
+      .newsletter-title
+        color: white
+        font-weight: bold
+        margin-bottom: $gutter
+      .newsletter-slide
+        position: relative
+        height: $newsletter-height
+        .newsletter-icon
+          height: $newsletter-height
+        .newsletter-form
+          position: absolute
+          left: -1000px
+          top: 0
+          height: $newsletter-height
+          width: $newsletter-width
+          background: $newsletter-bg-color
+          transition: all 0.3s
+
+          &:after
+            content: " "
+            position: absolute
+            height: 0
+            width: 0
+            left: $newsletter-width
+            top: 0
+            border: $newsletter-height / 2 solid transparent
+            border-left: $newsletter-height / 3 solid $newsletter-bg-color
+            z-index: 1
+
+          .newsletter-email-input
+            border: none
+            width: $newsletter-width - 30px
+            padding: 30px 15px
+            color: $secondary_color_1
+            font-style: italic
+            font-size: $font-size * 1.5
+            background: none
+            height: $newsletter-height - 60px
+            &:focus
+              outline: none
+
+        &:hover
+          .newsletter-form
+            left: 0
+    .clock
+      text-align: right
+      .location
+        font-weight: bold
+        font-size: $font-size
+        line-height: 1em
+      .time
+        font-size: $font-size-huge
+        font-weight: bold
+        line-height: 1em
+        .time-divider
+          &.on
+            opacity: 1
+          &.off
+            opacity: 0.3
+      .date
+        font-size: $font-size
+        text-transform: uppercase
+    #footer-guidepost-clock
+      margin-bottom: 20px
+      .location
+        color: $primary_color_3
+  .credits
+    text-align: center
+    a
+      text-decoration: none
+      color: inherit
+      &:hover
+        text-decoration: underline
+
+    .footer-logo
+      height: 24px
+      width: 24px
+      position: relative
+      top: 5px
+
+@media (max-width: 500px)
+  .footer
+    .mountains
+      height: 300px
+      background-position-x: 25%
+      margin-bottom: 0
+      &.step-3
+        background-position-x: 50%
+      &.step-4
+        background-position-x: 75%
+      &.step-5
+        background-position-x: 100%
+
+    .contact
+      flex-direction: column-reverse
+      .col
+        width: 100%
+
+      .newsletter
+        margin-top: 4 * $gutter
+        .newsletter-slide
+          .newsletter-form
+            left: 0
+            width: 90%
+
+            &:after
+              left: 100%
+              top: 0
+
+            .newsletter-email-input
+              width: 90%
+              padding: 30px 15px
+
+          &:hover
+            .newsletter-form
+              left: 0
+      .clock
+        text-align: center
