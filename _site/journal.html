@@ -234,7 +234,7 @@ Have a nice day :)
   gtag('config', 'UA-96857697-3');
 </script>
 </head>
-<body id="body">
+<body id="body" class="journal-body">
     <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
@@ -281,39 +281,122 @@ Have a nice day :)
     <div class="page">
   <div class="container">
     <div class="content">
-      <h1>Journal</h1>
-<p></p>
-
-
-
-  <div class="journal-listing">
-    <h3><a href="/journal/002-china"">The Great (fire)Wall of China</a></h3>
-    <p>
-</p>
+      <div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div class="journal-header">
+        <h1 class="title">Journal</h1>
+        <p class="slogan">Notes on things we've learned.</p>
+    </div>
   </div>
+</div>
 
-  <div class="journal-listing">
-    <h3><a href="/journal/001-smile"">Smile :)</a></h3>
-    <p>
-</p>
-  </div>
-
+<div class="entry-previews">
+  
+    <div class="entry-preview ">
+      <div class="row">
+        <div class="col-2 tablet-or-bigger"></div>
+        <div class="col-4">
+          <h3 class="number">02</h3>
+        </div>
+        <div class="col-4">
+          <h2 class="title"><a href="/journal/002-china">The Great (fire)Wall of China</a></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <p class="date">5 | October | 2018</p>
+            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+            <a href="/journal/002-china" class="read-more-btn">
+              <span>Read more</span>
+              <img src="/assets/img/icons/arrow.svg" alt="red arrow" class="arrow-link"/>
+            </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="entry-preview last">
+      <div class="row">
+        <div class="col-2 tablet-or-bigger"></div>
+        <div class="col-4">
+          <h3 class="number">01</h3>
+        </div>
+        <div class="col-4">
+          <h2 class="title"><a href="/journal/001-digital_nomads">Digital Nomads</a></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <p class="date">17 | September | 2018</p>
+            <p class="summary">We have meetings in London, Sydney & Santiago timezones with our clients. Oh, and in two more week, we will become Estonia e-residents.</p>
+            <a href="/journal/001-digital_nomads" class="read-more-btn">
+              <span>Read more</span>
+              <img src="/assets/img/icons/arrow.svg" alt="red arrow" class="arrow-link"/>
+            </a>
+        </div>
+      </div>
+    </div>
+  
+</div>
 
     </div>
   </div>
 </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="content">
-                <p style="text-align: center; opacity: 0.3"><img src="/assets/img/logos/imagetype_horizontal_white.svg" style="height: 80px"/></p>
-                <!-- <p style="text-align: center; opacity: 0.3; font-size: 12px">® All rights reserved</p> -->
+  <div class="mountains step-3"></div>
+  <div class="container">
+    <div class="content">
+      <div class="contact">
+        <div class="col">
+          <div class="newsletter">
+            <h3 class="newsletter-title">Newsletter</h3>
+            <div class="newsletter-slide">
+              <img class="newsletter-icon" src="/assets/img/footer/newsletter.svg"/>
+              <div class="newsletter-form">
+                <form action="https://guidepostcreative.us19.list-manage.com/subscribe/post?u=20fd62f82bfdeda0ba02007cc&amp;id=41c08b5c99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <input class="newsletter-email-input" name="EMAIL" type="email" placeholder="Leave us your email"/>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+        <div class="col">
+          <div class="clock" id="footer-guidepost-clock">
+            <div class="location"></div>
+            <div class="time"></div>
+            <div class="date"></div>
+          </div>
+          <div class="clock" id="footer-guest-clock">
+            <div class="location"></div>
+            <div class="time"></div>
+            <div class="date"></div>
+          </div>
+        </div>
+      </div>
+
+        <div class="credits">
+          <p><img src="/assets/img/logos/favicon_white.svg" class="footer-logo"/> Proudly made in <a href="https://duckduckgo.com/?q=Chile&t=h_&iax=images&ia=images" target="_blank">Chile</a> with ❤️</p>
+        </div>
+
+    </div>
+  </div>
+</footer>
+    <script type="text/javascript">
+        var guidepostLocation = "Koh Tao, TH";
+        var guidepostTimeZone = "Asia/Bangkok";
+        var guidepostLat = 10.081729;
+        var guidepostLng = 99.824654;
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/menu.js"></script>
-    <script type="text/javascript" src="/assets/js/uglipop.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js"></script>
     <script type="text/javascript" src="/assets/js/modal.js"></script>
+    <script type="text/javascript" src="/assets/js/clock.js"></script>
     <script type="text/javascript">
 
 window.addEventListener('load', function() {

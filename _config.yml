@@ -17,11 +17,11 @@ defaults:
       type: "pages"
     values:
       layout: "base"
-  - scope:
-      path: ""
-      type: "pages"
-    values:
       hiddable_header: "false"
+      guidepost_location: "Koh Tao, TH"
+      guidepost_timezone: "Asia/Bangkok"
+      guidepost_lat: "10.081729"
+      guidepost_lng: "99.824654"
 
 collections:
   journal:

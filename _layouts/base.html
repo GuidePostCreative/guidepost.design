@@ -32,7 +32,7 @@
     {% include loader_css.html %}
     {% include google_analytics.html %}
 </head>
-<body id="body">
+<body id="body" class="{{ page.body_class }}">
     {% include loader.html %}
     <div class="navbar {% if page.hiddable_header == true %}hiddable unpin{% endif %}" id="navbar">
         <div class="container">
@@ -73,17 +73,20 @@
         </div>
     </div>
     {{ content }}
-    <footer class="footer">
-        <div class="container">
-            <div class="content">
-                <p style="text-align: center; opacity: 0.3"><img src="/assets/img/logos/imagetype_horizontal_white.svg" style="height: 80px"/></p>
-                <!-- <p style="text-align: center; opacity: 0.3; font-size: 12px">® All rights reserved</p> -->
-            </div>
-        </div>
-    </footer>
+    {% include footer.html %}
+    <script type="text/javascript">
+        var guidepostLocation = "{{ page.guidepost_location }}";
+        var guidepostTimeZone = "{{ page.guidepost_timezone }}";
+        var guidepostLat = {{ page.guidepost_lat }};
+        var guidepostLng = {{ page.guidepost_lng }};
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/menu.js"></script>
-    <script type="text/javascript" src="/assets/js/uglipop.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js"></script>
     <script type="text/javascript" src="/assets/js/modal.js"></script>
+    <script type="text/javascript" src="/assets/js/clock.js"></script>
     {% include loader_js.html %}
 </body>
 </html>

@@ -1,0 +1,97 @@
+@import 'variables'
+
+
+$from-color: #F5f5f5
+$to-color: #b3b3b3
+$header-background-url: '/assets/img/about-us/pictures/picture_up_about-us.jpg'
+$page-background-url: '/assets/img/about-us/icons/background_toolbox_web.svg'
+
+$header-height: 280px
+
+.about-us-header
+  height: $header-height
+
+.about-us-picture
+  height: $header-height
+  background-image: url($header-background-url)
+  background-size: cover
+  background-position: 0% 60%
+  background-repeat: no-repeat
+  overflow: hidden
+  background-blend-mode: saturation
+
+.about-us-title
+  font-size: 160px
+  text-align: center
+
+  &.top
+    margin: 165px 0 0
+    color: $primary_color_2
+
+  &.bottom
+    color: $secondary_color_2
+    margin-top: -115px
+    z-index: -1
+
+.page.about-us
+  padding-top: 0
+  background-image: url($page-background-url)
+  background-size: cover
+  background-position: center bottom
+
+
+$profile-picture-width: 220px
+$profile-picture-border-width: 8px
+.profile
+  .profile-picture-container
+    border: 6px solid $secondary_color_1
+    border-radius: 50%
+    width: $profile-picture-width + 2 * $profile-picture-border-width
+    height: $profile-picture-width + 2 * $profile-picture-border-width
+    .profile-picture
+      width: $profile-picture-width
+      height: $profile-picture-width
+      border-radius: 50%
+      border: $profile-picture-border-width solid white
+  .profile-header
+    height: 70px
+    margin: 2 * $gutter 0
+    .profile-name
+      &.francisco
+        img
+          height: 28px
+          position: relative
+          bottom: 2px
+      &.isabel
+        img
+          height: 36px
+    .profile-social-networks
+      li
+        display: inline
+        list-style-type: none
+        a
+          text-decoration: none
+          margin-right: 10px
+          &:hover
+            opacity: 0.8
+
+      .social-network-icon
+        width: 32px
+  .profile-content
+    .profile-bio
+      line-height: 1.5em
+    .profile-tools-title
+      font-weight: bold
+      font-size: $font-size
+      color: $secondary_color_1
+    .profile-tools-text
+      font-size: $font-size
+      color: $secondary_color_1
+    .profile-tools-icons
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      .profile-tools-icon
+        // width: 40px
+        display: inline
+        margin: 0 12px 12px 0

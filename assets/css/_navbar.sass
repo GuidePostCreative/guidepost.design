@@ -25,7 +25,6 @@
   #navbar-logo
     margin: $gutter 0 0 $gutter
     height: $navbar-height - (2* $gutter)
-    
 
   .menu
     .menu-links
@@ -38,17 +37,17 @@
         line-height: $navbar-height
 
         a
-          color: $title-color
-          height: $navbar-height
+          color: $navbar-color
+          height: $navbar-height - 2px
           display: block
           padding: 0 $gutter
           text-decoration: none
           transition: all 0.3s
           &:hover
-            color: $link_color
+            color: $navbar-active-color
         &.active
           a
-            border-bottom: 2px solid $link-color
+            border-bottom: 2px solid $navbar-active-color
 
   #mobile-menu-btn
     height: 25px
@@ -58,6 +57,14 @@
     height: $navbar-height - 4 * $gutter
 
 @media (max-width: $page-width)
+  .navbar
+    height: $navbar-height-mobile
+    #navbar-logo
+      margin: $gutter 0 0 $gutter
+      height: $navbar-height-mobile - (2* $gutter)
+    #mobile-menu-btn
+      height: 20px
+      margin: 30px $gutter
   .menu
     .menu-links
       display: none !important

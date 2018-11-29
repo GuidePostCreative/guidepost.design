@@ -234,7 +234,7 @@ Have a nice day :)
   gtag('config', 'UA-96857697-3');
 </script>
 </head>
-<body id="body">
+<body id="body" class="journal-body">
     <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
@@ -281,26 +281,39 @@ Have a nice day :)
     <div class="page">
   <div class="container">
     <div class="content">
-      <div class="journal-item">
-  <span class="journal-number">02</span>
-  
+      <div class="journal-entry">
+  <div class="journal-number">
+      <div class="left-body"></div>
+      <div class="counter">
+        <span>02</span>
+      </div>
+      <div class="point"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <div class="row">
+          <div class="col-12">
+              <h1 class="journal-title">The Great (fire)Wall of China</h1>
+              <p class="journal-date">5 | October | 2018</p>
+          </div>
+        </div>
+        <div class="journal-content">
+          
 <div class="row">
   <div class="col-6">
 
-    <h1 class="journal-title" id="the-freat-fire-wall-of-china">The Freat (Fire)-Wall <br />of China</h1>
-
     <figure>
 
-      <p><img src="/assets/img/journal/002/raj-eiamworakul-386769-unsplash.jpg" alt="Great Wall of China" class="modal-image" /></p>
+      <p><img src="/assets/img/journal/002/raj-eiamworakul-386769-unsplash.jpg" alt="Photo by Robert Nyman on Unsplash." class="modal-image" /></p>
 
-      <p class="journal-caption"><strong>Credits:</strong> Photo by Robert Nyman on Unsplash.</p>
+      <p class="journal-caption">Photo by Robert Nyman on Unsplash.</p>
 
     </figure>
 
   </div>
   <div class="col-6">
-
-    <p class="journal-date">October / 24 / 2018</p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -309,7 +322,8 @@ Have a nice day :)
   </div>
 </div>
 
-  <div id="disqus_thread"></div>
+        </div>
+        <div id="disqus_thread"></div>
 <script>
 
 /**
@@ -329,22 +343,67 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    </div>
+  </div>
 </div>
+
     </div>
   </div>
 </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="content">
-                <p style="text-align: center; opacity: 0.3"><img src="/assets/img/logos/imagetype_horizontal_white.svg" style="height: 80px"/></p>
-                <!-- <p style="text-align: center; opacity: 0.3; font-size: 12px">® All rights reserved</p> -->
+  <div class="mountains step-"></div>
+  <div class="container">
+    <div class="content">
+      <div class="contact">
+        <div class="col">
+          <div class="newsletter">
+            <h3 class="newsletter-title">Newsletter</h3>
+            <div class="newsletter-slide">
+              <img class="newsletter-icon" src="/assets/img/footer/newsletter.svg"/>
+              <div class="newsletter-form">
+                <form action="https://guidepostcreative.us19.list-manage.com/subscribe/post?u=20fd62f82bfdeda0ba02007cc&amp;id=41c08b5c99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <input class="newsletter-email-input" name="EMAIL" type="email" placeholder="Leave us your email"/>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
+        <div class="col">
+          <div class="clock" id="footer-guidepost-clock">
+            <div class="location"></div>
+            <div class="time"></div>
+            <div class="date"></div>
+          </div>
+          <div class="clock" id="footer-guest-clock">
+            <div class="location"></div>
+            <div class="time"></div>
+            <div class="date"></div>
+          </div>
+        </div>
+      </div>
+
+        <div class="credits">
+          <p><img src="/assets/img/logos/favicon_white.svg" class="footer-logo"/> Proudly made in <a href="https://duckduckgo.com/?q=Chile&t=h_&iax=images&ia=images" target="_blank">Chile</a> with ❤️</p>
+        </div>
+
+    </div>
+  </div>
+</footer>
+    <script type="text/javascript">
+        var guidepostLocation = "";
+        var guidepostTimeZone = "";
+        var guidepostLat = ;
+        var guidepostLng = ;
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/menu.js"></script>
-    <script type="text/javascript" src="/assets/js/uglipop.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js"></script>
     <script type="text/javascript" src="/assets/js/modal.js"></script>
+    <script type="text/javascript" src="/assets/js/clock.js"></script>
     <script type="text/javascript">
 
 window.addEventListener('load', function() {

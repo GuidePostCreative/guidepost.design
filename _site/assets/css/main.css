@@ -2601,7 +2601,7 @@ body {
   font-family: "Bitter", serif;
   font-size: 16px;
   line-height: 1.6em;
-  color: #414042; }
+  color: #4F4F4F; }
 
 h1, h2, h3 {
   color: #0C2C2D;
@@ -2615,7 +2615,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #414042;
+  color: #4F4F4F;
   text-decoration: underline;
   text-decoration-color: #4FB0BB;
   text-decoration-style: solid; }
@@ -2630,6 +2630,15 @@ strong {
 
 em {
   font-style: italic; }
+
+.align-right {
+  align: right; }
+
+.align-left {
+  align: left; }
+
+.align-center {
+  align: center; }
 
 body, html {
   height: 100%;
@@ -2648,7 +2657,7 @@ body {
   padding: 0 16px; }
 
 .page {
-  margin: 64px 0;
+  padding: 64px 0;
   flex: 1 0 auto; }
 
 .footer {
@@ -2684,15 +2693,15 @@ body {
       line-height: 96px; }
       .navbar .menu .menu-links li a {
         color: #0C2C2D;
-        height: 96px;
+        height: 94px;
         display: block;
         padding: 0 16px;
         text-decoration: none;
         transition: all 0.3s; }
         .navbar .menu .menu-links li a:hover {
-          color: #4FB0BB; }
+          color: #1B708A; }
       .navbar .menu .menu-links li.active a {
-        border-bottom: 2px solid #4FB0BB; }
+        border-bottom: 2px solid #1B708A; }
   .navbar #mobile-menu-btn {
     height: 25px;
     margin: 36px 16px; }
@@ -2700,6 +2709,15 @@ body {
     height: 32px; }
 
 @media (max-width: 1060px) {
+  .navbar {
+    height: 80px; }
+    .navbar #navbar-logo {
+      margin: 16px 0 0 16px;
+      height: 48px; }
+    .navbar #mobile-menu-btn {
+      height: 20px;
+      margin: 30px 16px; }
+
   .menu .menu-links {
     display: none !important;
     padding: 16px; }
@@ -2989,37 +3007,364 @@ body {
     .breadcrumbs li:last-child:after {
       content: ""; }
 
-.journal-item {
-  border-left: 2px solid #E5E5E5;
-  position: relative;
-  margin-left: -50px;
-  padding-left: 50px;
-  padding-top: 10px;
-  padding-bottom: 100px; }
-  .journal-item .journal-number {
-    font-size: 32px;
-    background: white;
-    padding: 0 5px;
-    background: white;
-    text-align: relative;
-    position: absolute;
-    line-height: 64px;
-    left: -24px;
-    top: -30px; }
-  .journal-item .journal-date {
-    color: #4FB0BB;
-    margin-top: 16px; }
-  .journal-item .journal-caption {
-    text-align: center; }
-  .journal-item img {
+.journal-body {
+  background: #0C2C2D;
+  background-image: url(/assets/img/footer/pattern_dot.svg); }
+  .journal-body .page {
+    margin: 0;
+    padding-top: 0; }
+    .journal-body .page .content {
+      background-color: white;
+      background-image: linear-gradient(0deg, transparent 1.5em, #f5fafb 1.5em, #f5fafb 1.6em);
+      background-size: 100% 1.6em;
+      padding-top: 64px;
+      padding-bottom: 64px;
+      border-radius: 50px;
+      margin: 96px 0 0; }
+  .journal-body .footer {
+    background: none; }
+
+.journal-header .title {
+  font-size: 96px;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #1B708A; }
+.journal-header .slogan {
+  font-size: 16px;
+  text-align: center; }
+
+.entry-preview {
+  padding: 96px 0;
+  border-bottom: 1px dashed #4FB0BB; }
+  .entry-preview.last {
+    border-bottom: none; }
+  .entry-preview .number {
+    color: #E5E5E5;
+    font-size: 240px;
+    font-weight: bold;
+    line-height: 0.7em; }
+  .entry-preview .title {
+    font-size: 48px;
+    line-height: 1.3em;
+    font-weight: bold;
+    margin: 0; }
+    .entry-preview .title a {
+      color: #0C2C2D;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out; }
+      .entry-preview .title a:hover {
+        color: #4FB0BB; }
+  .entry-preview .date {
+    margin: 32px 0 0;
+    color: #4FB0BB; }
+  .entry-preview .read-more-btn {
+    color: #D83830;
+    text-decoration: none;
+    font-style: italic; }
+    .entry-preview .read-more-btn .arrow-link {
+      display: block;
+      transform-origin: 0 50%;
+      transition: all 0.2s ease-in-out; }
+    .entry-preview .read-more-btn:hover .arrow-link {
+      transform: scale(1.5, 1); }
+
+.journal-entry {
+  position: relative; }
+  .journal-entry .journal-number {
+    height: 42px; }
+    .journal-entry .journal-number .left-body {
+      background: #4FB0BB;
+      width: 10%;
+      float: left;
+      height: 42px; }
+    .journal-entry .journal-number .counter {
+      float: left;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      height: 42px;
+      background: #4FB0BB;
+      padding: 0 20px; }
+      .journal-entry .journal-number .counter span {
+        position: relative;
+        top: 5px;
+        line-height: 0.9em; }
+    .journal-entry .journal-number .point {
+      float: left;
+      width: 0;
+      height: 0;
+      border-top: 21px solid transparent;
+      border-bottom: 21px solid transparent;
+      border-left: 21px solid #4FB0BB; }
+    .journal-entry .journal-number:after {
+      content: "";
+      clear: both; }
+  .journal-entry .journal-title {
+    font-size: 64px;
+    margin: 16px 0; }
+  .journal-entry .journal-content {
+    margin-bottom: 96px; }
+  .journal-entry .journal-date {
+    margin: 32px 0 0;
+    color: #4FB0BB; }
+  .journal-entry .modal-image {
+    max-width: 100%; }
+  .journal-entry .journal-caption {
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 11px; }
+  .journal-entry figure {
+    margin-bottom: 16px; }
+    .journal-entry figure p {
+      margin: 0; }
+  .journal-entry img {
     max-width: 100%; }
 
+@media (max-width: 1060px) {
+  .journal-body {
+    background: none; }
+    .journal-body .page .content {
+      margin-top: 0; }
+    .journal-body .footer {
+      background-color: #0C2C2D;
+      background-image: url(/assets/img/footer/pattern_dot.svg); }
+
+  .entry-preview {
+    padding: 16px 0 32px; }
+    .entry-preview.last {
+      border-bottom: none; }
+    .entry-preview .number {
+      font-size: 240px;
+      text-align: left;
+      margin-bottom: 16px;
+      margin-left: -16px; }
+    .entry-preview .title {
+      font-size: 48px;
+      margin: 0; }
+    .entry-preview .date {
+      margin: 0 0 16px; }
+
+  .journal-header {
+    margin-bottom: 32px; }
+    .journal-header .title {
+      font-size: 64px;
+      text-align: center; }
+    .journal-header .slogan {
+      font-size: 16px;
+      text-align: center; }
+
+  .journal-entry .journal-number .left-body {
+    width: 0; }
+  .journal-entry .journal-number .counter {
+    padding: 0 20px 0 10px; } }
+.about-us-header {
+  height: 280px; }
+
+.about-us-picture {
+  height: 280px;
+  background-image: url("/assets/img/about-us/pictures/picture_up_about-us.jpg");
+  background-size: cover;
+  background-position: 0% 60%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-blend-mode: saturation; }
+
+.about-us-title {
+  font-size: 160px;
+  text-align: center; }
+  .about-us-title.top {
+    margin: 165px 0 0;
+    color: #0C2C2D; }
+  .about-us-title.bottom {
+    color: #4FB0BB;
+    margin-top: -115px;
+    z-index: -1; }
+
+.page.about-us {
+  padding-top: 0;
+  background-image: url("/assets/img/about-us/icons/background_toolbox_web.svg");
+  background-size: cover;
+  background-position: center bottom; }
+
+.profile .profile-picture-container {
+  border: 6px solid #1B708A;
+  border-radius: 50%;
+  width: 236px;
+  height: 236px; }
+  .profile .profile-picture-container .profile-picture {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 8px solid white; }
+.profile .profile-header {
+  height: 70px;
+  margin: 32px 0; }
+  .profile .profile-header .profile-name.francisco img {
+    height: 28px;
+    position: relative;
+    bottom: 2px; }
+  .profile .profile-header .profile-name.isabel img {
+    height: 36px; }
+  .profile .profile-header .profile-social-networks li {
+    display: inline;
+    list-style-type: none; }
+    .profile .profile-header .profile-social-networks li a {
+      text-decoration: none;
+      margin-right: 10px; }
+      .profile .profile-header .profile-social-networks li a:hover {
+        opacity: 0.8; }
+  .profile .profile-header .profile-social-networks .social-network-icon {
+    width: 32px; }
+.profile .profile-content .profile-bio {
+  line-height: 1.5em; }
+.profile .profile-content .profile-tools-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1B708A; }
+.profile .profile-content .profile-tools-text {
+  font-size: 16px;
+  color: #1B708A; }
+.profile .profile-content .profile-tools-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .profile .profile-content .profile-tools-icons .profile-tools-icon {
+    display: inline;
+    margin: 0 12px 12px 0; }
+
 .footer {
-  padding: 32px 16px;
+  padding: 64px 0;
   background-color: #0C2C2D;
   background-image: url(/assets/img/footer/pattern_dot.svg);
   color: #E5E5E5; }
+  .footer .mountains {
+    background-size: cover;
+    background-position: center;
+    height: 460px;
+    margin-bottom: -128px; }
+    .footer .mountains.step-1 {
+      background-image: url(/assets/img/footer/mountain-climbing-1.svg); }
+    .footer .mountains.step-2 {
+      background-image: url(/assets/img/footer/mountain-climbing-2.svg); }
+    .footer .mountains.step-3 {
+      background-image: url(/assets/img/footer/mountain-climbing-3.svg); }
+    .footer .mountains.step-4 {
+      background-image: url(/assets/img/footer/mountain-climbing-4.svg); }
+    .footer .mountains.step-5 {
+      background-image: url(/assets/img/footer/mountain-climbing-5.svg); }
+  .footer .contact {
+    margin: 0 0 96px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; }
+    .footer .contact .col {
+      height: 100%; }
+    .footer .contact .newsletter .newsletter-title {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 16px; }
+    .footer .contact .newsletter .newsletter-slide {
+      position: relative;
+      height: 80px; }
+      .footer .contact .newsletter .newsletter-slide .newsletter-icon {
+        height: 80px; }
+      .footer .contact .newsletter .newsletter-slide .newsletter-form {
+        position: absolute;
+        left: -1000px;
+        top: 0;
+        height: 80px;
+        width: 400px;
+        background: #E5E5E5;
+        transition: all 0.3s; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
+          content: " ";
+          position: absolute;
+          height: 0;
+          width: 0;
+          left: 400px;
+          top: 0;
+          border: 40px solid transparent;
+          border-left: 26.6666666667px solid #E5E5E5;
+          z-index: 1; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
+          border: none;
+          width: 370px;
+          padding: 30px 15px;
+          color: #1B708A;
+          font-style: italic;
+          font-size: 24px;
+          background: none;
+          height: 20px; }
+          .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input:focus {
+            outline: none; }
+      .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
+        left: 0; }
+    .footer .contact .clock {
+      text-align: right; }
+      .footer .contact .clock .location {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1em; }
+      .footer .contact .clock .time {
+        font-size: 64px;
+        font-weight: bold;
+        line-height: 1em; }
+        .footer .contact .clock .time .time-divider.on {
+          opacity: 1; }
+        .footer .contact .clock .time .time-divider.off {
+          opacity: 0.3; }
+      .footer .contact .clock .date {
+        font-size: 16px;
+        text-transform: uppercase; }
+    .footer .contact #footer-guidepost-clock {
+      margin-bottom: 20px; }
+      .footer .contact #footer-guidepost-clock .location {
+        color: #D83830; }
+  .footer .credits {
+    text-align: center; }
+    .footer .credits a {
+      text-decoration: none;
+      color: inherit; }
+      .footer .credits a:hover {
+        text-decoration: underline; }
+    .footer .credits .footer-logo {
+      height: 24px;
+      width: 24px;
+      position: relative;
+      top: 5px; }
 
+@media (max-width: 500px) {
+  .footer .mountains {
+    height: 300px;
+    background-position-x: 25%;
+    margin-bottom: 0; }
+    .footer .mountains.step-3 {
+      background-position-x: 50%; }
+    .footer .mountains.step-4 {
+      background-position-x: 75%; }
+    .footer .mountains.step-5 {
+      background-position-x: 100%; }
+  .footer .contact {
+    flex-direction: column-reverse; }
+    .footer .contact .col {
+      width: 100%; }
+    .footer .contact .newsletter {
+      margin-top: 64px; }
+      .footer .contact .newsletter .newsletter-slide .newsletter-form {
+        left: 0;
+        width: 90%; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
+          left: 100%;
+          top: 0; }
+        .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
+          width: 90%;
+          padding: 30px 15px; }
+      .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
+        left: 0; }
+    .footer .contact .clock {
+      text-align: center; } }
 .modal-image {
   cursor: pointer; }
 
