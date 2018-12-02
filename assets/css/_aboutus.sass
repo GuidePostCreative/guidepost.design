@@ -39,10 +39,11 @@ $profile-picture-border-width: 8px
 .about-us-lead
   line-height: 1.5em
   text-align: center
-  max-width: 600px
+  max-width: 630px
   margin: 0 auto
-
-
+  padding: 0 $gutter
+  span
+    display: block
 
 .page.about-us
   background-size: 1450px
@@ -127,6 +128,10 @@ $profile-picture-border-width: 8px
 
     &.bottom
       margin-top: -42px
+
+  .about-us-lead
+    span
+      display: inline
 
   .page.about-us
     background-size: 1200px
