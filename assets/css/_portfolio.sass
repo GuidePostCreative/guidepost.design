@@ -4,6 +4,11 @@ $header-height: 300px
 $header-height-mobile: 240px
 $header-background-url: '/assets/img/portfolio/header-background.svg'
 
+$portfolio-item-header-height: 333px
+$arrow-height: 54px
+$arrow-height-mobile: 40px
+
+
 // HEADER
 .portfolio-header
   height: $header-height
@@ -35,8 +40,6 @@ $header-background-url: '/assets/img/portfolio/header-background.svg'
       font-size: 60px
       text-align: center
 
-$portfolio-item-header-height: 333px
-$arrow-height: 54px
 // ITEM: HEADER
 .portfolio-item
   margin-bottom: 4 * $gutter
@@ -71,6 +74,7 @@ $arrow-height: 54px
           font-size: 32px
           font-style: italic
           color: $text-color
+
     .portfolio-arrow
       height: $arrow-height
       display: inline-block
@@ -120,3 +124,36 @@ $arrow-height: 54px
         &:before
           right: -1000px
           background: $secondary_color_1
+  &-content
+    padding: 4 * $gutter 0
+    &.light-blue
+      background: #EBEFF2
+
+    .topics
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+
+      &-item
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 0 5px
+        &-img-container
+          height: 50px
+          margin-bottom: $gutter
+        &-img
+          height: 50px
+          margin: 0 auto
+        &-text
+          text-align: center
+          font-weight: bold
+          color: $secondary_color_1
+
+@media (max-width: $page-threashold-mobile)
+  .portfolio-item-header
+    &-content
+      flex-direction: column
+
+    .portfolio-arrow
+      height: $arrow-height-mobile
