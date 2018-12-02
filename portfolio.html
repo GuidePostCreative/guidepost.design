@@ -1,14 +1,33 @@
 ---
-layout: content
+layout: base
 title: Porfolio | GuidePost
 description: Learn about some projects we've worked on? Check them out!
 keywords: influencer marketing platform, multilingual designs for international markets, won bidding against 20+ competitors, developed the soul of the brand.
 active_menu: portfolio
 mountain_step: 4
 ---
-<h1>Portfolio</h1>
-<ul>
-{% for item in site.portfolio %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-{% endfor %}
-</ul>
+<div class="portfolio-header">
+  <div class="portfolio-header-background">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="portfolio-header-title">Portfolio</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include portfolio-items/beeinfluencer.html %}
+{% include portfolio-items/concha-y-toro.html %}
+{% include portfolio-items/cdecsic.html %}
+{% include portfolio-items/late.html %}
+
+<div class="page">
+  <div class="container">
+    <div class="content">
+
+
+    </div>
+  </div>
+</div>

@@ -2663,6 +2663,11 @@ body {
 .footer {
   flex-shrink: 0; }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
 .navbar {
   height: 96px;
   transition: transform 0.5s ease-in-out;
@@ -3248,6 +3253,108 @@ body {
 
   .page.about-us {
     background-size: 1200px; } }
+.portfolio-header {
+  height: 300px;
+  margin: 16px 0 96px; }
+  .portfolio-header-background {
+    height: 300px;
+    background-image: url("/assets/img/portfolio/header-background.svg");
+    background-size: 1500px;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  .portfolio-header-title {
+    font-size: 96px;
+    text-align: left;
+    margin: 88px 0 0;
+    color: #4F4F4F; }
+
+@media (max-width: 480px) {
+  .portfolio-header {
+    height: 240px; }
+    .portfolio-header-background {
+      height: 240px;
+      background: none; }
+    .portfolio-header-title {
+      font-size: 60px;
+      text-align: center; } }
+.portfolio-item {
+  margin-bottom: 64px; }
+  .portfolio-item:after {
+    content: " ";
+    clear: both; }
+  .portfolio-item-header {
+    background-repeat: none;
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 333px; }
+    .portfolio-item-header.item-04 {
+      background-image: url(/assets/img/portfolio/beeinfluencer/number.svg); }
+    .portfolio-item-header.item-03 {
+      background-image: url(/assets/img/portfolio/concha-y-toro/number.svg); }
+    .portfolio-item-header.item-02 {
+      background-image: url(/assets/img/portfolio/cdecsic/number.svg); }
+    .portfolio-item-header.item-01 {
+      background-image: url(/assets/img/portfolio/late/number.svg); }
+    .portfolio-item-header-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 333px;
+      justify-content: space-around; }
+      .portfolio-item-header-content .project-client .logo {
+        position: relative;
+        max-width: 300px; }
+      .portfolio-item-header-content .project-highlight .name {
+        font-size: 32px;
+        font-style: italic;
+        color: #4F4F4F; }
+    .portfolio-item-header .portfolio-arrow {
+      height: 54px;
+      display: inline-block;
+      position: relative; }
+      .portfolio-item-header .portfolio-arrow .handwritten-name {
+        margin: 0 16px; }
+      .portfolio-item-header .portfolio-arrow:after {
+        content: " ";
+        height: 0;
+        width: 0;
+        top: 0;
+        border: 27px solid transparent;
+        position: absolute;
+        z-index: 1; }
+      .portfolio-item-header .portfolio-arrow:before {
+        content: " ";
+        position: absolute;
+        height: 54px;
+        width: 0;
+        top: 0;
+        width: 1000px;
+        z-index: 1; }
+      .portfolio-item-header .portfolio-arrow.francisco {
+        background: #4FB0BB;
+        float: left; }
+        .portfolio-item-header .portfolio-arrow.francisco .handwritten-name {
+          height: 30px;
+          margin-top: 9px; }
+        .portfolio-item-header .portfolio-arrow.francisco:after {
+          right: -45px;
+          border-left: 18px solid #4FB0BB; }
+        .portfolio-item-header .portfolio-arrow.francisco:before {
+          left: -1000px;
+          background: #4FB0BB; }
+      .portfolio-item-header .portfolio-arrow.isabel {
+        background: #1B708A;
+        float: right; }
+        .portfolio-item-header .portfolio-arrow.isabel .handwritten-name {
+          height: 40px;
+          margin-top: 11px; }
+        .portfolio-item-header .portfolio-arrow.isabel:after {
+          left: -45px;
+          border-right: 18px solid #1B708A; }
+        .portfolio-item-header .portfolio-arrow.isabel:before {
+          right: -1000px;
+          background: #1B708A; }
+
 .footer {
   padding: 64px 0;
   background-color: #0C2C2D;

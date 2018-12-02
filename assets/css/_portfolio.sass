@@ -1,0 +1,122 @@
+@import 'variables'
+
+$header-height: 300px
+$header-height-mobile: 240px
+$header-background-url: '/assets/img/portfolio/header-background.svg'
+
+// HEADER
+.portfolio-header
+  height: $header-height
+  margin: $gutter 0 6 * $gutter
+
+  &-background
+    height: $header-height
+    background-image: url($header-background-url)
+    background-size: 1500px
+    background-position: center center
+    background-repeat: no-repeat
+
+  &-title
+    font-size: 96px
+    text-align: left
+    margin: 88px 0 0
+    color: $text-color
+
+
+@media (max-width: $page-threashold-mobile)
+  .portfolio-header
+    height: $header-height-mobile
+
+    &-background
+      height: $header-height-mobile
+      background: none
+
+    &-title
+      font-size: 60px
+      text-align: center
+
+$portfolio-item-header-height: 333px
+$arrow-height: 54px
+// ITEM: HEADER
+.portfolio-item
+  margin-bottom: 4 * $gutter
+  &:after
+    content: " "
+    clear: both
+  &-header
+    background-repeat: none
+    background-position: center right
+    background-repeat: no-repeat
+    height: $portfolio-item-header-height
+    &.item-04
+      background-image: url(/assets/img/portfolio/beeinfluencer/number.svg)
+    &.item-03
+      background-image: url(/assets/img/portfolio/concha-y-toro/number.svg)
+    &.item-02
+      background-image: url(/assets/img/portfolio/cdecsic/number.svg)
+    &.item-01
+      background-image: url(/assets/img/portfolio/late/number.svg)
+    &-content
+      display: flex
+      flex-direction: row
+      align-items: center
+      height: $portfolio-item-header-height
+      justify-content: space-around
+      .project-client
+        .logo
+          position: relative
+          max-width: 300px
+      .project-highlight
+        .name
+          font-size: 32px
+          font-style: italic
+          color: $text-color
+    .portfolio-arrow
+      height: $arrow-height
+      display: inline-block
+      position: relative
+      .handwritten-name
+        margin: 0 $gutter
+      &:after
+        content: " "
+        height: 0
+        width: 0
+        top: 0
+        border: $arrow-height / 2 solid transparent
+        position: absolute
+        z-index: 1
+      &:before
+        content: " "
+        position: absolute
+        height: $arrow-height
+        width: 0
+        top: 0
+        width: 1000px
+        z-index: 1
+      &.francisco
+        background: $secondary_color_2
+        float: left
+        .handwritten-name
+          height: 30px
+          margin-top: 9px
+        &:after
+          right: -45px
+          border-left: $arrow-height / 3 solid $secondary_color_2
+        &:before
+          left: -1000px
+          background: $secondary_color_2
+
+        &.francisco
+        .handwritten-name
+      &.isabel
+        background: $secondary_color_1
+        float: right
+        .handwritten-name
+          height: 40px
+          margin-top: 11px
+        &:after
+          left: -45px
+          border-right: $arrow-height / 3 solid $secondary_color_1
+        &:before
+          right: -1000px
+          background: $secondary_color_1
