@@ -1,12 +1,15 @@
 @import 'variables'
 
 
-$from-color: #F5f5f5
-$to-color: #b3b3b3
+$header-height: 280px
+$header-mobile-height: 180px
+
 $header-background-url: '/assets/img/about-us/pictures/picture_up_about-us.jpg'
 $page-background-url: '/assets/img/about-us/icons/background_toolbox_web.svg'
 
-$header-height: 280px
+$profile-picture-width: 220px
+$profile-picture-border-width: 8px
+
 
 .about-us-header
   height: $header-height
@@ -14,8 +17,8 @@ $header-height: 280px
 .about-us-picture
   height: $header-height
   background-image: url($header-background-url)
-  background-size: cover
-  background-position: 0% 60%
+  background-size: 1450px
+  background-position: center -45px
   background-repeat: no-repeat
   overflow: hidden
   background-blend-mode: saturation
@@ -34,14 +37,13 @@ $header-height: 280px
     z-index: -1
 
 .page.about-us
-  padding-top: 0
+  background-size: 1450px
+  background-position: center -45px
   background-image: url($page-background-url)
-  background-size: cover
+  background-size: 1450px
+  background-repeat: no-repeat
   background-position: center bottom
 
-
-$profile-picture-width: 220px
-$profile-picture-border-width: 8px
 .profile
   .profile-picture-container
     border: 6px solid $secondary_color_1
@@ -92,6 +94,31 @@ $profile-picture-border-width: 8px
       flex-wrap: wrap
       align-items: center
       .profile-tools-icon
-        // width: 40px
         display: inline
         margin: 0 12px 12px 0
+
+@media (max-width: $page-threashold-tablet)
+  .about-us-title
+    font-size: 120px
+    &.top
+      margin: 194px 0 0
+    &.bottom
+      margin-top: -86px
+
+@media (max-width: $page-threashold-mobile)
+  .about-us-picture
+    height: $header-mobile-height
+    background-image: url($header-background-url)
+    background-size: 800px
+    background-position: center -20px
+
+  .about-us-title
+    font-size: 60px
+    &.top
+      margin: 137px 0 0
+
+    &.bottom
+      margin-top: -42px
+
+  .page.about-us
+    background-size: 1200px
