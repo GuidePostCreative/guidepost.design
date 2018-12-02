@@ -2997,8 +2997,7 @@ body {
       background-size: 100% 1.6em;
       padding-top: 64px;
       padding-bottom: 64px;
-      border-radius: 50px;
-      margin: 96px 0 0; }
+      border-radius: 0 0 50px 50px; }
   .journal-body .footer {
     background: none; }
 
