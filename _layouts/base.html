@@ -25,6 +25,8 @@
     <meta property="twitter:description" content="{{ page.description }}">
     <meta property="twitter:image" content="{{ '/assets/metatags/guidepost_gif_570x320_64.gif' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}">
 
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="{{ site.url }}/manifest.json" />
 
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" />
