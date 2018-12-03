@@ -13,22 +13,22 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://guidepost.design{{ page.url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.description }}">
     <meta property="og:image" content="/assets/metatags/guidepost_gif_570x320_64.gif">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://guidepost.design{{ page.url }}">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
     <meta property="twitter:title" content="{{ page.title }}">
     <meta property="twitter:description" content="{{ page.description }}">
-    <meta property="twitter:image" content="/assets/metatags/guidepost_gif_570x320_64.gif">
+    <meta property="twitter:image" content="{{ '/assets/metatags/guidepost_gif_570x320_64.gif' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}">
 
 
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-    <link rel="icon" href="/assets/img/logos/favicon_color.png" type="image/gif" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" />
+    <link rel="icon" href="{{ '/assets/img/logos/favicon_color.png' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" type="image/gif" />
     {% include loader_css.html %}
     {% include google_analytics.html %}
 </head>
@@ -80,13 +80,13 @@
         var guidepostLat = {{ page.guidepost_lat }};
         var guidepostLng = {{ page.guidepost_lng }};
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/menu.js"></script>
-    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment.min.js"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js"></script>
-    <script type="text/javascript" src="/assets/js/modal.js"></script>
-    <script type="text/javascript" src="/assets/js/clock.js"></script>
+    <script type="text/javascript" src="{{ '/assets/js/libs/jquery-3.3.1.min.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/libs/uglipop.min.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/libs/moment.min.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/libs/moment-timezone-with-data.min.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/menu.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/modal.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/clock.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
     {% include loader_js.html %}
 </body>
 </html>
