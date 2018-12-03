@@ -2948,7 +2948,7 @@ body {
 /************************** */
 .brand-message {
   width: 100%;
-  margin: 0px 0 30px; }
+  margin: 0px 0 60px; }
 
 #illustration-webcreation {
   width: 90%;
@@ -2989,9 +2989,13 @@ body {
   margin-left: 15%; }
 
 .splash-text {
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.5em;
   margin-bottom: 30px; }
+  .splash-text .marker {
+    background: rgba(79, 176, 187, 0.3);
+    background: rgba(243, 213, 67, 0.34);
+    padding: 0 5px; }
 
 @media (max-width: 500px) {
   #blackboard-top-curve {
