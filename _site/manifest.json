@@ -1,0 +1,17 @@
+{
+    "name": "GuidePost | Indepented Creative Partners",
+    "short_name": "GuidePost",
+    "description": "We design personal user/customer experiences. Develop design, innovation, strategy, products and services. Create jaw-dropping mobile and web applications that have a positive impact in the world. Want to team up? smile@guidepost.design.",
+    "start_url": "/",
+    "background_color": "#FFFFFF",
+    "theme_color": "#1B708A",
+    "icons": [{
+      "src": "/assets/img/logos/favicon_color.png",
+      "sizes": "144x127",
+      "type": "image/png"
+    },{
+        "src": "/assets/img/logos/favicon_color.svg",
+        "sizes": "144x127",
+        "type": "image/svg"
+    }]
+  }
