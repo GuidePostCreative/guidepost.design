@@ -41,6 +41,12 @@ $arrow-height-mobile: 40px
       text-align: center
 
 // ITEM: HEADER
+#concha-y-toro
+  margin-bottom: 140px
+
+#beeinfluencer
+  margin-bottom: 140px
+
 .portfolio-item
   margin-bottom: 4 * $gutter
   &:after
@@ -125,35 +131,172 @@ $arrow-height-mobile: 40px
           right: -1000px
           background: $secondary_color_1
   &-content
-    padding: 4 * $gutter 0
+    padding: 4 * $gutter $gutter
     &.light-blue
       background: #EBEFF2
+    &.grapes
+      background-image: url(/assets/img/portfolio/concha-y-toro/background.jpg)
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 1600px
 
     .topics
       display: flex
       flex-direction: row
       justify-content: space-between
-
       &-item
         display: flex
         flex-direction: column
         align-items: center
         padding: 0 5px
         &-img-container
-          height: 50px
+          height: auto
+          height: 55px
           margin-bottom: $gutter
         &-img
-          height: 50px
+          height: 55px
           margin: 0 auto
         &-text
           text-align: center
           font-weight: bold
           color: $secondary_color_1
+          margin: 0
+      &.light
+        .topics-item
+          padding: 0 7px
+          &-text
+            color: $secondary_color_2
+
+    .concha-y-toro-layout
+      display: flex
+      flex-direction: row
+      .column
+        width: 33%
+        color: white
+        padding: 0 $gutter
+        display: flex
+        align-items: center
+
+      .topics
+        flex-direction: column
+        color: white
+
+        &-item
+          align-items: center
+          padding: 0 25px
+          margin-bottom: 4 * $gutter
+          &:last-item
+            margin-bottom: 0
+          &-img-container
+            height: 60px
+            margin-bottom: $gutter
+          &-img
+            height: 60px
+            margin: 0 auto
+          &-text
+            text-align: center
+            font-weight: bold
+            color: white
+    #bottle-of-wine
+      float: right
+      margin-top: -120px
+      margin-bottom: -150px
+      height: 1000px
+
+    .beeinfluencer-product-img
+      margin-bottom: -140px
 
 @media (max-width: $page-threashold-mobile)
   .portfolio-item-header
-    &-content
-      flex-direction: column
-
     .portfolio-arrow
       height: $arrow-height-mobile
+      &.francisco
+        .handwritten-name
+          height: 20px
+          margin-top: 9px
+        &:after
+          right: -33px
+          border: $arrow-height-mobile / 2 solid transparent
+          border-left: $arrow-height-mobile / 3 solid $secondary_color_2
+
+      &.isabel
+        .handwritten-name
+          height: 30px
+          margin-top: 9px
+        &:after
+          left: -33px
+          border: $arrow-height-mobile / 2 solid transparent
+          border-right: $arrow-height-mobile / 3 solid $secondary_color_1
+    &-content
+      flex-direction: column
+      justify-content: center
+      .project-client
+        .logo
+          position: relative
+          max-width: 300px
+          max-height: 80px
+          margin-bottom: $gutter
+      .project-highlight
+        .name
+          font-size: 32px
+          font-style: italic
+          color: $text-color
+          text-align: center
+          margin: 0 $gutter
+
+  .portfolio-item
+    &-content
+      .topics
+        flex-direction: column
+        justify-content: space-between
+
+        &-item
+          display: block
+          margin-bottom: 2 * $gutter
+
+          &-img-container
+            height: 50px
+            width: 70px
+            margin: 0 0 10px
+            float: left
+          &-img
+            height: auto
+            width: 50px
+            margin: 0 auto
+          &-text
+            text-align: left
+      &.grapes
+        background-size: 500px
+        background-position: center bottom
+      .concha-y-toro-layout
+        display: flex
+        flex-direction: column
+        .column
+          width: 100%
+          color: $text-color
+
+        .topics
+          flex-direction: column
+          color: white
+          margin-top: 50px
+          &-item
+            display: block
+            margin-bottom: 2 * $gutter
+            padding: 0
+            &-img-container
+              height: 50px
+              width: 70px
+              margin: 0 0 10px
+              float: left
+            &-img
+              height: auto
+              width: 50px
+              margin: 0 auto
+            &-text
+              text-align: left
+              color: $text-color
+
+    #bottle-of-wine
+      float: none
+      height: 500px
+      margin: 0 auto -140px

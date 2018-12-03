@@ -2579,6 +2579,9 @@ table {
   border-radius: 4px;
   margin: 16px 0; }
 
+.responsive-img {
+  max-width: 100%; }
+
 .mobile-only {
   display: none; }
 
@@ -3280,6 +3283,12 @@ body {
     .portfolio-header-title {
       font-size: 60px;
       text-align: center; } }
+#concha-y-toro {
+  margin-bottom: 140px; }
+
+#beeinfluencer {
+  margin-bottom: 140px; }
+
 .portfolio-item {
   margin-bottom: 64px; }
   .portfolio-item:after {
@@ -3358,9 +3367,14 @@ body {
           right: -1000px;
           background: #1B708A; }
   .portfolio-item-content {
-    padding: 64px 0; }
+    padding: 64px 16px; }
     .portfolio-item-content.light-blue {
       background: #EBEFF2; }
+    .portfolio-item-content.grapes {
+      background-image: url(/assets/img/portfolio/concha-y-toro/background.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 1600px; }
     .portfolio-item-content .topics {
       display: flex;
       flex-direction: row;
@@ -3371,21 +3385,139 @@ body {
         align-items: center;
         padding: 0 5px; }
         .portfolio-item-content .topics-item-img-container {
-          height: 50px;
+          height: auto;
+          height: 55px;
           margin-bottom: 16px; }
         .portfolio-item-content .topics-item-img {
-          height: 50px;
+          height: 55px;
           margin: 0 auto; }
         .portfolio-item-content .topics-item-text {
           text-align: center;
           font-weight: bold;
-          color: #1B708A; }
+          color: #1B708A;
+          margin: 0; }
+      .portfolio-item-content .topics.light .topics-item {
+        padding: 0 7px; }
+        .portfolio-item-content .topics.light .topics-item-text {
+          color: #4FB0BB; }
+    .portfolio-item-content .concha-y-toro-layout {
+      display: flex;
+      flex-direction: row; }
+      .portfolio-item-content .concha-y-toro-layout .column {
+        width: 33%;
+        color: white;
+        padding: 0 16px;
+        display: flex;
+        align-items: center; }
+      .portfolio-item-content .concha-y-toro-layout .topics {
+        flex-direction: column;
+        color: white; }
+        .portfolio-item-content .concha-y-toro-layout .topics-item {
+          align-items: center;
+          padding: 0 25px;
+          margin-bottom: 64px; }
+          .portfolio-item-content .concha-y-toro-layout .topics-item:last-item {
+            margin-bottom: 0; }
+          .portfolio-item-content .concha-y-toro-layout .topics-item-img-container {
+            height: 60px;
+            margin-bottom: 16px; }
+          .portfolio-item-content .concha-y-toro-layout .topics-item-img {
+            height: 60px;
+            margin: 0 auto; }
+          .portfolio-item-content .concha-y-toro-layout .topics-item-text {
+            text-align: center;
+            font-weight: bold;
+            color: white; }
+    .portfolio-item-content #bottle-of-wine {
+      float: right;
+      margin-top: -120px;
+      margin-bottom: -150px;
+      height: 1000px; }
+    .portfolio-item-content .beeinfluencer-product-img {
+      margin-bottom: -140px; }
 
 @media (max-width: 480px) {
-  .portfolio-item-header-content {
-    flex-direction: column; }
   .portfolio-item-header .portfolio-arrow {
-    height: 40px; } }
+    height: 40px; }
+    .portfolio-item-header .portfolio-arrow.francisco .handwritten-name {
+      height: 20px;
+      margin-top: 9px; }
+    .portfolio-item-header .portfolio-arrow.francisco:after {
+      right: -33px;
+      border: 20px solid transparent;
+      border-left: 13.3333333333px solid #4FB0BB; }
+    .portfolio-item-header .portfolio-arrow.isabel .handwritten-name {
+      height: 30px;
+      margin-top: 9px; }
+    .portfolio-item-header .portfolio-arrow.isabel:after {
+      left: -33px;
+      border: 20px solid transparent;
+      border-right: 13.3333333333px solid #1B708A; }
+  .portfolio-item-header-content {
+    flex-direction: column;
+    justify-content: center; }
+    .portfolio-item-header-content .project-client .logo {
+      position: relative;
+      max-width: 300px;
+      max-height: 80px;
+      margin-bottom: 16px; }
+    .portfolio-item-header-content .project-highlight .name {
+      font-size: 32px;
+      font-style: italic;
+      color: #4F4F4F;
+      text-align: center;
+      margin: 0 16px; }
+
+  .portfolio-item-content .topics {
+    flex-direction: column;
+    justify-content: space-between; }
+    .portfolio-item-content .topics-item {
+      display: block;
+      margin-bottom: 32px; }
+      .portfolio-item-content .topics-item-img-container {
+        height: 50px;
+        width: 70px;
+        margin: 0 0 10px;
+        float: left; }
+      .portfolio-item-content .topics-item-img {
+        height: auto;
+        width: 50px;
+        margin: 0 auto; }
+      .portfolio-item-content .topics-item-text {
+        text-align: left; }
+  .portfolio-item-content.grapes {
+    background-size: 500px;
+    background-position: center bottom; }
+  .portfolio-item-content .concha-y-toro-layout {
+    display: flex;
+    flex-direction: column; }
+    .portfolio-item-content .concha-y-toro-layout .column {
+      width: 100%;
+      color: #4F4F4F; }
+    .portfolio-item-content .concha-y-toro-layout .topics {
+      flex-direction: column;
+      color: white;
+      margin-top: 50px; }
+      .portfolio-item-content .concha-y-toro-layout .topics-item {
+        display: block;
+        margin-bottom: 32px;
+        padding: 0; }
+        .portfolio-item-content .concha-y-toro-layout .topics-item-img-container {
+          height: 50px;
+          width: 70px;
+          margin: 0 0 10px;
+          float: left; }
+        .portfolio-item-content .concha-y-toro-layout .topics-item-img {
+          height: auto;
+          width: 50px;
+          margin: 0 auto; }
+        .portfolio-item-content .concha-y-toro-layout .topics-item-text {
+          text-align: left;
+          color: #4F4F4F; }
+  .portfolio-item #bottle-of-wine {
+    float: none;
+    height: 500px;
+    margin: 0 auto -140px; } }
 .footer {
   padding: 64px 0;
   background-color: #0C2C2D;
