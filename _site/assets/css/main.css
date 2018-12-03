@@ -3371,7 +3371,7 @@ body {
     .portfolio-item-content.light-blue {
       background: #EBEFF2; }
     .portfolio-item-content.grapes {
-      background-image: url(/assets/img/portfolio/concha-y-toro/background.jpg);
+      background-image: url(/assets/img/portfolio/concha-y-toro/background_comp.jpg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 1600px; }
@@ -3435,6 +3435,9 @@ body {
       height: 1000px; }
     .portfolio-item-content .beeinfluencer-product-img {
       margin-bottom: -140px; }
+    .portfolio-item-content .cdecsic-product-img {
+      width: 80%;
+      margin: 0 10%; }
     .portfolio-item-content .late-product-img {
       width: 50%;
       margin-left: 25%; }
@@ -3521,6 +3524,9 @@ body {
     float: none;
     height: 500px;
     margin: 0 auto -140px; }
+  .portfolio-item .cdecsic-product-img {
+    width: 100%;
+    margin: 0; }
   .portfolio-item .late-product-img {
     width: 80%;
     margin-left: 10%; } }
