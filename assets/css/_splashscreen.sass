@@ -34,15 +34,17 @@
 
 #splash-logo
   width: $logo-width
-  display: table-cell
   margin: 0 auto
   padding-top: 80px
+  &-svg
+    width: $logo-width
 
 #splash-slogan
   width: $logo-width * 1.2
-  display: table-cell
   margin: 0 auto
   position: relative
+  &-svg
+    width: 100%
 
 #splash-team
   display: flex
@@ -58,11 +60,12 @@
       width: 200px
     .name
       height: 40px
+      opacity: 0
 
   #splash-designer
     .arrow
-      left: 500px
-      top: 200px
+      right: 115px
+      top: 185px
     .description
       width: 220px
       right: 120px
@@ -73,7 +76,7 @@
 
   #splash-developer
     .arrow
-      right: 500px
+      left: 100px
       top: 60px
     .description
       width: -220px
@@ -86,33 +89,13 @@
 @media (max-width: $page_width)
   #splash-logo
     width: $logo-width-tablet
-    padding-top: 30px
+    padding-top: 80px
+    &-svg
+      width: $logo-width-tablet
   #splash-slogan
     width: $logo-width-tablet * 0.8
-
-  #splash-team
-    margin-top: 50px
-    .splash-team-member
-      .arrow
-        display: none
-    #splash-developer
-      .description
-        width: 150px
-        right: 30px
-        top: 40px
-      .name
-        top: 170px
-        right: 60px
-
-    #splash-designer
-      .description
-        width: 160px
-        left: 0px
-        top: 100px
-      .name
-        top: 190px
-        left: 20px
-
+    &-svg
+      width: $logo-width-tablet * 0.8
 @media (max-width: 500px)
   .splash-screen
     height: $splash-height-mobile
@@ -121,8 +104,6 @@
       height: $splash-height-mobile
       min-height: $splash-height-mobile
       background-position: center -100px
-      background-repeat: no-repeat
-      background-size: 1450px
 
   .splash-elements
     height: $splash-height-mobile
@@ -131,14 +112,20 @@
     width: 90%
     margin: 0 5%
     padding-top: 60px
+    &-svg
+      width: 100%
 
   #splash-slogan
-    width: 80%
-    margin: 20px 10% 0
+    width: 90%
+    margin: 20px 5% 0
+    &-svg
+      width: 100%
 
   #splash-team
     margin-top: 77px
     .splash-team-member
+      .arrow
+        display: none
       .description
         width: 100px
       .name
@@ -146,21 +133,21 @@
 
     #splash-developer
       .description
-        width: 150px
-        right: 0px
-        top: 40px
+        width: 80%
+        left: 10%
+        top: 225px
       .name
-        top: 120px
-        right: 16px
+        top: 163px
+        left: 30px
 
     #splash-designer
       .description
-        width: 140px
-        left: 20px
-        top: 80px
+        width: 80%
+        right: 10%
+        top: 225px
       .name
         top: 150px
-        left: 43px
+        right: 37px
 
 .landing-blackboard
   height: auto
@@ -183,18 +170,16 @@ $animation-dev-arrow-speed: 0.7s
 
 
 $logo-placed: 0.8s
+
 $animation-des-arrow-delay: 0.5s + $logo-placed
 $animation-des-text-delay: 1s + $logo-placed
-$animation-des-name-delay: 2.5s + $logo-placed
-
+$animation-des-name-delay: 1.8s + $logo-placed
 
 $animation-dev-arrow-delay: 2s + $logo-placed
 $animation-dev-text-delay: 2.4s + $logo-placed
-$animation-dev-name-delay: 3.5s + $logo-placed
+$animation-dev-name-delay: 3.2s + $logo-placed
 
-
-
-$animation-slogan-delay: 1s + $animation-des-name-delay
+$animation-slogan-delay: 1.5s + $animation-des-name-delay
 
 
 @keyframes write
@@ -229,8 +214,8 @@ $animation-slogan-delay: 1s + $animation-des-name-delay
 
   #splash-designer
     .name
+      -webkit-animation-delay: $animation-des-name-delay
       animation-delay: $animation-des-name-delay
-      opacity: 0
       animation-fill-mode: forwards
 
 // DEVELOPER
@@ -246,16 +231,12 @@ $animation-slogan-delay: 1s + $animation-des-name-delay
   #splash-developer
     .name
       animation-delay: $animation-dev-name-delay
-      opacity: 0
       animation-fill-mode: forwards
 
 .loaded
   #splash-logo
     transform: translate3d(0, -100%, 0)
     animation: slideInDown 0.35s ease forwards 1s
-
-
-
 
 
 /***************************/

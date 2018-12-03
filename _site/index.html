@@ -79,14 +79,14 @@ Have a nice day :)
     <meta property="twitter:url" content="http://localhost:4000/">
     <meta property="twitter:title" content="GuidePost | Independent Creative Partners">
     <meta property="twitter:description" content="We design personal user/customer experiences. Develop design, innovation, strategy, products and services. Create jaw-dropping mobile and web applications that have a positive impact in the world. Want to team up? smile@guidepost.design">
-    <meta property="twitter:image" content="/assets/metatags/guidepost_gif_570x320_64.gif?1543813464278913000">
+    <meta property="twitter:image" content="/assets/metatags/guidepost_gif_570x320_64.gif?1543822266471675000">
 
     <!-- Progressive Web App -->
     <link rel="manifest" href="http://localhost:4000/manifest.json" />
 
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css?1543813464278913000" />
-    <link rel="icon" href="/assets/img/logos/favicon_color.png?1543813464278913000" type="image/gif" />
+    <link rel="stylesheet" href="/assets/css/main.css?1543822266471675000" />
+    <link rel="icon" href="/assets/img/logos/favicon_color.png?1543822266471675000" type="image/gif" />
     <style>
 #loader-wrapper {
   position: fixed;
@@ -285,10 +285,13 @@ Have a nice day :)
 
       <div class="splash-elements">
         <!-- Logo -->
-        <img id="splash-logo" src="/assets/img/logos/imagetype_horizontal_segreen.svg" alt="GuidePost logo" />
+        <div id="splash-logo">
+          <img id="splash-logo-svg" src="/assets/img/logos/imagetype_horizontal_segreen.svg" alt="GuidePost logo" />
+        </div>
         <!-- Slogan -->
         <!-- <img src="/assets/img/splashscreen/greatness.svg" id="splash-slogan"/> -->
-        <svg version="1.1" id="splash-slogan" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <div id="splash-slogan" >
+          <svg version="1.1" id="splash-slogan-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 325.347 60.785" style="enable-background:new 0 0 325.347 60.785;"
 	 xml:space="preserve">
 <g id="clip_slogan">
@@ -535,7 +538,8 @@ Have a nice day :)
 </g>
 </svg>
 
-  
+        </div>
+
         <!-- <img id="splash-slogan" src="/assets/img/splashscreen/slogan_white_1384x252-compressor.png" alt="Greatness is in the details."/> -->
         <!-- Team -->
         <div id="splash-team">
@@ -725,7 +729,7 @@ Have a nice day :)
 </g>
 </svg>
 
-            <img class="name bounceIn" src="/assets/img/splashscreen/button_isabel.svg" />
+            <img class="name" src="/assets/img/splashscreen/button_isabel.svg" alt="Isabel" id="isabel-btn"/>
           </div>
           <div id="splash-developer" class="splash-team-member">
             <svg version="1.1" id="arrow_developer" class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -894,7 +898,7 @@ Have a nice day :)
 </g>
 </svg>
 
-            <img class="name bounceIn" src="/assets/img/splashscreen/button_francisco.svg" />
+            <img class="name" src="/assets/img/splashscreen/button_francisco.svg" alt="Francisco" id="francisco-btn"/>
           </div>
         </div>
     </div>
@@ -969,17 +973,19 @@ Have a nice day :)
         var guidepostLat = 10.081729;
         var guidepostLng = 99.824654;
     </script>
-    <script type="text/javascript" src="/assets/js/libs/jquery-3.3.1.min.js?1543813464278913000"></script>
-    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js?1543813464278913000"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment.min.js?1543813464278913000"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js?1543813464278913000"></script>
-    <script type="text/javascript" src="/assets/js/menu.js?1543813464278913000"></script>
-    <script type="text/javascript" src="/assets/js/modal.js?1543813464278913000"></script>
-    <script type="text/javascript" src="/assets/js/clock.js?1543813464278913000"></script>
+    <script type="text/javascript" src="/assets/js/libs/jquery-3.3.1.min.js?1543822266471675000"></script>
+    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js?1543822266471675000"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment.min.js?1543822266471675000"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js?1543822266471675000"></script>
+    <script type="text/javascript" src="/assets/js/menu.js?1543822266471675000"></script>
+    <script type="text/javascript" src="/assets/js/modal.js?1543822266471675000"></script>
+    <script type="text/javascript" src="/assets/js/clock.js?1543822266471675000"></script>
     <script type="text/javascript">
 
 window.addEventListener('load', function() {
   document.getElementById('body').classList.add('loaded');
+  document.getElementById('isabel-btn').classList.add('bounceIn');
+  document.getElementById('francisco-btn').classList.add('bounceIn');
 });
 
 // setTimeout(function() {

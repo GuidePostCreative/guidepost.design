@@ -11,23 +11,22 @@ mountain_step: 1
 
       <div class="splash-elements">
         <!-- Logo -->
-        <img id="splash-logo" src="/assets/img/logos/imagetype_horizontal_segreen.svg" alt="GuidePost logo" />
-        <!-- Slogan -->
-        <!-- <img src="/assets/img/splashscreen/greatness.svg" id="splash-slogan"/> -->
-        {% include slogan.svg %}
-  
-        <!-- <img id="splash-slogan" src="/assets/img/splashscreen/slogan_white_1384x252-compressor.png" alt="Greatness is in the details."/> -->
-        <!-- Team -->
+        <div id="splash-logo">
+          <img id="splash-logo-svg" src="/assets/img/logos/imagetype_horizontal_segreen.svg" alt="GuidePost logo" />
+        </div>
+        <div id="splash-slogan" >
+          {% include slogan.svg %}
+        </div>
         <div id="splash-team">
           <div id="splash-designer" class="splash-team-member" >
             {% include arrow_designer.svg %}
             {% include text_designer.svg %}
-            <img class="name bounceIn" src="/assets/img/splashscreen/button_isabel.svg" />
+            <img class="name" src="/assets/img/splashscreen/button_isabel.svg" alt="Isabel" id="isabel-btn"/>
           </div>
           <div id="splash-developer" class="splash-team-member">
             {% include arrow_developer.svg %}
             {% include text_developer.svg %}
-            <img class="name bounceIn" src="/assets/img/splashscreen/button_francisco.svg" />
+            <img class="name" src="/assets/img/splashscreen/button_francisco.svg" alt="Francisco" id="francisco-btn"/>
           </div>
         </div>
     </div>

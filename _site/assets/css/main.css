@@ -2783,15 +2783,17 @@ body {
 
 #splash-logo {
   width: 400px;
-  display: table-cell;
   margin: 0 auto;
   padding-top: 80px; }
+  #splash-logo-svg {
+    width: 400px; }
 
 #splash-slogan {
   width: 480px;
-  display: table-cell;
   margin: 0 auto;
   position: relative; }
+  #splash-slogan-svg {
+    width: 100%; }
 
 #splash-team {
   display: flex;
@@ -2806,10 +2808,11 @@ body {
     #splash-team .splash-team-member .description {
       width: 200px; }
     #splash-team .splash-team-member .name {
-      height: 40px; }
+      height: 40px;
+      opacity: 0; }
   #splash-team #splash-designer .arrow {
-    left: 500px;
-    top: 200px; }
+    right: 115px;
+    top: 185px; }
   #splash-team #splash-designer .description {
     width: 220px;
     right: 120px;
@@ -2818,7 +2821,7 @@ body {
     top: 180px;
     right: 230px; }
   #splash-team #splash-developer .arrow {
-    right: 500px;
+    left: 100px;
     top: 60px; }
   #splash-team #splash-developer .description {
     width: -220px;
@@ -2831,29 +2834,14 @@ body {
 @media (max-width: 1060px) {
   #splash-logo {
     width: 400px;
-    padding-top: 30px; }
+    padding-top: 80px; }
+    #splash-logo-svg {
+      width: 400px; }
 
   #splash-slogan {
     width: 320px; }
-
-  #splash-team {
-    margin-top: 50px; }
-    #splash-team .splash-team-member .arrow {
-      display: none; }
-    #splash-team #splash-developer .description {
-      width: 150px;
-      right: 30px;
-      top: 40px; }
-    #splash-team #splash-developer .name {
-      top: 170px;
-      right: 60px; }
-    #splash-team #splash-designer .description {
-      width: 160px;
-      left: 0px;
-      top: 100px; }
-    #splash-team #splash-designer .name {
-      top: 190px;
-      left: 20px; } }
+    #splash-slogan-svg {
+      width: 320px; } }
 @media (max-width: 500px) {
   .splash-screen {
     height: 700px;
@@ -2861,9 +2849,7 @@ body {
     .splash-screen .background {
       height: 700px;
       min-height: 700px;
-      background-position: center -100px;
-      background-repeat: no-repeat;
-      background-size: 1450px; }
+      background-position: center -100px; }
 
   .splash-elements {
     height: 700px; }
@@ -2872,31 +2858,37 @@ body {
     width: 90%;
     margin: 0 5%;
     padding-top: 60px; }
+    #splash-logo-svg {
+      width: 100%; }
 
   #splash-slogan {
-    width: 80%;
-    margin: 20px 10% 0; }
+    width: 90%;
+    margin: 20px 5% 0; }
+    #splash-slogan-svg {
+      width: 100%; }
 
   #splash-team {
     margin-top: 77px; }
+    #splash-team .splash-team-member .arrow {
+      display: none; }
     #splash-team .splash-team-member .description {
       width: 100px; }
     #splash-team .splash-team-member .name {
       height: 32px; }
     #splash-team #splash-developer .description {
-      width: 150px;
-      right: 0px;
-      top: 40px; }
+      width: 80%;
+      left: 10%;
+      top: 225px; }
     #splash-team #splash-developer .name {
-      top: 120px;
-      right: 16px; }
+      top: 163px;
+      left: 30px; }
     #splash-team #splash-designer .description {
-      width: 140px;
-      left: 20px;
-      top: 80px; }
+      width: 80%;
+      right: 10%;
+      top: 225px; }
     #splash-team #splash-designer .name {
       top: 150px;
-      left: 43px; } }
+      right: 37px; } }
 .landing-blackboard {
   height: auto;
   color: #E5E5E5;
@@ -2920,7 +2912,7 @@ body {
 .loaded #path_slogan {
   stroke-dashoffset: 3000;
   stroke-dasharray: 3000;
-  animation: write 3.8s linear forwards 4.3s; }
+  animation: write 3.8s linear forwards 4.1s; }
 
 .loaded #arrow_designer #path_arrow_designer {
   animation: write 0.7s linear forwards 1.3s; }
@@ -2930,8 +2922,8 @@ body {
   stroke-width: 4px;
   animation: write 1.25s linear forwards 1.8s; }
 .loaded #splash-designer .name {
-  animation-delay: 3.3s;
-  opacity: 0;
+  -webkit-animation-delay: 2.6s;
+  animation-delay: 2.6s;
   animation-fill-mode: forwards; }
 
 .loaded #arrow_developer #path_arrow_developer {
@@ -2939,8 +2931,7 @@ body {
 .loaded #text_developer #path_text_developer {
   animation: write 2s linear forwards 3.2s; }
 .loaded #splash-developer .name {
-  animation-delay: 4.3s;
-  opacity: 0;
+  animation-delay: 4s;
   animation-fill-mode: forwards; }
 
 .loaded #splash-logo {
