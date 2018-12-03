@@ -1,0 +1,39 @@
+@import 'variables'
+
+.clock
+  text-align: right
+  color: white
+  &.centered
+    text-align: center
+  .location
+    font-weight: bold
+    font-size: $font-size
+    line-height: 1.5em
+    color: white
+    white-space: nowrap
+
+  .time
+    font-size: $font-size-huge
+    font-weight: bold
+    line-height: 1em
+    .time-divider
+      &.on
+        opacity: 1
+      &.off
+        opacity: 0.3
+  .date
+    font-size: $font-size
+    text-transform: uppercase
+
+@media (max-width: 500px)
+  .clock
+    text-align: center
+
+    &.fixed-clock
+      .time
+        font-size: 55px
+
+#footer-guidepost-clock
+  margin-bottom: 20px
+  .location
+    color: $primary_color_3

@@ -79,14 +79,14 @@ Have a nice day :)
     <meta property="twitter:url" content="http://localhost:4000/lets-talk.html">
     <meta property="twitter:title" content="Let's talk | GuidePost">
     <meta property="twitter:description" content="Just send us an email to smile@guidepost.design. We will be happy to hear about your new bussiness opportunities, request, inquiries and more.">
-    <meta property="twitter:image" content="/assets/metatags/guidepost_gif_570x320_64.gif?1543822266471675000">
+    <meta property="twitter:image" content="/assets/metatags/guidepost_gif_570x320_64.gif?1543834853486795000">
 
     <!-- Progressive Web App -->
     <link rel="manifest" href="http://localhost:4000/manifest.json" />
 
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css?1543822266471675000" />
-    <link rel="icon" href="/assets/img/logos/favicon_color.png?1543822266471675000" type="image/gif" />
+    <link rel="stylesheet" href="/assets/css/main.css?1543834853486795000" />
+    <link rel="icon" href="/assets/img/logos/favicon_color.png?1543834853486795000" type="image/gif" />
     <style>
 #loader-wrapper {
   position: fixed;
@@ -94,7 +94,7 @@ Have a nice day :)
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10000;
+  z-index: 1000000;
 
 }
 #loader {
@@ -235,8 +235,14 @@ Have a nice day :)
 
   gtag('config', 'UA-96857697-3');
 </script>
+    <script type="text/javascript">
+        var guidepostLocation = "Koh Tao, TH";
+        var guidepostTimeZone = "Asia/Bangkok";
+        var guidepostLat = 10.081729;
+        var guidepostLng = 99.824654;
+    </script>
 </head>
-<body id="body" class="">
+<body id="body" class="journal-body">
     <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
@@ -280,12 +286,69 @@ Have a nice day :)
             </div>
         </div>
     </div>
-    <div class="page">
-  <div class="container">
-    <div class="content">
-      <h1>Let's talk</h1>
-<p>Just send us an email to <a href="mailto:smile@guidepost.design">smile@guidepost.design</a>, we will be happy to hear from you.</p>
+    <div id="lets-talk-map-container">
+  <div id="lets-talk-map">
+    <div id="map-overlay">
+      <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1 class="lets-talk-title">Wanna talk?</h1>
+        </div>
+        <div class="col-6">
+          <div class="clock fixed-clock centered" data-timezone="Asia/Bangkok" style="margin-top: 125px">
+            <img src="/assets/img/lets-talk/guidepost-marker.svg" alt="GuidePost map marker" />
+            <div class="location">We are here <br/>[Koh Tao, Thailand]</div>
+            <div class="time"></div>
+            <div class="date"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="lets-talk-separator">
+  <svg id="lets-talk-separator-svg" width="100%" height="75px" preserveAspectRatio="none" viewBox="0 0 1000 100">
+    <g transform="matrix(1.00047,0,0,1,-0.47193,0)">
+        <path d="M1001.32,-1.313L1001.32,100.742L0.493,100.742L0.493,0.098C500.196,100 800.065,99.967 1000,0L0.493,0L0.493,-1.313L1001.32,-1.313Z"/>
+    </g>
+  </svg>
+</div>
 
+<div class="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="lets-talk-text">We work remotely. Our meetings and interviews are on google hangouts, skype, slack or any other tool available. If you want to reach us, just send us an email to <a href="mailto:smile@guidepost.design">smile@guidepost.design</a>.</p>
+      </div>
+      <div class="col-6-sm col-3">
+        <div class="clock fixed-clock centered" id="lets-talk-clock-01" data-timezone="America/Santiago">
+          <div class="location">[Santiago, CL]</div>
+          <div class="time"></div>
+          <div class="date"></div>
+        </div>
+      </div>
+      <div class="col-6-sm col-3">
+        <div class="clock fixed-clock centered" id="lets-talk-clock-04" data-timezone="Europe/Madrid">
+          <div class="location">[Madrid, ES]</div>
+          <div class="time"></div>
+          <div class="date"></div>
+        </div>
+      </div>
+      <div class="col-6-sm col-3">
+        <div class="clock fixed-clock centered" id="lets-talk-clock-03" data-timezone="Australia/Sydney">
+          <div class="location">[Sydney, AU]</div>
+          <div class="time"></div>
+          <div class="date"></div>
+        </div>
+      </div>
+      <div class="col-6-sm col-3">
+        <div class="clock fixed-clock centered" id="lets-talk-clock-02" data-timezone="America/Los_Angeles">
+          <div class="location">[San Francisco, US]</div>
+          <div class="time"></div>
+          <div class="date"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -329,25 +392,23 @@ Have a nice day :)
     </div>
   </div>
 </footer>
-    <script type="text/javascript">
-        var guidepostLocation = "Koh Tao, TH";
-        var guidepostTimeZone = "Asia/Bangkok";
-        var guidepostLat = 10.081729;
-        var guidepostLng = 99.824654;
-    </script>
-    <script type="text/javascript" src="/assets/js/libs/jquery-3.3.1.min.js?1543822266471675000"></script>
-    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js?1543822266471675000"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment.min.js?1543822266471675000"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js?1543822266471675000"></script>
-    <script type="text/javascript" src="/assets/js/menu.js?1543822266471675000"></script>
-    <script type="text/javascript" src="/assets/js/modal.js?1543822266471675000"></script>
-    <script type="text/javascript" src="/assets/js/clock.js?1543822266471675000"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <script type="text/javascript" src="/assets/js/libs/jquery-3.3.1.min.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment.min.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/menu.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/modal.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/clock.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/lets-talk.js?1543834853486795000"></script>
     <script type="text/javascript">
 
 window.addEventListener('load', function() {
   document.getElementById('body').classList.add('loaded');
-  document.getElementById('isabel-btn').classList.add('bounceIn');
-  document.getElementById('francisco-btn').classList.add('bounceIn');
+  if(document.getElementById('isabel-btn'))
+    document.getElementById('isabel-btn').classList.add('bounceIn');
+  if(document.getElementById('francisco-btn'))
+    document.getElementById('francisco-btn').classList.add('bounceIn');
 });
 
 // setTimeout(function() {

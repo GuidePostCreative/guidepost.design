@@ -33,6 +33,12 @@
     <link rel="icon" href="{{ '/assets/img/logos/favicon_color.png' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" type="image/gif" />
     {% include loader_css.html %}
     {% include google_analytics.html %}
+    <script type="text/javascript">
+        var guidepostLocation = "{{ page.guidepost_location }}";
+        var guidepostTimeZone = "{{ page.guidepost_timezone }}";
+        var guidepostLat = {{ page.guidepost_lat }};
+        var guidepostLng = {{ page.guidepost_lng }};
+    </script>
 </head>
 <body id="body" class="{{ page.body_class }}">
     {% include loader.html %}
@@ -76,12 +82,7 @@
     </div>
     {{ content }}
     {% include footer.html %}
-    <script type="text/javascript">
-        var guidepostLocation = "{{ page.guidepost_location }}";
-        var guidepostTimeZone = "{{ page.guidepost_timezone }}";
-        var guidepostLat = {{ page.guidepost_lat }};
-        var guidepostLng = {{ page.guidepost_lng }};
-    </script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <script type="text/javascript" src="{{ '/assets/js/libs/jquery-3.3.1.min.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/libs/uglipop.min.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/libs/moment.min.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
@@ -89,6 +90,7 @@
     <script type="text/javascript" src="{{ '/assets/js/menu.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/modal.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/clock.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
+    <script type="text/javascript" src="{{ '/assets/js/lets-talk.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
     {% include loader_js.html %}
 </body>
 </html>

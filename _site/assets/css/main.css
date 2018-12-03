@@ -2992,6 +2992,8 @@ body {
 .journal-body {
   background: #0C2C2D;
   background-image: url(/assets/img/footer/pattern_dot.svg); }
+  .journal-body .container {
+    width: 1060px; }
   .journal-body .page {
     margin: 0;
     padding-top: 0; }
@@ -3104,13 +3106,13 @@ body {
     max-width: 100%; }
 
 @media (max-width: 1060px) {
-  .journal-body {
-    background: none; }
-    .journal-body .page .content {
-      margin-top: 0; }
-    .journal-body .footer {
-      background-color: #0C2C2D;
-      background-image: url(/assets/img/footer/pattern_dot.svg); }
+  .journal-body .container {
+    width: 100%; }
+  .journal-body .page .content {
+    margin-top: 0; }
+  .journal-body .footer {
+    background-color: #0C2C2D;
+    background-image: url(/assets/img/footer/pattern_dot.svg); }
 
   .entry-preview {
     padding: 16px 0 32px; }
@@ -3523,6 +3525,105 @@ body {
   .portfolio-item .late-product-img {
     width: 80%;
     margin-left: 10%; } }
+#lets-talk-map-container {
+  height: 550px;
+  position: relative; }
+
+#lets-talk-map {
+  height: 550px; }
+
+#lets-talk-separator {
+  height: 75px;
+  z-index: 100000;
+  width: 100%;
+  margin-top: -75px;
+  margin-bottom: 100px;
+  z-index: 10; }
+
+#lets-talk-separator-svg {
+  width: 100%;
+  height: 75px;
+  z-index: 0; }
+  #lets-talk-separator-svg path {
+    fill: #0C2C2D;
+    z-index: 0; }
+
+#map-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 470px;
+  z-index: 1000; }
+  #map-overlay .clock {
+    color: #4F4F4F; }
+    #map-overlay .clock .location {
+      color: #1B708A; }
+
+.lets-talk-title {
+  font-size: 120px;
+  margin-top: 100px; }
+
+.lets-talk-text {
+  color: white;
+  font-size: 32px;
+  line-height: 1.5em;
+  margin-bottom: 100px; }
+  .lets-talk-text a {
+    color: #4FB0BB;
+    text-decoration: none; }
+
+@media (max-width: 500px) {
+  .lets-talk-title {
+    font-size: 70px;
+    margin-top: 50px; }
+
+  .lets-talk-text {
+    font-size: 25.6px; }
+
+  #lets-talk-map-container {
+    height: 400px; }
+
+  #lets-talk-map {
+    height: 400px; }
+
+  #map-overlay {
+    height: 400px; }
+    #map-overlay .clock {
+      display: none; } }
+.clock {
+  text-align: right;
+  color: white; }
+  .clock.centered {
+    text-align: center; }
+  .clock .location {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: white;
+    white-space: nowrap; }
+  .clock .time {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1em; }
+    .clock .time .time-divider.on {
+      opacity: 1; }
+    .clock .time .time-divider.off {
+      opacity: 0.3; }
+  .clock .date {
+    font-size: 16px;
+    text-transform: uppercase; }
+
+@media (max-width: 500px) {
+  .clock {
+    text-align: center; }
+    .clock.fixed-clock .time {
+      font-size: 55px; } }
+#footer-guidepost-clock {
+  margin-bottom: 20px; }
+  #footer-guidepost-clock .location {
+    color: #D83830; }
+
 .footer {
   padding: 64px 0;
   background-color: #0C2C2D;
@@ -3590,27 +3691,6 @@ body {
             outline: none; }
       .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
         left: 0; }
-    .footer .contact .clock {
-      text-align: right; }
-      .footer .contact .clock .location {
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 1em; }
-      .footer .contact .clock .time {
-        font-size: 64px;
-        font-weight: bold;
-        line-height: 1em; }
-        .footer .contact .clock .time .time-divider.on {
-          opacity: 1; }
-        .footer .contact .clock .time .time-divider.off {
-          opacity: 0.3; }
-      .footer .contact .clock .date {
-        font-size: 16px;
-        text-transform: uppercase; }
-    .footer .contact #footer-guidepost-clock {
-      margin-bottom: 20px; }
-      .footer .contact #footer-guidepost-clock .location {
-        color: #D83830; }
   .footer .credits {
     text-align: center; }
     .footer .credits a {
@@ -3651,9 +3731,7 @@ body {
           width: 90%;
           padding: 30px 15px; }
       .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
-        left: 0; }
-    .footer .contact .clock {
-      text-align: center; } }
+        left: 0; } }
 .modal-image {
   cursor: pointer; }
 

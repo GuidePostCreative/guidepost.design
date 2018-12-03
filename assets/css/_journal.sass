@@ -7,7 +7,8 @@ $jounral-line-color: lighten($secondary_color_2, 45%)
 .journal-body
   background: $primary_color_2
   background-image: url(/assets/img/footer/pattern_dot.svg)
-
+  .container
+    width: $page-width
   .page
     margin: 0
     padding-top: 0
@@ -18,6 +19,7 @@ $jounral-line-color: lighten($secondary_color_2, 45%)
       padding-top: 4 * $gutter
       padding-bottom: 4 * $gutter
       border-radius: 0 0 50px 50px
+
   .footer
     background: none
 
@@ -136,7 +138,8 @@ $journal-number-height: $journal-number-size + (2 * $journal-number-margin)
 
 @media (max-width: $page_width)
   .journal-body
-    background: none
+    .container
+      width: 100%
     .page
       .content
         margin-top: 0

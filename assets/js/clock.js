@@ -38,11 +38,11 @@ function initClocks() {
       guestLocationEle.innerHTML = guestLocation;
     }
   }
+
 }
 
 var tick = true;
 function tickClocks() {
-  var middle;
   if (tick == true) {
     divider = '<span class="time-divider on">:</span>'
   } else {
