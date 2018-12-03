@@ -10,16 +10,18 @@
   min-height: 600px
   width: 100%
   flex: 1 0 auto
-  
+
 
   .background
     height: 100%
     // max-width: $page_width
     margin: 0 auto
-    background: url('/assets/img/splashscreen/francisco_isabel_pier.jpg')
-    background-position: 0 -50px 
+    background-image: url('/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg')
+    background-image: -webkit-image-set(url('/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg') 1x, url('/assets/img/splashscreen/francisco_isabel_pier_2x_comp.jpg') 2x)
+    background-image: image-set(url('/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg') 1x, url('/assets/img/splashscreen/francisco_isabel_pier_2x_comp.jpg') 2x)
+    background-position: center -50px
     background-repeat: no-repeat
-    background-size: cover
+    background-size: 1450px
 
 .splash-elements
   position: relative
@@ -118,9 +120,9 @@
     .background
       height: $splash-height-mobile
       min-height: $splash-height-mobile
-      background-position: 43% 60%
+      background-position: center -100px
       background-repeat: no-repeat
-      background-size: 220%
+      background-size: 1450px
 
   .splash-elements
     height: $splash-height-mobile
@@ -164,7 +166,7 @@
   height: auto
   color: $primary_color_1
   padding: 0 0 60px
-  
+
     margin: 0 0 20px
     font-weight: 400
 
@@ -190,7 +192,7 @@ $animation-dev-arrow-delay: 2s + $logo-placed
 $animation-dev-text-delay: 2.4s + $logo-placed
 $animation-dev-name-delay: 3.5s + $logo-placed
 
-  
+
 
 $animation-slogan-delay: 1s + $animation-des-name-delay
 
@@ -215,9 +217,9 @@ $animation-slogan-delay: 1s + $animation-des-name-delay
 // DESIGNER
 .loaded
   #arrow_designer
-    #path_arrow_designer   
+    #path_arrow_designer
       animation: write $animation-des-arrow-speed linear forwards $animation-des-arrow-delay
-  
+
   #text_designer
     #path_text_designer
       stroke-dashoffset: 2000
@@ -232,11 +234,11 @@ $animation-slogan-delay: 1s + $animation-des-name-delay
       animation-fill-mode: forwards
 
 // DEVELOPER
-.loaded  
+.loaded
   #arrow_developer
-    #path_arrow_developer   
-      animation: write $animation-dev-arrow-speed linear forwards $animation-dev-arrow-delay      
-  
+    #path_arrow_developer
+      animation: write $animation-dev-arrow-speed linear forwards $animation-dev-arrow-delay
+
   #text_developer
     #path_text_developer
       animation: write $animation-dev-text-speed linear forwards $animation-dev-text-delay
