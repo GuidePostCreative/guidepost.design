@@ -2651,6 +2651,10 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden; }
+  body.fixed-header {
+    padding-top: 96px; }
+  body.index {
+    padding-top: 0 !important; }
 
 .container {
   max-width: 1060px;
@@ -2678,12 +2682,13 @@ body {
   height: 96px;
   transition: transform 0.5s ease-in-out;
   background: #E5E5E5;
-  z-index: 1000; }
-  .navbar.hiddable {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0; }
+  z-index: 10000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+  .navbar.fixed {
+    margin-bottom: 100px; }
   .navbar.unpin {
     transform: translateY(-96px); }
   .navbar.pin {
@@ -2954,22 +2959,39 @@ body {
   margin: 20px 5%; }
 
 #whiteboard-lets-team-up {
-  width: 90%;
-  margin-left: 5%;
+  width: 80%;
+  margin-left: 10%;
   margin-top: 40px; }
 
-#blackboard-email {
-  width: 60%;
-  margin-left: 20%; }
+#whiteboard-email {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 50px; }
 
-#blackboard-top-curve {
-  height: 100px;
-  display: block;
-  overflow: visible;
-  transform: scale(-1, -1);
-  margin-top: -100px; }
-  #blackboard-top-curve path {
-    fill: white; }
+#whiteboard-top-curve {
+  height: 75px;
+  z-index: 0;
+  z-index: 100000;
+  width: 100%;
+  margin-top: -75px;
+  margin-bottom: 100px; }
+
+#whiteboard-top-curve-svg {
+  width: 100%;
+  height: 75px;
+  z-index: 0; }
+  #whiteboard-top-curve-svg path {
+    fill: white;
+    z-index: 0; }
+
+.splash-column {
+  width: 70%;
+  margin-left: 15%; }
+
+.splash-text {
+  font-size: 32px;
+  line-height: 1.5em;
+  margin-bottom: 30px; }
 
 @media (max-width: 500px) {
   #blackboard-top-curve {

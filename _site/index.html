@@ -79,14 +79,14 @@ Have a nice day :)
     <meta property="twitter:url" content="http://localhost:4000/">
     <meta property="twitter:title" content="GuidePost | Independent Creative Partners">
     <meta property="twitter:description" content="We design personal user/customer experiences. Develop design, innovation, strategy, products and services. Create jaw-dropping mobile and web applications that have a positive impact in the world. Want to team up? smile@guidepost.design">
-    <meta property="twitter:image" content="/assets/metatags/guidepost_gif_570x320_64.gif?1543834853486795000">
+    <meta property="twitter:image" content="/assets/metatags/guidepost_gif_570x320_64.gif?1543840722234949000">
 
     <!-- Progressive Web App -->
     <link rel="manifest" href="http://localhost:4000/manifest.json" />
 
     <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/main.css?1543834853486795000" />
-    <link rel="icon" href="/assets/img/logos/favicon_color.png?1543834853486795000" type="image/gif" />
+    <link rel="stylesheet" href="/assets/css/main.css?1543840722234949000" />
+    <link rel="icon" href="/assets/img/logos/favicon_color.png?1543840722234949000" type="image/gif" />
     <style>
 #loader-wrapper {
   position: fixed;
@@ -242,13 +242,13 @@ Have a nice day :)
         var guidepostLng = 99.824654;
     </script>
 </head>
-<body id="body" class="">
+<body id="body" class="index fixed-header">
     <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
 </div>
-    <div class="navbar hiddable unpin" id="navbar">
+    <div class="navbar  hiddable unpin" id="navbar">
         <div class="container">
             <div class="inner-navbar">
                 <div class="logo-container">
@@ -905,26 +905,25 @@ Have a nice day :)
     </div>
   </div>
 </div>
-<svg id="blackboard-top-curve" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-  <path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-</svg>
+<div id="whiteboard-top-curve">
+  <svg id="whiteboard-top-curve-svg" width="100%" height="75px" preserveAspectRatio="none" viewBox="0 0 1000 100">
+    <g transform="matrix(1.00047,0,0,1,-0.47193,0)">
+      <path d="M1001.32,-1.313L1001.32,100.742L0.493,100.742L0.493,0.098C500.196,100 800.065,99.967 1000,0L0.493,0L0.493,-1.313L1001.32,-1.313Z"/>
+    </g>
+  </svg>
+</div>
 <div class="landing-whiteboard">
   <div class="container">
     <div class="content">
       <img src="/assets/img/splashscreen/blocktext_webuildyourdreams_big_white.svg" class="brand-message tablet-or-bigger"/>
       <img src="/assets/img/splashscreen/blocktext_webuildyourdreams_small_white.svg"  class="brand-message mobile-only"/>
-      <div class="row">
-        <div class="col-6">
-            <p>We are a product design team. We aim to design and develop, strategy,  innovation, products and services that will help your business grow and have a positive impact in the world.</p>
-            <img src="/assets/img/splashscreen/illustration_webcreation.png" id="illustration-webcreation"/>
-            <p>We anticipate, solve problems and create products & services that deliver unique experiences.  We complement each other skills and think that working collaboratively make us achieve the best results.</p>
-        </div>
-        <div class="col-6">
-          <p>Create jaw-dropping mobile and web applications, advert games, and make your idea come to life would be the result of competitor, customer, and user research, assume challenges, measuring success, design intuitive interfaces and craft authentic experiences with business goals in sight.</p>
-          <img src="/assets/img/splashscreen/illustration_one_stop_shop.png" id="illustration-onestop"/>
-          <img src="/assets/img/splashscreen/block_text_letsteamup_1B708A_954x139.png" id="whiteboard-lets-team-up"/>
-          <img src="/assets/img/splashscreen/block_text_mail_1B708A_954x63.png" id="blackboard-email"/>
-        </div>
+      <div class="splash-column">
+        <p class="splash-text">We are a product design team. We develop and design innovative experiences that will help your business grow and have a positive impact in the world.</p>
+        <p class="splash-text">We complement each other skills and think that working collaboratively make us achieve the best results. We take pride in noticing and anticipating those little moments of joy or anxiety that make or break a user experience. Our goal is to create a product that your users and customers will fall in love with.
+        <img src="/assets/img/splashscreen/illustration_webcreation.png" id="illustration-webcreation"/>
+        <p class="splash-text">Together we’ll turn your idea into a jaw-dropping e-commerce, mobile and/or web application, social media campaign, advert game or what’s needed.</p>
+        <img src="/assets/img/splashscreen/block_text_letsteamup_1B708A_954x139.png" id="whiteboard-lets-team-up"/>
+        <img src="/assets/img/splashscreen/block_text_mail_1B708A_954x63.png" id="whiteboard-email"/>
       </div>
     </div>
   </div>
@@ -969,14 +968,14 @@ Have a nice day :)
   </div>
 </footer>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
-    <script type="text/javascript" src="/assets/js/libs/jquery-3.3.1.min.js?1543834853486795000"></script>
-    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js?1543834853486795000"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment.min.js?1543834853486795000"></script>
-    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js?1543834853486795000"></script>
-    <script type="text/javascript" src="/assets/js/menu.js?1543834853486795000"></script>
-    <script type="text/javascript" src="/assets/js/modal.js?1543834853486795000"></script>
-    <script type="text/javascript" src="/assets/js/clock.js?1543834853486795000"></script>
-    <script type="text/javascript" src="/assets/js/lets-talk.js?1543834853486795000"></script>
+    <script type="text/javascript" src="/assets/js/libs/jquery-3.3.1.min.js?1543840722234949000"></script>
+    <script type="text/javascript" src="/assets/js/libs/uglipop.min.js?1543840722234949000"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment.min.js?1543840722234949000"></script>
+    <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js?1543840722234949000"></script>
+    <script type="text/javascript" src="/assets/js/menu.js?1543840722234949000"></script>
+    <script type="text/javascript" src="/assets/js/modal.js?1543840722234949000"></script>
+    <script type="text/javascript" src="/assets/js/clock.js?1543840722234949000"></script>
+    <script type="text/javascript" src="/assets/js/lets-talk.js?1543840722234949000"></script>
     <script type="text/javascript">
 
 window.addEventListener('load', function() {

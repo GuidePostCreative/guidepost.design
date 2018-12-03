@@ -255,22 +255,39 @@ $animation-slogan-delay: 1.5s + $animation-des-name-delay
   margin: 20px 5%
 
 #whiteboard-lets-team-up
-  width: 90%
-  margin-left: 5%
+  width: 80%
+  margin-left: 10%
   margin-top: 40px
 
-#blackboard-email
-  width: 60%
-  margin-left: 20%
+#whiteboard-email
+  width: 70%
+  margin-left: 15%
+  margin-bottom: 50px
 
-#blackboard-top-curve
-  height: 100px
-  display: block
-  overflow: visible
-  transform: scale(-1, -1)
-  margin-top: -100px
+#whiteboard-top-curve
+  height: 75px
+  z-index: 0
+  z-index: 100000
+  width: 100%
+  margin-top: -75px
+  margin-bottom: 100px
+
+#whiteboard-top-curve-svg
+  width: 100%
+  height: 75px
+  z-index: 0
   path
     fill: white
+    z-index: 0
+
+.splash-column
+  width: 70%
+  margin-left: 15%
+
+.splash-text
+  font-size: $font-size-big
+  line-height: 1.5em
+  margin-bottom: 30px
 
 
 @media (max-width: 500px)

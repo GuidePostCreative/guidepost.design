@@ -4,13 +4,14 @@
   height: $navbar-height
   transition: transform 0.5s ease-in-out
   background: $navbar-background-color
-  z-index: 1000
+  z-index: 10000000
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
 
-  &.hiddable
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
+  &.fixed
+    margin-bottom: 100px
 
   &.unpin
     transform: translateY(-$navbar-height)
