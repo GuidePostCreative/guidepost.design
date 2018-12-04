@@ -3389,7 +3389,7 @@ body {
         top: 0;
         width: 1000px;
         z-index: 1; }
-        @media (max-width: 480px) {
+        @media (max-width: 1060px) {
           .portfolio-item-header .portfolio-arrow:before {
             display: none; } }
       .portfolio-item-header .portfolio-arrow.francisco {
