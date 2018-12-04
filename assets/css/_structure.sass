@@ -9,17 +9,17 @@ body
   flex-direction: column
   overflow-x: hidden
 
-  &.fixed-header
+  &.padding-top
     padding-top: $navbar-height
-  &.index
-    padding-top: 0 !important
+    @media (max-width: $page-threashold-mobile)
+      padding-top: $navbar-height-mobile
 
 .container
   max-width: $page_width
   margin: 0 auto
 
 .content
-  padding: 0 $gutter
+  padding: 0 2 * $gutter
 
 .page
   padding: 4 * $gutter 0

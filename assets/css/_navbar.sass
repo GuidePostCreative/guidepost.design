@@ -1,22 +1,25 @@
 @import 'variables'
 
-.navbar
+#navbar
   height: $navbar-height
   transition: transform 0.5s ease-in-out
   background: $navbar-background-color
   z-index: 10000000
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
 
-  &.fixed
-    margin-bottom: 100px
+  @media (max-width: $page-width)
+    height: $navbar-height-mobile
 
-  &.unpin
-    transform: translateY(-$navbar-height)
-  &.pin
-    transform: none
+  &.navbar-fixed
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+
+  &.hiddable
+    &.unpin
+      transform: translateY(-$navbar-height)
+    &.pin
+      transform: none
 
   .inner-navbar
     padding: 0 $gutter
@@ -27,16 +30,41 @@
     margin: $gutter 0 0 $gutter
     height: $navbar-height - (2* $gutter)
 
+    @media (max-width: $page-width)
+      margin: $gutter 0 0 $gutter
+      height: $navbar-height-mobile - (2* $gutter)
+
   .menu
     .menu-links
       height: $navbar-height
       display: flex
       transition: all 0.5s
 
+      @media (max-width: $page-width)
+        display: none !important
+        padding: 2 * $gutter
+        height: 100% !important
+
+        &.open
+          display: flex !important
+          flex-direction: column
+          position: fixed
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          background: white
+          height: 100%
+          z-index: 100000
+
       li
         height: 100%
         line-height: $navbar-height
-
+        @media (max-width: $page-width)
+          display: block
+          font-size: 20px
+          text-align: right
+          background: white
         a
           color: $navbar-color
           height: $navbar-height - 2px
@@ -46,50 +74,23 @@
           transition: all 0.3s
           &:hover
             color: $navbar-active-color
+          @media (max-width: $page-width)
+            font-size: $font-size-big
+            height: auto
+
         &.active
           a
             border-bottom: 2px solid $navbar-active-color
+            @media (max-width: $page-width)
+              border: none
+              color: $link_color
 
   #mobile-menu-btn
     height: 25px
     margin: 36px $gutter
+    @media (max-width: $page-width)
+      height: 20px
+      margin: 30px $gutter
 
   .close-btn
     height: $navbar-height - 4 * $gutter
-
-@media (max-width: $page-width)
-  .navbar
-    height: $navbar-height-mobile
-    #navbar-logo
-      margin: $gutter 0 0 $gutter
-      height: $navbar-height-mobile - (2* $gutter)
-    #mobile-menu-btn
-      height: 20px
-      margin: 30px $gutter
-  .menu
-    .menu-links
-      display: none !important
-      padding: $gutter
-
-      &.open
-        display: flex !important
-        flex-direction: column
-        position: fixed
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        background: white
-        height: 100%
-        z-index: 100000
-        li
-          display: block
-          font-size: 20px
-          text-align: right
-          background: white
-          a
-            height: auto
-          &.active
-            a
-              border: none
-              color: $link_color

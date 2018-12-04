@@ -18,12 +18,14 @@ function tickFixedClocks() {
 $(document).ready(function() {
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiZmNlcnV0aS1ncCIsImEiOiJjanA4MmFmMmQxNGRjM3BtbmlsdmZkbWhqIn0.Rk0eQehhU4wqvvY-qfjueQ';
-  var map = new mapboxgl.Map({
-    container: 'lets-talk-map',
-    style: 'mapbox://styles/mapbox/light-v9',
-    center: [guidepostLng, guidepostLat],
-    zoom: 8
-  });
-  window.setInterval(tickFixedClocks, 500);
+  if(document.getElementById('lets-talk-map')) {
+    var map = new mapboxgl.Map({
+      container: 'lets-talk-map',
+      style: 'mapbox://styles/mapbox/light-v9',
+      center: [guidepostLng, guidepostLat],
+      zoom: 8
+    });
+    window.setInterval(tickFixedClocks, 500);
+  }
 
 });

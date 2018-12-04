@@ -27,9 +27,7 @@ $arrow-height-mobile: 40px
     margin: 88px 0 0
     color: $text-color
 
-
-@media (max-width: $page-threashold-mobile)
-  .portfolio-header
+  @media (max-width: $page-threashold-mobile)
     height: $header-height-mobile
 
     &-background
@@ -95,6 +93,8 @@ $arrow-height-mobile: 40px
         border: $arrow-height / 2 solid transparent
         position: absolute
         z-index: 1
+
+
       &:before
         content: " "
         position: absolute
@@ -103,6 +103,9 @@ $arrow-height-mobile: 40px
         top: 0
         width: 1000px
         z-index: 1
+        @media (max-width: $page-threashold-mobile)
+          display: none
+
       &.francisco
         background: $secondary_color_2
         float: left
@@ -130,8 +133,9 @@ $arrow-height-mobile: 40px
         &:before
           right: -1000px
           background: $secondary_color_1
+
   &-content
-    padding: 4 * $gutter $gutter
+    padding: 4 * $gutter 0
     &.light-blue
       background: #EBEFF2
     &.grapes

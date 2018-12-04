@@ -40,9 +40,9 @@
         var guidepostLng = {{ page.guidepost_lng }};
     </script>
 </head>
-<body id="body" class="{{ page.body_class }} fixed-header">
+<body id="body" class="{{ page.body_class }}">
     {% include loader.html %}
-    <div class="navbar {% if page.hiddable_header == true %} hiddable unpin{% endif %}" id="navbar">
+    <div class="navbar navbar-fixed {% if page.hiddable_header == true %}hiddable unpin{% endif %}" id="navbar">
         <div class="container">
             <div class="inner-navbar">
                 <div class="logo-container">
@@ -52,9 +52,9 @@
                 </div>
                 <div class="menu">
                     <div class="tablet-or-smaller">
-                        <img src="/assets/img/icons/menu.svg" id="mobile-menu-btn" onclick="javascript: document.getElementById('menu').classList.add('open');" />
+                        <img src="/assets/img/icons/menu.svg" id="mobile-menu-btn" onclick="javascript: document.getElementById('menu-links').classList.add('open');" />
                     </div>
-                    <ul class="menu-links" id="menu">
+                    <ul class="menu-links" id="menu-links">
                         <li class="mobile-only">
                             <a onclick="javascript: document.getElementById('menu').classList.remove('open');">
                                 <img src="/assets/img/icons/close.svg" class="close-btn"/>
