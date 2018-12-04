@@ -3750,7 +3750,8 @@ body {
         width: 370px;
         transition: all 0.3s;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        background: none; }
         @media (max-width: 480px) {
           .footer .contact .newsletter .newsletter-slide .newsletter-form {
             left: 0;
@@ -3776,9 +3777,9 @@ body {
           color: #1B708A;
           font-style: italic;
           font-size: 24px;
-          background: none;
           height: 20px;
-          background: #E5E5E5; }
+          background: #E5E5E5;
+          border-radius: 0; }
           .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input:focus {
             outline: none; }
           @media (max-width: 480px) {
