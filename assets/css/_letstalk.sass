@@ -7,8 +7,14 @@
 #lets-talk-map-container
   height: 550px
   position: relative
+  z-index: -1
+  @media (max-width: $page-threashold-mobile)
+    height: 400px
+
 #lets-talk-map
   height: 550px
+  @media (max-width: $page-threashold-mobile)
+    height: 400px
 
 #lets-talk-separator
   height: 75px
@@ -34,14 +40,22 @@
   height: 470px
   z-index: 1000
 
+  @media (max-width: $page-threashold-mobile)
+    height: 400px
+
   .clock
     color: $text-color
+    @media (max-width: $page-threashold-mobile)
+      display: none
     .location
       color: $secondary_color_1
 
 .lets-talk-title
   font-size: 120px
-  margin-top: 100px
+  margin-top: 150px
+  @media (max-width: $page-threashold-mobile)
+    font-size: 70px
+    margin-top: 100px
 
 .lets-talk-text
   color: white
@@ -51,22 +65,5 @@
   a
     color: $secondary_color_2
     text-decoration: none
-
-
-@media (max-width: 500px)
-  .lets-talk-title
-    font-size: 70px
-    margin-top: 50px
-
-  .lets-talk-text
+  @media (max-width: $page-threashold-mobile)
     font-size: 20px
-
-  #lets-talk-map-container
-    height: 400px
-  #lets-talk-map
-
-    height: 400px
-  #map-overlay
-    height: 400px
-    .clock
-      display: none

@@ -34,11 +34,13 @@ table {
 
 .row {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  margin-left: -4%;
+  margin-right: -4%; }
 
 .row [class^="col"] {
   float: left;
-  margin: 0.5rem 2%;
+  margin: 0.5rem 4%;
   min-height: 0.125rem; }
 
 .row::after {
@@ -3035,8 +3037,6 @@ body.padding-top {
 .journal-body {
   background: #0C2C2D;
   background-image: url(/assets/img/footer/pattern_dot.svg); }
-  .journal-body .container {
-    width: 1060px; }
   .journal-body .page {
     margin: 0;
     padding-top: 0; }
@@ -3580,10 +3580,17 @@ body.padding-top {
 
 #lets-talk-map-container {
   height: 550px;
-  position: relative; }
+  position: relative;
+  z-index: -1; }
+  @media (max-width: 480px) {
+    #lets-talk-map-container {
+      height: 400px; } }
 
 #lets-talk-map {
   height: 550px; }
+  @media (max-width: 480px) {
+    #lets-talk-map {
+      height: 400px; } }
 
 #lets-talk-separator {
   height: 75px;
@@ -3608,14 +3615,24 @@ body.padding-top {
   top: 0;
   height: 470px;
   z-index: 1000; }
+  @media (max-width: 480px) {
+    #map-overlay {
+      height: 400px; } }
   #map-overlay .clock {
     color: #4F4F4F; }
+    @media (max-width: 480px) {
+      #map-overlay .clock {
+        display: none; } }
     #map-overlay .clock .location {
       color: #1B708A; }
 
 .lets-talk-title {
   font-size: 120px;
-  margin-top: 100px; }
+  margin-top: 150px; }
+  @media (max-width: 480px) {
+    .lets-talk-title {
+      font-size: 70px;
+      margin-top: 100px; } }
 
 .lets-talk-text {
   color: white;
@@ -3625,25 +3642,10 @@ body.padding-top {
   .lets-talk-text a {
     color: #4FB0BB;
     text-decoration: none; }
+  @media (max-width: 480px) {
+    .lets-talk-text {
+      font-size: 20px; } }
 
-@media (max-width: 500px) {
-  .lets-talk-title {
-    font-size: 70px;
-    margin-top: 50px; }
-
-  .lets-talk-text {
-    font-size: 20px; }
-
-  #lets-talk-map-container {
-    height: 400px; }
-
-  #lets-talk-map {
-    height: 400px; }
-
-  #map-overlay {
-    height: 400px; }
-    #map-overlay .clock {
-      display: none; } }
 .clock {
   text-align: right;
   color: white; }
