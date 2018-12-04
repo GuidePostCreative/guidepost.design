@@ -3734,7 +3734,7 @@ body.padding-top {
         @media (max-width: 480px) {
           .footer .contact .newsletter .newsletter-slide .newsletter-form {
             left: 0;
-            width: 250px; } }
+            width: 220px; } }
         .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
           content: " ";
           position: absolute;
@@ -3747,7 +3747,7 @@ body.padding-top {
           z-index: 1; }
           @media (max-width: 480px) {
             .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
-              left: 250px;
+              left: 220px;
               top: 0; } }
         .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
           border: none;
@@ -3763,7 +3763,7 @@ body.padding-top {
             outline: none; }
           @media (max-width: 480px) {
             .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
-              width: 220px;
+              width: 190px;
               font-size: 16px; } }
       .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
         left: 0; }
