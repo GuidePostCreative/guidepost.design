@@ -73,9 +73,13 @@ $profile-picture-border-width: 8px
           height: 28px
           position: relative
           bottom: 2px
+          @media (max-width: $page-threashold-mobile)
+            height: 22px
       &.isabel
         img
           height: 36px
+          @media (max-width: $page-threashold-mobile)
+            height: 30px
     .profile-social-networks
       li
         display: inline

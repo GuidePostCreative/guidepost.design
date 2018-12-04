@@ -6,11 +6,10 @@ function tickFixedClocks() {
     divider = '<span class="time-divider off">:</span>'
   }
   $('.fixed-clock').each(function(){
-    console.log($(this).data('timezone'));
-    var time = moment().tz($(this).data('timezone')).format('HH-mm').split('-');
-    console.log(time)
-    $(this).find('.time').html(time[0] + divider + guestTime[1])
-    $(this).find('.date').html(moment().tz(guestTimeZone).format('ddd DD MMM'))
+    var tz = $(this).data('timezone');
+    var time = moment().tz(tz).format('HH-mm').split('-');
+    $(this).find('.time').html(time[0] + divider + time[1])
+    $(this).find('.date').html(moment().tz(tz).format('ddd DD MMM'))
   });
   fixedTick = !fixedTick;
 }
