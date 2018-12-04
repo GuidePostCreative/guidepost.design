@@ -3342,6 +3342,11 @@ body.padding-top {
     background-position: center right;
     background-repeat: no-repeat;
     height: 333px; }
+    @media (max-width: 480px) {
+      .portfolio-item-header {
+        height: 400px; }
+        .portfolio-item-header-content {
+          height: 400px; } }
     .portfolio-item-header.item-04 {
       background-image: url(/assets/img/portfolio/beeinfluencer/number.svg); }
     .portfolio-item-header.item-03 {
@@ -3356,13 +3361,28 @@ body.padding-top {
       align-items: center;
       height: 333px;
       justify-content: space-around; }
+      @media (max-width: 480px) {
+        .portfolio-item-header-content {
+          flex-direction: column;
+          justify-content: center; } }
       .portfolio-item-header-content .project-client .logo {
         position: relative;
         max-width: 300px; }
+        @media (max-width: 480px) {
+          .portfolio-item-header-content .project-client .logo {
+            width: 80%;
+            margin-bottom: 16px;
+            margin: 0 10% 50px; } }
       .portfolio-item-header-content .project-highlight .name {
         font-size: 32px;
         font-style: italic;
         color: #4F4F4F; }
+        @media (max-width: 480px) {
+          .portfolio-item-header-content .project-highlight .name {
+            font-size: 20px;
+            color: #4F4F4F;
+            text-align: center;
+            margin: 0 16px; } }
     .portfolio-item-header .portfolio-arrow {
       height: 54px;
       display: inline-block;
@@ -3404,6 +3424,11 @@ body.padding-top {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 1600px; }
+    @media (max-width: 480px) {
+      .portfolio-item-content {
+        padding-top: 0; }
+        .portfolio-item-content.light-blue {
+          padding-top: 64px; } }
     .portfolio-item-content .topics {
       display: flex;
       flex-direction: row;
@@ -3413,6 +3438,9 @@ body.padding-top {
         flex-direction: column;
         align-items: center;
         padding: 0 5px; }
+        @media (max-width: 480px) {
+          .portfolio-item-content .topics-item {
+            padding: 0; } }
         .portfolio-item-content .topics-item-img-container {
           height: auto;
           height: 55px;
@@ -3488,20 +3516,6 @@ body.padding-top {
       left: -33px;
       border: 20px solid transparent;
       border-right: 13.3333333333px solid #1B708A; }
-  .portfolio-item-header-content {
-    flex-direction: column;
-    justify-content: center; }
-    .portfolio-item-header-content .project-client .logo {
-      position: relative;
-      max-width: 300px;
-      max-height: 80px;
-      margin-bottom: 16px; }
-    .portfolio-item-header-content .project-highlight .name {
-      font-size: 32px;
-      font-style: italic;
-      color: #4F4F4F;
-      text-align: center;
-      margin: 0 16px; }
 
   .portfolio-item-content .topics {
     flex-direction: column;

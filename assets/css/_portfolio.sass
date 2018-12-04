@@ -5,6 +5,7 @@ $header-height-mobile: 240px
 $header-background-url: '/assets/img/portfolio/header-background.svg'
 
 $portfolio-item-header-height: 333px
+$portfolio-item-header-height-mobile: 400px
 $arrow-height: 54px
 $arrow-height-mobile: 40px
 
@@ -47,14 +48,22 @@ $arrow-height-mobile: 40px
 
 .portfolio-item
   margin-bottom: 4 * $gutter
+
   &:after
     content: " "
     clear: both
+
   &-header
     background-repeat: none
     background-position: center right
     background-repeat: no-repeat
     height: $portfolio-item-header-height
+
+    @media (max-width: $page-threashold-mobile)
+      height: $portfolio-item-header-height-mobile
+      &-content
+        height: $portfolio-item-header-height-mobile
+
     &.item-04
       background-image: url(/assets/img/portfolio/beeinfluencer/number.svg)
     &.item-03
@@ -69,15 +78,30 @@ $arrow-height-mobile: 40px
       align-items: center
       height: $portfolio-item-header-height
       justify-content: space-around
+
+      @media (max-width: $page-threashold-mobile)
+        flex-direction: column
+        justify-content: center
+
       .project-client
         .logo
           position: relative
           max-width: 300px
+          @media (max-width: $page-threashold-mobile)
+            width: 80%
+            margin-bottom: $gutter
+            margin: 0 10% 50px
+
       .project-highlight
         .name
           font-size: 32px
           font-style: italic
           color: $text-color
+          @media (max-width: $page-threashold-mobile)
+            font-size: 20px
+            color: $text-color
+            text-align: center
+            margin: 0 $gutter
 
     .portfolio-arrow
       height: $arrow-height
@@ -126,6 +150,11 @@ $arrow-height-mobile: 40px
       background-position: center center
       background-size: 1600px
 
+    @media (max-width: $page-threashold-mobile)
+      padding-top: 0
+      &.light-blue
+        padding-top: 4 * $gutter
+
     .topics
       display: flex
       flex-direction: row
@@ -135,6 +164,9 @@ $arrow-height-mobile: 40px
         flex-direction: column
         align-items: center
         padding: 0 5px
+        @media (max-width: $page-threashold-mobile)
+          padding: 0
+
         &-img-container
           height: auto
           height: 55px
@@ -222,22 +254,6 @@ $arrow-height-mobile: 40px
           left: -33px
           border: $arrow-height-mobile / 2 solid transparent
           border-right: $arrow-height-mobile / 3 solid $secondary_color_1
-    &-content
-      flex-direction: column
-      justify-content: center
-      .project-client
-        .logo
-          position: relative
-          max-width: 300px
-          max-height: 80px
-          margin-bottom: $gutter
-      .project-highlight
-        .name
-          font-size: 32px
-          font-style: italic
-          color: $text-color
-          text-align: center
-          margin: 0 $gutter
 
   .portfolio-item
     &-content
