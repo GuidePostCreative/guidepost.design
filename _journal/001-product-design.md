@@ -11,14 +11,14 @@ body_class: journal-body padding-top
 ---
 {::options parse_block_html="true" /}
 
-
-![Photo by Robert Nyman on Unsplash.](/assets/img/journal/002/raj-eiamworakul-386769-unsplash.jpg){: .modal-image}
-
-Photo by Robert Nyman on Unsplash.
-{: .journal-caption}
-
-
 <div class="row">
+<div class="col-12">
+
+
+<h1 class="journal-title">{{ page.title }}</h1>
+<p class="journal-date">{{ page.ddate }}</p>
+
+</div>
 <div class="col-6">
 
 
