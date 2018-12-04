@@ -94,18 +94,6 @@ $arrow-height-mobile: 40px
         position: absolute
         z-index: 1
 
-
-      &:before
-        content: " "
-        position: absolute
-        height: $arrow-height
-        width: 0
-        top: 0
-        width: 1000px
-        z-index: 1
-        @media (max-width: $page_width)
-          display: none
-
       &.francisco
         background: $secondary_color_2
         float: left
@@ -115,9 +103,6 @@ $arrow-height-mobile: 40px
         &:after
           right: -45px
           border-left: $arrow-height / 3 solid $secondary_color_2
-        &:before
-          left: -1000px
-          background: $secondary_color_2
 
         &.francisco
         .handwritten-name
@@ -130,9 +115,6 @@ $arrow-height-mobile: 40px
         &:after
           left: -45px
           border-right: $arrow-height / 3 solid $secondary_color_1
-        &:before
-          right: -1000px
-          background: $secondary_color_1
 
   &-content
     padding: 4 * $gutter 0

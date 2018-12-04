@@ -5,13 +5,10 @@ body, html
   width: 100%
 
 body
-  display: flex
-  flex-direction: column
-  overflow-x: hidden
 
   &.padding-top
     padding-top: $navbar-height
-    @media (max-width: $page-threashold-mobile)
+    @media (max-width: $page-width)
       padding-top: $navbar-height-mobile
 
 .container
