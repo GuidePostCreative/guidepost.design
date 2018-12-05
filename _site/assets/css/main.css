@@ -3093,7 +3093,9 @@ body.padding-top {
       transform: scale(1.5, 1); }
 
 .journal-entry {
-  position: relative; }
+  position: relative;
+  font-size: 18px;
+  line-height: 1.6em; }
   .journal-entry .journal-number {
     height: 42px; }
     .journal-entry .journal-number .left-body {
@@ -3161,6 +3163,9 @@ body.padding-top {
       text-decoration-color: #1B708A; }
   .journal-entry b {
     font-weight: bold; }
+  .journal-entry p {
+    font-size: 18px;
+    line-height: 1.6em; }
 
 @media (max-width: 1060px) {
   .journal-body .container {
