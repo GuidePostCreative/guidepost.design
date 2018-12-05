@@ -7,6 +7,12 @@ markdown: kramdown
 sass:
   sass_dir: assets/css
 
+# Clock configuration
+guidepost_location: "Koh Tao, TH"
+guidepost_timezone: "Asia/Bangkok"
+guidepost_lat: "10.081729"
+guidepost_lng: "99.824654"
+
 defaults:
   - scope:
       path: "assets/img"
@@ -18,10 +24,6 @@ defaults:
     values:
       layout: "base"
       hiddable_header: "false"
-      guidepost_location: "Koh Tao, TH"
-      guidepost_timezone: "Asia/Bangkok"
-      guidepost_lat: "10.081729"
-      guidepost_lng: "99.824654"
 
 collections:
   journal:

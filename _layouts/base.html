@@ -34,10 +34,10 @@
     {% include loader_css.html %}
     {% include google_analytics.html %}
     <script type="text/javascript">
-        var guidepostLocation = "{{ page.guidepost_location }}";
-        var guidepostTimeZone = "{{ page.guidepost_timezone }}";
-        var guidepostLat = {{ page.guidepost_lat }};
-        var guidepostLng = {{ page.guidepost_lng }};
+        var guidepostLocation = "{{ site.guidepost_location }}";
+        var guidepostTimeZone = "{{ site.guidepost_timezone }}";
+        var guidepostLat = {{ site.guidepost_lat }};
+        var guidepostLng = {{ site.guidepost_lng }};
     </script>
 </head>
 <body id="body" class="{{ page.body_class }}">
@@ -85,6 +85,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <script type="text/javascript" src="/assets/js/libs/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/assets/js/libs/uglipop.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libs/fancybox/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="/assets/js/libs/moment.min.js"></script>
     <script type="text/javascript" src="/assets/js/libs/moment-timezone-with-data.min.js"></script>
     <script type="text/javascript" src="{{ '/assets/js/menu.js' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}"></script>
