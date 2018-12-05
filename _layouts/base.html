@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% include tag_manager.js.html %}
     {% include meme.html %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,6 +42,7 @@
     </script>
 </head>
 <body id="body" class="{{ page.body_class }}">
+    {% include tag_manager_container.html %}
     {% include loader.html %}
     <div class="navbar navbar-fixed {% if page.hiddable_header == true %}hiddable unpin{% endif %}" id="navbar">
         <div class="container">
