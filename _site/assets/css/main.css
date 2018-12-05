@@ -3339,7 +3339,8 @@ body.padding-top {
     background-repeat: none;
     background-position: center right;
     background-repeat: no-repeat;
-    height: 333px; }
+    height: 333px;
+    position: relative; }
     @media (max-width: 480px) {
       .portfolio-item-header {
         height: 400px; }
@@ -3370,7 +3371,7 @@ body.padding-top {
           .portfolio-item-header-content .project-client .logo {
             width: 80%;
             margin-bottom: 16px;
-            margin: 0 10% 50px; } }
+            margin: 90px 10% 50px; } }
       .portfolio-item-header-content .project-highlight .name {
         font-size: 32px;
         font-style: italic;
@@ -3383,8 +3384,11 @@ body.padding-top {
             margin: 0 16px; } }
     .portfolio-item-header .portfolio-arrow {
       height: 54px;
-      display: inline-block;
-      position: relative; }
+      position: absolute;
+      top: 0; }
+      @media (max-width: 480px) {
+        .portfolio-item-header .portfolio-arrow {
+          height: 40px; } }
       .portfolio-item-header .portfolio-arrow .handwritten-name {
         margin: 0 16px; }
       .portfolio-item-header .portfolio-arrow:after {
@@ -3397,22 +3401,39 @@ body.padding-top {
         z-index: 1; }
       .portfolio-item-header .portfolio-arrow.francisco {
         background: #4FB0BB;
-        float: left; }
+        left: 0; }
         .portfolio-item-header .portfolio-arrow.francisco .handwritten-name {
           height: 30px;
           margin-top: 9px; }
+          @media (max-width: 480px) {
+            .portfolio-item-header .portfolio-arrow.francisco .handwritten-name {
+              height: 20px; } }
         .portfolio-item-header .portfolio-arrow.francisco:after {
           right: -45px;
           border-left: 18px solid #4FB0BB; }
+          @media (max-width: 480px) {
+            .portfolio-item-header .portfolio-arrow.francisco:after {
+              right: -33px;
+              border: 20px solid transparent;
+              border-left: 13.3333333333px solid #4FB0BB; } }
       .portfolio-item-header .portfolio-arrow.isabel {
         background: #1B708A;
-        float: right; }
+        right: 0; }
         .portfolio-item-header .portfolio-arrow.isabel .handwritten-name {
           height: 40px;
           margin-top: 11px; }
+          @media (max-width: 480px) {
+            .portfolio-item-header .portfolio-arrow.isabel .handwritten-name {
+              height: 30px;
+              margin-top: 9px; } }
         .portfolio-item-header .portfolio-arrow.isabel:after {
           left: -45px;
           border-right: 18px solid #1B708A; }
+          @media (max-width: 480px) {
+            .portfolio-item-header .portfolio-arrow.isabel:after {
+              left: -33px;
+              border: 20px solid transparent;
+              border-right: 13.3333333333px solid #1B708A; } }
   .portfolio-item-content {
     padding: 64px 0; }
     .portfolio-item-content.light-blue {
@@ -3422,6 +3443,10 @@ body.padding-top {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 1600px; }
+      @media (max-width: 480px) {
+        .portfolio-item-content.grapes {
+          background-size: 500px;
+          background-position: center bottom; } }
     @media (max-width: 480px) {
       .portfolio-item-content {
         padding-top: 0; }
@@ -3431,6 +3456,9 @@ body.padding-top {
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
+      @media (max-width: 480px) {
+        .portfolio-item-content .topics {
+          flex-direction: column; } }
       .portfolio-item-content .topics-item {
         display: flex;
         flex-direction: column;
@@ -3438,19 +3466,35 @@ body.padding-top {
         padding: 0 5px; }
         @media (max-width: 480px) {
           .portfolio-item-content .topics-item {
-            padding: 0; } }
+            padding: 0;
+            display: block;
+            margin-bottom: 32px; } }
         .portfolio-item-content .topics-item-img-container {
           height: auto;
           height: 55px;
-          margin-bottom: 16px; }
+          margin-bottom: 16px;
+          height: 50px; }
+          @media (max-width: 480px) {
+            .portfolio-item-content .topics-item-img-container {
+              width: 70px;
+              margin: 0 0 10px;
+              float: left; } }
         .portfolio-item-content .topics-item-img {
           height: 55px;
           margin: 0 auto; }
+          @media (max-width: 480px) {
+            .portfolio-item-content .topics-item-img {
+              height: auto;
+              width: 50px;
+              margin: 0 auto; } }
         .portfolio-item-content .topics-item-text {
           text-align: center;
           font-weight: bold;
           color: #1B708A;
           margin: 0; }
+          @media (max-width: 480px) {
+            .portfolio-item-content .topics-item-text {
+              text-align: left; } }
       .portfolio-item-content .topics.light .topics-item {
         padding: 0 7px; }
         .portfolio-item-content .topics.light .topics-item-text {
@@ -3458,119 +3502,88 @@ body.padding-top {
     .portfolio-item-content .concha-y-toro-layout {
       display: flex;
       flex-direction: row; }
+      @media (max-width: 480px) {
+        .portfolio-item-content .concha-y-toro-layout {
+          flex-direction: column; } }
       .portfolio-item-content .concha-y-toro-layout .column {
         width: 33%;
         color: white;
         padding: 0 16px;
         display: flex;
         align-items: center; }
+        @media (max-width: 480px) {
+          .portfolio-item-content .concha-y-toro-layout .column {
+            width: 100%;
+            color: #4F4F4F; } }
       .portfolio-item-content .concha-y-toro-layout .topics {
         flex-direction: column;
         color: white; }
+        @media (max-width: 480px) {
+          .portfolio-item-content .concha-y-toro-layout .topics {
+            margin-top: 50px; } }
         .portfolio-item-content .concha-y-toro-layout .topics-item {
           align-items: center;
           padding: 0 25px;
           margin-bottom: 64px; }
+          @media (max-width: 480px) {
+            .portfolio-item-content .concha-y-toro-layout .topics-item {
+              display: block;
+              margin-bottom: 32px;
+              padding: 0; } }
           .portfolio-item-content .concha-y-toro-layout .topics-item:last-item {
             margin-bottom: 0; }
           .portfolio-item-content .concha-y-toro-layout .topics-item-img-container {
             height: 60px;
             margin-bottom: 16px; }
+            @media (max-width: 480px) {
+              .portfolio-item-content .concha-y-toro-layout .topics-item-img-container {
+                height: 50px;
+                width: 70px;
+                margin: 0 0 10px;
+                float: left; } }
           .portfolio-item-content .concha-y-toro-layout .topics-item-img {
             height: 60px;
             margin: 0 auto; }
+            @media (max-width: 480px) {
+              .portfolio-item-content .concha-y-toro-layout .topics-item-img {
+                height: auto;
+                width: 50px;
+                margin: 0 auto; } }
           .portfolio-item-content .concha-y-toro-layout .topics-item-text {
             text-align: center;
             font-weight: bold;
             color: white; }
+            @media (max-width: 480px) {
+              .portfolio-item-content .concha-y-toro-layout .topics-item-text {
+                text-align: left;
+                color: #4F4F4F; } }
     .portfolio-item-content #bottle-of-wine {
       float: right;
       margin-top: -120px;
       margin-bottom: -150px;
       height: 1000px; }
+      @media (max-width: 480px) {
+        .portfolio-item-content #bottle-of-wine {
+          float: none;
+          height: 500px;
+          margin: 0 auto -140px; } }
     .portfolio-item-content .beeinfluencer-product-img {
       margin-bottom: -140px; }
     .portfolio-item-content .cdecsic-product-img {
       width: 80%;
       margin: 0 10%; }
+      @media (max-width: 480px) {
+        .portfolio-item-content .cdecsic-product-img {
+          width: 100%;
+          margin: 0; } }
     .portfolio-item-content .late-product-img {
       width: 50%;
       margin-left: 25%; }
+      @media (max-width: 480px) {
+        .portfolio-item-content .late-product-img {
+          width: 80%;
+          margin-left: 10%; } }
 
-@media (max-width: 480px) {
-  .portfolio-item-header .portfolio-arrow {
-    height: 40px; }
-    .portfolio-item-header .portfolio-arrow.francisco .handwritten-name {
-      height: 20px;
-      margin-top: 9px; }
-    .portfolio-item-header .portfolio-arrow.francisco:after {
-      right: -33px;
-      border: 20px solid transparent;
-      border-left: 13.3333333333px solid #4FB0BB; }
-    .portfolio-item-header .portfolio-arrow.isabel .handwritten-name {
-      height: 30px;
-      margin-top: 9px; }
-    .portfolio-item-header .portfolio-arrow.isabel:after {
-      left: -33px;
-      border: 20px solid transparent;
-      border-right: 13.3333333333px solid #1B708A; }
-
-  .portfolio-item-content .topics {
-    flex-direction: column;
-    justify-content: space-between; }
-    .portfolio-item-content .topics-item {
-      display: block;
-      margin-bottom: 32px; }
-      .portfolio-item-content .topics-item-img-container {
-        height: 50px;
-        width: 70px;
-        margin: 0 0 10px;
-        float: left; }
-      .portfolio-item-content .topics-item-img {
-        height: auto;
-        width: 50px;
-        margin: 0 auto; }
-      .portfolio-item-content .topics-item-text {
-        text-align: left; }
-  .portfolio-item-content.grapes {
-    background-size: 500px;
-    background-position: center bottom; }
-  .portfolio-item-content .concha-y-toro-layout {
-    display: flex;
-    flex-direction: column; }
-    .portfolio-item-content .concha-y-toro-layout .column {
-      width: 100%;
-      color: #4F4F4F; }
-    .portfolio-item-content .concha-y-toro-layout .topics {
-      flex-direction: column;
-      color: white;
-      margin-top: 50px; }
-      .portfolio-item-content .concha-y-toro-layout .topics-item {
-        display: block;
-        margin-bottom: 32px;
-        padding: 0; }
-        .portfolio-item-content .concha-y-toro-layout .topics-item-img-container {
-          height: 50px;
-          width: 70px;
-          margin: 0 0 10px;
-          float: left; }
-        .portfolio-item-content .concha-y-toro-layout .topics-item-img {
-          height: auto;
-          width: 50px;
-          margin: 0 auto; }
-        .portfolio-item-content .concha-y-toro-layout .topics-item-text {
-          text-align: left;
-          color: #4F4F4F; }
-  .portfolio-item #bottle-of-wine {
-    float: none;
-    height: 500px;
-    margin: 0 auto -140px; }
-  .portfolio-item .cdecsic-product-img {
-    width: 100%;
-    margin: 0; }
-  .portfolio-item .late-product-img {
-    width: 80%;
-    margin-left: 10%; } }
 .letstalk-body {
   background: #0C2C2D;
   background-image: url(/assets/img/footer/pattern_dot.svg); }

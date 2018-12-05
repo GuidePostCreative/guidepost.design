@@ -58,6 +58,7 @@ $arrow-height-mobile: 40px
     background-position: center right
     background-repeat: no-repeat
     height: $portfolio-item-header-height
+    position: relative
 
     @media (max-width: $page-threashold-mobile)
       height: $portfolio-item-header-height-mobile
@@ -90,7 +91,7 @@ $arrow-height-mobile: 40px
           @media (max-width: $page-threashold-mobile)
             width: 80%
             margin-bottom: $gutter
-            margin: 0 10% 50px
+            margin: 90px 10% 50px
 
       .project-highlight
         .name
@@ -105,8 +106,11 @@ $arrow-height-mobile: 40px
 
     .portfolio-arrow
       height: $arrow-height
-      display: inline-block
-      position: relative
+      position: absolute
+      top: 0
+      @media (max-width: $page-threashold-mobile)
+        height: $arrow-height-mobile
+
       .handwritten-name
         margin: 0 $gutter
       &:after
@@ -120,25 +124,37 @@ $arrow-height-mobile: 40px
 
       &.francisco
         background: $secondary_color_2
-        float: left
+        left: 0
         .handwritten-name
           height: 30px
           margin-top: 9px
+          @media (max-width: $page-threashold-mobile)
+            height: 20px
         &:after
           right: -45px
           border-left: $arrow-height / 3 solid $secondary_color_2
-
+          @media (max-width: $page-threashold-mobile)
+            right: -33px
+            border: $arrow-height-mobile / 2 solid transparent
+            border-left: $arrow-height-mobile / 3 solid $secondary_color_2
         &.francisco
         .handwritten-name
       &.isabel
         background: $secondary_color_1
-        float: right
+        right: 0
         .handwritten-name
           height: 40px
           margin-top: 11px
+          @media (max-width: $page-threashold-mobile)
+            height: 30px
+            margin-top: 9px
         &:after
           left: -45px
           border-right: $arrow-height / 3 solid $secondary_color_1
+          @media (max-width: $page-threashold-mobile)
+            left: -33px
+            border: $arrow-height-mobile / 2 solid transparent
+            border-right: $arrow-height-mobile / 3 solid $secondary_color_1
 
   &-content
     padding: 4 * $gutter 0
@@ -149,6 +165,9 @@ $arrow-height-mobile: 40px
       background-repeat: no-repeat
       background-position: center center
       background-size: 1600px
+      @media (max-width: $page-threashold-mobile)
+        background-size: 500px
+        background-position: center bottom
 
     @media (max-width: $page-threashold-mobile)
       padding-top: 0
@@ -159,6 +178,9 @@ $arrow-height-mobile: 40px
       display: flex
       flex-direction: row
       justify-content: space-between
+      @media (max-width: $page-threashold-mobile)
+        flex-direction: column
+
       &-item
         display: flex
         flex-direction: column
@@ -166,19 +188,33 @@ $arrow-height-mobile: 40px
         padding: 0 5px
         @media (max-width: $page-threashold-mobile)
           padding: 0
+          display: block
+          margin-bottom: 2 * $gutter
 
         &-img-container
           height: auto
           height: 55px
           margin-bottom: $gutter
+          height: 50px
+          @media (max-width: $page-threashold-mobile)
+            width: 70px
+            margin: 0 0 10px
+            float: left
+
         &-img
           height: 55px
           margin: 0 auto
+          @media (max-width: $page-threashold-mobile)
+            height: auto
+            width: 50px
+            margin: 0 auto
         &-text
           text-align: center
           font-weight: bold
           color: $secondary_color_1
           margin: 0
+          @media (max-width: $page-threashold-mobile)
+            text-align: left
       &.light
         .topics-item
           padding: 0 7px
@@ -188,39 +224,70 @@ $arrow-height-mobile: 40px
     .concha-y-toro-layout
       display: flex
       flex-direction: row
+      @media (max-width: $page-threashold-mobile)
+        flex-direction: column
       .column
         width: 33%
         color: white
         padding: 0 $gutter
         display: flex
         align-items: center
+        @media (max-width: $page-threashold-mobile)
+          width: 100%
+          color: $text-color
 
       .topics
         flex-direction: column
         color: white
+        @media (max-width: $page-threashold-mobile)
+          margin-top: 50px
 
         &-item
           align-items: center
           padding: 0 25px
           margin-bottom: 4 * $gutter
+          @media (max-width: $page-threashold-mobile)
+            display: block
+            margin-bottom: 2 * $gutter
+            padding: 0
+
           &:last-item
             margin-bottom: 0
+
           &-img-container
             height: 60px
             margin-bottom: $gutter
+            @media (max-width: $page-threashold-mobile)
+              height: 50px
+              width: 70px
+              margin: 0 0 10px
+              float: left
+
           &-img
             height: 60px
             margin: 0 auto
+            @media (max-width: $page-threashold-mobile)
+              height: auto
+              width: 50px
+              margin: 0 auto
+
           &-text
             text-align: center
             font-weight: bold
             color: white
+            @media (max-width: $page-threashold-mobile)
+              text-align: left
+              color: $text-color
 
     #bottle-of-wine
       float: right
       margin-top: -120px
       margin-bottom: -150px
       height: 1000px
+      @media (max-width: $page-threashold-mobile)
+        float: none
+        height: 500px
+        margin: 0 auto -140px
 
     .beeinfluencer-product-img
       margin-bottom: -140px
@@ -228,94 +295,13 @@ $arrow-height-mobile: 40px
     .cdecsic-product-img
       width: 80%
       margin: 0 10%
+      @media (max-width: $page-threashold-mobile)
+        width: 100%
+        margin: 0
 
     .late-product-img
       width: 50%
       margin-left: 25%
-
-@media (max-width: $page-threashold-mobile)
-  .portfolio-item-header
-    .portfolio-arrow
-      height: $arrow-height-mobile
-      &.francisco
-        .handwritten-name
-          height: 20px
-          margin-top: 9px
-        &:after
-          right: -33px
-          border: $arrow-height-mobile / 2 solid transparent
-          border-left: $arrow-height-mobile / 3 solid $secondary_color_2
-
-      &.isabel
-        .handwritten-name
-          height: 30px
-          margin-top: 9px
-        &:after
-          left: -33px
-          border: $arrow-height-mobile / 2 solid transparent
-          border-right: $arrow-height-mobile / 3 solid $secondary_color_1
-
-  .portfolio-item
-    &-content
-      .topics
-        flex-direction: column
-        justify-content: space-between
-
-        &-item
-          display: block
-          margin-bottom: 2 * $gutter
-
-          &-img-container
-            height: 50px
-            width: 70px
-            margin: 0 0 10px
-            float: left
-          &-img
-            height: auto
-            width: 50px
-            margin: 0 auto
-          &-text
-            text-align: left
-      &.grapes
-        background-size: 500px
-        background-position: center bottom
-      .concha-y-toro-layout
-        display: flex
-        flex-direction: column
-        .column
-          width: 100%
-          color: $text-color
-
-        .topics
-          flex-direction: column
-          color: white
-          margin-top: 50px
-          &-item
-            display: block
-            margin-bottom: 2 * $gutter
-            padding: 0
-            &-img-container
-              height: 50px
-              width: 70px
-              margin: 0 0 10px
-              float: left
-            &-img
-              height: auto
-              width: 50px
-              margin: 0 auto
-            &-text
-              text-align: left
-              color: $text-color
-
-    #bottle-of-wine
-      float: none
-      height: 500px
-      margin: 0 auto -140px
-
-    .cdecsic-product-img
-      width: 100%
-      margin: 0
-
-    .late-product-img
-      width: 80%
-      margin-left: 10%
+      @media (max-width: $page-threashold-mobile)
+        width: 80%
+        margin-left: 10%
