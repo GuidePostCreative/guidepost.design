@@ -3068,7 +3068,7 @@ body.padding-top {
     font-weight: bold;
     line-height: 0.7em; }
   .entry-preview .title {
-    font-size: 64px;
+    font-size: 48px;
     line-height: 1.3em;
     font-weight: bold;
     margin: 0; }
@@ -3156,6 +3156,8 @@ body.padding-top {
     .journal-entry a:hover {
       color: #1B708A;
       text-decoration-color: #1B708A; }
+  .journal-entry b {
+    font-weight: bold; }
 
 @media (max-width: 1060px) {
   .journal-body .container {
