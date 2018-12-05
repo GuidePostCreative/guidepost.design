@@ -3044,7 +3044,7 @@ body.padding-top {
       background-image: linear-gradient(0deg, transparent 1.5em, #f5fafb 1.5em, #f5fafb 1.6em);
       background-size: 100% 1.6em;
       border-radius: 0 0 50px 50px;
-      padding: 64px 0; }
+      padding: 64px 32px; }
   .journal-body .footer {
     background: none; }
 
@@ -3824,3 +3824,29 @@ body.padding-top {
 
 .fancybox-content {
   background: white; }
+
+.calltoaction-row {
+  margin-bottom: 32px; }
+
+.calltoaction-form {
+  background: none; }
+  .calltoaction-form p {
+    margin-top: 8px; }
+
+.calltoaction-title {
+  font-size: 32px; }
+
+.calltoaction-email-input {
+  font-size: 16px;
+  padding: 16px 10%;
+  width: 80%;
+  border: 1px solid;
+  margin-bottom: 16px; }
+
+.calltoaction-button {
+  font-size: 16px;
+  background: #1B708A;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  float: right; }
