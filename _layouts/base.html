@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% include tag_manager.js.html %}
+    {% include google/tag_manager.js %}
     {% include meme.html %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" />
     <link rel="icon" href="{{ '/assets/img/logos/favicon_color.png' | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" type="image/gif" />
     {% include loader_css.html %}
-    {% include google_analytics.html %}
+    {% include google/google_analytics.html %}
     <script type="text/javascript">
         var guidepostLocation = "{{ site.guidepost_location }}";
         var guidepostTimeZone = "{{ site.guidepost_timezone }}";
@@ -42,7 +42,7 @@
     </script>
 </head>
 <body id="body" class="{{ page.body_class }}">
-    {% include tag_manager_container.html %}
+    {% include google/tag_manager_container.html %}
     {% include loader.html %}
     <div class="navbar navbar-fixed {% if page.hiddable_header == true %}hiddable unpin{% endif %}" id="navbar">
         <div class="container">
