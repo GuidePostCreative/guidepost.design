@@ -13,7 +13,8 @@ $profile-picture-border-width: 8px
 
 .about-us-header
   height: $header-height
-
+  @media (max-width: $page-threashold-mobile)
+    height: $header-mobile-height
 .about-us-picture
   height: $header-height
   background-image: url($header-background-url)
@@ -22,19 +23,37 @@ $profile-picture-border-width: 8px
   background-repeat: no-repeat
   overflow: hidden
   background-blend-mode: saturation
+  @media (max-width: $page-threashold-mobile)
+    height: $header-mobile-height
+    background-image: url($header-background-url)
+    background-size: 800px
+    background-position: center -20px
 
 .about-us-title
   font-size: 160px
   text-align: center
+  @media (max-width: $page-threashold-tablet)
+    font-size: 120px
+  @media (max-width: $page-threashold-mobile)
+    font-size: 60px
 
   &.top
     margin: 165px 0 0
     color: lighten($primary_color_2, 10%)
+    @media (max-width: $page-threashold-tablet)
+      margin: 194px 0 0
+    @media (max-width: $page-threashold-mobile)
+      margin: 137px 0 0
 
   &.bottom
     color: $secondary_color_2
     margin-top: -115px
     z-index: -1
+    @media (max-width: $page-threashold-tablet)
+      margin-top: -86px
+
+    @media (max-width: $page-threashold-mobile)
+      margin-top: -43px
 
 .about-us-lead
   line-height: 1.5em
@@ -44,6 +63,8 @@ $profile-picture-border-width: 8px
   padding: 0 $gutter
   span
     display: block
+    @media (max-width: $page-threashold-mobile)
+      display: inline
 
 .page.about-us
   background-size: 1450px
@@ -52,6 +73,8 @@ $profile-picture-border-width: 8px
   background-size: 1450px
   background-repeat: no-repeat
   background-position: center bottom
+  @media (max-width: $page-threashold-mobile)
+    background-size: 1200px
 
 .profile
   .profile-picture-container
@@ -64,10 +87,13 @@ $profile-picture-border-width: 8px
       height: $profile-picture-width
       border-radius: 50%
       border: $profile-picture-border-width solid white
+
   .profile-header
     height: 70px
     margin: 2 * $gutter 0
     .profile-name
+      img
+        max-width: 100%
       &.francisco
         img
           height: 28px
@@ -99,6 +125,7 @@ $profile-picture-border-width: 8px
       font-weight: bold
       font-size: $font-size
       color: $secondary_color_1
+      a
     .profile-tools-text
       font-size: $font-size
       color: $secondary_color_1
@@ -109,33 +136,3 @@ $profile-picture-border-width: 8px
       .profile-tools-icon
         display: inline
         margin: 0 12px 12px 0
-
-@media (max-width: $page-threashold-tablet)
-  .about-us-title
-    font-size: 120px
-    &.top
-      margin: 194px 0 0
-    &.bottom
-      margin-top: -86px
-
-@media (max-width: $page-threashold-mobile)
-  .about-us-picture
-    height: $header-mobile-height
-    background-image: url($header-background-url)
-    background-size: 800px
-    background-position: center -20px
-
-  .about-us-title
-    font-size: 60px
-    &.top
-      margin: 137px 0 0
-
-    &.bottom
-      margin-top: -42px
-
-  .about-us-lead
-    span
-      display: inline
-
-  .page.about-us
-    background-size: 1200px
