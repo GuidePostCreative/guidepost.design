@@ -3176,12 +3176,12 @@ body.padding-top {
     .entry-preview.last {
       border-bottom: none; }
     .entry-preview .number {
-      font-size: 240px;
+      font-size: 160px;
       text-align: left;
       margin-bottom: 16px;
       margin-left: -16px; }
     .entry-preview .title {
-      font-size: 48px;
+      font-size: 32px;
       margin: 0; }
     .entry-preview .date {
       margin: 0 0 16px; }
