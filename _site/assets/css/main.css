@@ -2780,14 +2780,14 @@ body.padding-top {
   background-image: url("/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg");
   background-image: -webkit-image-set(url("/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg") 1x, url("/assets/img/splashscreen/francisco_isabel_pier_2x_comp.jpg") 2x);
   background-image: image-set(url("/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg") 1x, url("/assets/img/splashscreen/francisco_isabel_pier_2x_comp.jpg") 2x);
-  background-position: center -50px;
+  background-position: center 0;
   background-repeat: no-repeat;
   background-size: 1450px; }
   @media (max-width: 480px) {
     #splash-background {
       height: 620px;
       min-height: 620px;
-      background-position: center -140px; } }
+      background-position: center -115px; } }
 
 #splash-elements {
   position: relative;
@@ -2989,6 +2989,8 @@ body.padding-top {
   stroke-dasharray: 1000;
   stroke-width: 6px;
   fill: none; }
+  .pen-stroke.blue {
+    stroke: #4FB0BB; }
 
 .loaded #path_slogan {
   stroke-dashoffset: 3000;

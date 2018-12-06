@@ -23,14 +23,14 @@
   background-image: url('/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg')
   background-image: -webkit-image-set(url('/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg') 1x, url('/assets/img/splashscreen/francisco_isabel_pier_2x_comp.jpg') 2x)
   background-image: image-set(url('/assets/img/splashscreen/francisco_isabel_pier_1x_comp.jpg') 1x, url('/assets/img/splashscreen/francisco_isabel_pier_2x_comp.jpg') 2x)
-  background-position: center -50px
+  background-position: center 0
   background-repeat: no-repeat
   background-size: 1450px
 
   @media (max-width: $page-threashold-mobile)
     height: $splash-height-mobile
     min-height: $splash-height-mobile
-    background-position: center -140px
+    background-position: center -115px
 
 #splash-elements
   position: relative
@@ -265,6 +265,8 @@ $animation-slogan-delay: 1.5s + $animation-des-name-delay
   stroke-dasharray: 1000
   stroke-width: 6px
   fill: none
+  &.blue
+    stroke: $secondary_color_2
 
 .loaded
   #path_slogan
