@@ -2901,19 +2901,26 @@ body.padding-top {
 .whiteboard-border-curve {
   height: 75px;
   z-index: 100000;
-  width: 100%; }
+  width: 101%; }
   .whiteboard-border-curve.top {
     margin-top: -74px;
     margin-bottom: 100px; }
+    @media (max-width: 480px) {
+      .whiteboard-border-curve.top {
+        margin-top: -49px;
+        margin-bottom: 49px; } }
   .whiteboard-border-curve.bottom {
     margin-top: 0;
     margin-bottom: -74px; }
     .whiteboard-border-curve.bottom .whiteboard-border-curve-svg {
       transform: rotate(180deg); }
+    @media (max-width: 480px) {
+      .whiteboard-border-curve.bottom {
+        margin-top: 49px;
+        margin-bottom: -49px; } }
   @media (max-width: 480px) {
     .whiteboard-border-curve {
-      height: 50px;
-      margin-top: -49px; } }
+      height: 50px; } }
   .whiteboard-border-curve-svg {
     width: 100%;
     height: 75px;
@@ -3719,11 +3726,6 @@ body.padding-top {
     text-align: center; }
     .clock.fixed-clock .time {
       font-size: 55px; } }
-#footer-guidepost-clock {
-  margin-bottom: 20px; }
-  #footer-guidepost-clock .location {
-    color: #D83830; }
-
 .footer {
   padding: 64px 0 0;
   background-color: #0C2C2D;
@@ -3752,10 +3754,19 @@ body.padding-top {
     .footer .contact .newsletter .newsletter-info {
       position: relative;
       height: 80px; }
+      @media (max-width: 480px) {
+        .footer .contact .newsletter .newsletter-info {
+          height: auto; } }
       .footer .contact .newsletter .newsletter-info .newsletter-icon {
         height: 80px;
         float: left;
         margin-right: 16px; }
+        @media (max-width: 480px) {
+          .footer .contact .newsletter .newsletter-info .newsletter-icon {
+            width: 100%;
+            height: auto;
+            float: none;
+            margin: 16px 16px 16px 0; } }
       .footer .contact .newsletter .newsletter-info .newsletter-lead {
         color: white; }
     .footer .contact .newsletter .newsletter-form {
@@ -3770,7 +3781,8 @@ body.padding-top {
       @media (max-width: 480px) {
         .footer .contact .newsletter .newsletter-form {
           left: 0;
-          width: 220px; } }
+          width: 100%;
+          flex-direction: column; } }
       .footer .contact .newsletter .newsletter-form .newsletter-email-input {
         border: none;
         width: 70%;
@@ -3785,6 +3797,9 @@ body.padding-top {
           outline: none; }
         .footer .contact .newsletter .newsletter-form .newsletter-email-input::placeholder {
           color: white; }
+        @media (max-width: 480px) {
+          .footer .contact .newsletter .newsletter-form .newsletter-email-input {
+            width: auto; } }
       .footer .contact .newsletter .newsletter-form .newsletter-submit {
         height: 80px;
         padding: 30px 15px;
@@ -3802,6 +3817,25 @@ body.padding-top {
           left: 15px;
           top: 30px;
           color: white; }
+        @media (max-width: 480px) {
+          .footer .contact .newsletter .newsletter-form .newsletter-submit {
+            width: 100%;
+            border: 1px solid #647677;
+            padding: 20px 15px;
+            margin: 15px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; }
+            .footer .contact .newsletter .newsletter-form .newsletter-submit span {
+              position: relative;
+              top: 0;
+              left: 0; }
+            .footer .contact .newsletter .newsletter-form .newsletter-submit:hover {
+              background: white;
+              border-color: white; }
+              .footer .contact .newsletter .newsletter-form .newsletter-submit:hover span {
+                color: #4FB0BB !important; } }
         .footer .contact .newsletter .newsletter-form .newsletter-submit .newsletter-btn-bg {
           height: 80px;
           position: absolute;
@@ -3810,6 +3844,10 @@ body.padding-top {
           z-index: 0; }
           .footer .contact .newsletter .newsletter-form .newsletter-submit .newsletter-btn-bg path {
             fill: #647677; }
+          @media (max-width: 480px) {
+            .footer .contact .newsletter .newsletter-form .newsletter-submit .newsletter-btn-bg {
+              right: -15px;
+              display: none; } }
         .footer .contact .newsletter .newsletter-form .newsletter-submit:hover {
           cursor: pointer; }
           .footer .contact .newsletter .newsletter-form .newsletter-submit:hover span {
@@ -3837,6 +3875,15 @@ body.padding-top {
       width: 24px;
       position: relative;
       top: 5px; }
+    @media (max-width: 480px) {
+      .footer .credits {
+        text-align: right;
+        float: right;
+        font-size: 12px;
+        margin-right: 16px;
+        height: 20px; }
+        .footer .credits p {
+          margin-bottom: 0; } }
 
 #guidepost-footer-links {
   position: relative;
@@ -3846,10 +3893,19 @@ body.padding-top {
   #guidepost-footer-links .guidepost-footer-link:hover {
     fill: white;
     cursor: pointer; }
+  @media (max-width: 480px) {
+    #guidepost-footer-links {
+      width: 100%;
+      top: 244px;
+      margin-top: -50px; } }
 
 .footer-clocks {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  float: right; }
+  @media (max-width: 480px) {
+    .footer-clocks {
+      flex-direction: column; } }
   .footer-clocks .clock {
     margin-bottom: 0; }
     .footer-clocks .clock:first-child {
@@ -3863,7 +3919,30 @@ body.padding-top {
     .footer-clocks .clock .date {
       font-size: 12px;
       color: #647677; }
+    @media (max-width: 480px) {
+      .footer-clocks .clock {
+        margin-right: 16px;
+        margin-bottom: 0; }
+        .footer-clocks .clock .location {
+          text-align: right; }
+        .footer-clocks .clock .time {
+          text-align: right;
+          font-size: 20px; }
+        .footer-clocks .clock .date {
+          text-align: right; } }
 
+#footer-guidepost-clock {
+  margin-bottom: 20px; }
+  #footer-guidepost-clock .location {
+    color: #D83830; }
+  @media (max-width: 480px) {
+    #footer-guidepost-clock {
+      margin-bottom: 0; } }
+
+@media (max-width: 480px) {
+  .last-row {
+    display: flex;
+    flex-direction: column-reverse; } }
 .fancybox-container {
   z-index: 900000000000; }
 

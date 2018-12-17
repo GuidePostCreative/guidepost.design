@@ -40,12 +40,20 @@ $footer-dim-color: #647677
       .newsletter-info
         position: relative
         height: $newsletter-height
+        @media (max-width: $page-threashold-mobile)
+          height: auto
         .newsletter-icon
           height: $newsletter-height
           float: left
           margin-right: $gutter
+          @media (max-width: $page-threashold-mobile)
+            width: 100%
+            height: auto
+            float: none
+            margin: $gutter $gutter $gutter 0
         .newsletter-lead
           color: white
+
 
       .newsletter-form
         margin: 2 * $gutter 0 0
@@ -58,7 +66,8 @@ $footer-dim-color: #647677
         flex-direction: row
         @media (max-width: $page-threashold-mobile)
           left: 0
-          width: 220px
+          width: 100%
+          flex-direction: column
 
         .newsletter-email-input
           border: none
@@ -74,6 +83,8 @@ $footer-dim-color: #647677
             outline: none
           &::placeholder
             color: lighten(white, 30%)
+          @media (max-width: $page-threashold-mobile)
+            width: auto
 
         .newsletter-submit
           height: $newsletter-height
@@ -92,6 +103,25 @@ $footer-dim-color: #647677
             left: 15px
             top: 30px
             color: white
+          @media (max-width: $page-threashold-mobile)
+            width: 100%
+            border: 1px solid $footer-dim-color
+            padding: 20px 15px
+            margin: 15px 0 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            span
+              position: relative
+              top: 0
+              left: 0
+            &:hover
+              background: white
+              border-color: white
+              span
+                color: $secondary_color_2 !important
+
 
           .newsletter-btn-bg
             height: $newsletter-height
@@ -101,6 +131,9 @@ $footer-dim-color: #647677
             z-index: 0
             path
               fill: $footer-dim-color
+            @media (max-width: $page-threashold-mobile)
+              right: -15px
+              display: none
           &:hover
             cursor: pointer
             span
@@ -132,6 +165,14 @@ $footer-dim-color: #647677
       width: 24px
       position: relative
       top: 5px
+    @media (max-width: $page-threashold-mobile)
+      text-align: right
+      float: right
+      font-size: $font-size-small
+      margin-right: $gutter
+      height: 20px
+      p
+        margin-bottom: 0
 
 
 #guidepost-footer-links
@@ -143,11 +184,19 @@ $footer-dim-color: #647677
     &:hover
       fill: white
       cursor: pointer
+  @media (max-width: $page-threashold-mobile)
+    width: 100%
+    top: 244px
+    margin-top: -50px
 
 
 .footer-clocks
   display: flex
   flex-direction: row
+  float: right
+  @media (max-width: $page-threashold-mobile)
+    flex-direction: column
+
   .clock
     margin-bottom: 0
     &:first-child
@@ -161,3 +210,27 @@ $footer-dim-color: #647677
     .date
       font-size: $font-size-small
       color: $footer-dim-color
+
+    @media (max-width: $page-threashold-mobile)
+      margin-right: $gutter
+      margin-bottom: 0
+      .location
+        text-align: right
+      .time
+        text-align: right
+        font-size: 20px
+      .date
+        text-align: right
+
+
+#footer-guidepost-clock
+  margin-bottom: 20px
+  .location
+    color: $primary_color_3
+  @media (max-width: $page-threashold-mobile)
+    margin-bottom: 0
+
+@media (max-width: $page-threashold-mobile)
+  .last-row
+    display: flex
+    flex-direction: column-reverse

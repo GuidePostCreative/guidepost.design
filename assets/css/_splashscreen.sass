@@ -154,19 +154,24 @@
 .whiteboard-border-curve
   height: 75px
   z-index: 100000
-  width: 100%
+  width: 101%
   &.top
     margin-top: -74px
     margin-bottom: 100px
+    @media (max-width: $page-threashold-mobile)
+      margin-top: -49px
+      margin-bottom: 49px
   &.bottom
     margin-top: 0
     margin-bottom: -74px
     .whiteboard-border-curve-svg
       transform: rotate(180deg)
+    @media (max-width: $page-threashold-mobile)
+      margin-top: 49px
+      margin-bottom: -49px
 
   @media (max-width: $page-threashold-mobile)
     height: 50px
-    margin-top: -49px
 
   &-svg
     width: 100%
