@@ -20,7 +20,7 @@ function initClocks() {
   $.getJSON('https://ipapi.co/json', function(data){
 
     guestLocation = 'Your time [' + data.city + ', ' + data.country + ']';
-    guestTimeZone = datadata.timezone;
+    guestTimeZone = data.timezone;
 
     // Set Guest location
     guestLocationEle.innerHTML = guestLocation;
