@@ -8,6 +8,9 @@ $newsletter-bg-color: $footer-color
 $newsletter-btn-height: 70px
 $newsletter-btn-width: 0
 
+$footer-dim-color: #647677
+
+
 .footer
   padding: (4 * $gutter) 0
   background-color: $footer-background
@@ -34,59 +37,81 @@ $newsletter-btn-width: 0
         color: white
         font-weight: bold
         margin-bottom: $gutter
-      .newsletter-slide
+      .newsletter-info
         position: relative
         height: $newsletter-height
         .newsletter-icon
           height: $newsletter-height
-        .newsletter-form
-          position: absolute
-          left: -1000px
-          top: 0
+          float: left
+          margin-right: $gutter
+        .newsletter-lead
+          color: white
+
+      .newsletter-form
+        margin: 2 * $gutter 0 0
+        padding: 0
+        position: relative
+        height: $newsletter-height
+        transition: all 0.3s
+        background: none
+        display: flex
+        flex-direction: row
+        @media (max-width: $page-threashold-mobile)
+          left: 0
+          width: 220px
+
+        .newsletter-email-input
+          border: none
+          width: 70%
+          padding: 30px 15px
+          color: white
+          font-style: italic
+          font-size: $font-size
+          height: $newsletter-height - 60px
+          background: $footer-dim-color
+          border-radius: 0
+          &:focus
+            outline: none
+          &::placeholder
+            color: lighten(white, 30%)
+
+        .newsletter-submit
           height: $newsletter-height
-          width: $newsletter-width - 30px
-          transition: all 0.3s
-          margin: 0
-          padding: 0
-          background: none
-          @media (max-width: $page-threashold-mobile)
-            left: 0
-            width: 220px
-
-          &:after
-            content: " "
+          padding: 30px 15px
+          border: none
+          font-size: $font-size
+          position: relative
+          width: 40%
+          margin-left: 4px
+          font-weight: bold
+          background: transparent
+          overflow: hidden
+          span
             position: absolute
-            height: 0
-            width: 0
-            left: $newsletter-width
+            left: 15px
+            top: 30px
+            color: white
+
+          .newsletter-btn-bg
+            height: $newsletter-height
+            position: absolute
             top: 0
-            border: $newsletter-height / 2 solid transparent
-            border-left: $newsletter-height / 3 solid $newsletter-bg-color
-            z-index: 1
-            @media (max-width: $page-threashold-mobile)
-              left: 220px
-              top: 0
+            right: 0
+            z-index: 0
+            path
+              fill: $footer-dim-color
+          &:hover
+            span
+              color: white
+            .newsletter-btn-bg
+              path
+                fill: $secondary_color_2
 
-          .newsletter-email-input
-            border: none
-            width: $newsletter-width - 30px
-            padding: 30px 15px
-            color: $secondary_color_1
-            font-style: italic
-            font-size: $font-size * 1.5
-            height: $newsletter-height - 60px
-            background: $newsletter-bg-color
-            border-radius: 0
-            &:focus
-              outline: none
-
-            @media (max-width: $page-threashold-mobile)
-              width: 190px
-              font-size: $font-size
-
-        &:hover
-          .newsletter-form
-            left: 0
+      .newsletter-footer
+        font-size: $font-size-small
+        text-align: left
+        margin-top: $gutter
+        color: $footer-dim-color
 
   .credits
     text-align: center

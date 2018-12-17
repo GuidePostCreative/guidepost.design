@@ -3749,57 +3749,75 @@ body.padding-top {
       color: white;
       font-weight: bold;
       margin-bottom: 16px; }
-    .footer .contact .newsletter .newsletter-slide {
+    .footer .contact .newsletter .newsletter-info {
       position: relative;
       height: 80px; }
-      .footer .contact .newsletter .newsletter-slide .newsletter-icon {
-        height: 80px; }
-      .footer .contact .newsletter .newsletter-slide .newsletter-form {
-        position: absolute;
-        left: -1000px;
-        top: 0;
+      .footer .contact .newsletter .newsletter-info .newsletter-icon {
         height: 80px;
-        width: 370px;
-        transition: all 0.3s;
-        margin: 0;
-        padding: 0;
-        background: none; }
-        @media (max-width: 480px) {
-          .footer .contact .newsletter .newsletter-slide .newsletter-form {
-            left: 0;
-            width: 220px; } }
-        .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
-          content: " ";
+        float: left;
+        margin-right: 16px; }
+      .footer .contact .newsletter .newsletter-info .newsletter-lead {
+        color: white; }
+    .footer .contact .newsletter .newsletter-form {
+      margin: 32px 0 0;
+      padding: 0;
+      position: relative;
+      height: 80px;
+      transition: all 0.3s;
+      background: none;
+      display: flex;
+      flex-direction: row; }
+      @media (max-width: 480px) {
+        .footer .contact .newsletter .newsletter-form {
+          left: 0;
+          width: 220px; } }
+      .footer .contact .newsletter .newsletter-form .newsletter-email-input {
+        border: none;
+        width: 70%;
+        padding: 30px 15px;
+        color: white;
+        font-style: italic;
+        font-size: 16px;
+        height: 20px;
+        background: #647677;
+        border-radius: 0; }
+        .footer .contact .newsletter .newsletter-form .newsletter-email-input:focus {
+          outline: none; }
+        .footer .contact .newsletter .newsletter-form .newsletter-email-input::placeholder {
+          color: white; }
+      .footer .contact .newsletter .newsletter-form .newsletter-submit {
+        height: 80px;
+        padding: 30px 15px;
+        border: none;
+        font-size: 16px;
+        position: relative;
+        width: 40%;
+        margin-left: 4px;
+        font-weight: bold;
+        background: transparent;
+        overflow: hidden; }
+        .footer .contact .newsletter .newsletter-form .newsletter-submit span {
           position: absolute;
-          height: 0;
-          width: 0;
-          left: 400px;
+          left: 15px;
+          top: 30px;
+          color: white; }
+        .footer .contact .newsletter .newsletter-form .newsletter-submit .newsletter-btn-bg {
+          height: 80px;
+          position: absolute;
           top: 0;
-          border: 40px solid transparent;
-          border-left: 26.6666666667px solid #E5E5E5;
-          z-index: 1; }
-          @media (max-width: 480px) {
-            .footer .contact .newsletter .newsletter-slide .newsletter-form:after {
-              left: 220px;
-              top: 0; } }
-        .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
-          border: none;
-          width: 370px;
-          padding: 30px 15px;
-          color: #1B708A;
-          font-style: italic;
-          font-size: 24px;
-          height: 20px;
-          background: #E5E5E5;
-          border-radius: 0; }
-          .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input:focus {
-            outline: none; }
-          @media (max-width: 480px) {
-            .footer .contact .newsletter .newsletter-slide .newsletter-form .newsletter-email-input {
-              width: 190px;
-              font-size: 16px; } }
-      .footer .contact .newsletter .newsletter-slide:hover .newsletter-form {
-        left: 0; }
+          right: 0;
+          z-index: 0; }
+          .footer .contact .newsletter .newsletter-form .newsletter-submit .newsletter-btn-bg path {
+            fill: #647677; }
+        .footer .contact .newsletter .newsletter-form .newsletter-submit:hover span {
+          color: white; }
+        .footer .contact .newsletter .newsletter-form .newsletter-submit:hover .newsletter-btn-bg path {
+          fill: #4FB0BB; }
+    .footer .contact .newsletter .newsletter-footer {
+      font-size: 12px;
+      text-align: left;
+      margin-top: 16px;
+      color: #647677; }
   .footer .credits {
     text-align: center; }
     .footer .credits a {
