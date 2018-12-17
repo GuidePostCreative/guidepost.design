@@ -3729,35 +3729,6 @@ body.padding-top {
   background-color: #0C2C2D;
   background-image: url(/assets/img/footer/pattern_dot.svg);
   color: #E5E5E5; }
-  .footer .mountains {
-    background-size: 1464px;
-    background-position: center;
-    height: 460px;
-    margin-bottom: -100px; }
-    .footer .mountains.step-1 {
-      background-image: url(/assets/img/footer/mountain-climbing-1.svg); }
-    .footer .mountains.step-2 {
-      background-image: url(/assets/img/footer/mountain-climbing-2.svg); }
-    .footer .mountains.step-3 {
-      background-image: url(/assets/img/footer/mountain-climbing-3.svg); }
-      @media (max-width: 480px) {
-        .footer .mountains.step-3 {
-          background-position-x: 50%; } }
-    .footer .mountains.step-4 {
-      background-image: url(/assets/img/footer/mountain-climbing-4.svg); }
-      @media (max-width: 480px) {
-        .footer .mountains.step-4 {
-          background-position-x: 75%; } }
-    .footer .mountains.step-5 {
-      background-image: url(/assets/img/footer/mountain-climbing-5.svg); }
-      @media (max-width: 480px) {
-        .footer .mountains.step-5 {
-          background-position-x: 100%; } }
-    @media (max-width: 480px) {
-      .footer .mountains {
-        height: 473px;
-        background-position-x: 25%;
-        margin-bottom: 0; } }
   .footer .contact {
     margin: 0 0 96px;
     display: flex;
