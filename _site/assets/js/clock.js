@@ -17,27 +17,37 @@ var guestTimeZone = null;
 function initClocks() {
   // Set GuidePost location
   guidepostLocationEle.innerHTML = 'Our time [' + guidepostLocation + ']';
+  $.getJSON('https://ipapi.co/json', function(data){
 
-  // Get guest's location & timezone
-  var xhr;
-  if(window.AtiveXObject){
-    xhr = new ActiveXObject("Microsoft.XMLHTTP");
-  }else{
-    xhr = new XMLHttpRequest();
-  }
-  xhr.open("GET", 'https://ipapi.co/json');
-  xhr.setRequestHeader('Accept', '*/*')
-  xhr.send();
-  xhr.onreadystatechange= function(){
-    if (this.readyState == 4 && this.status == 200) {
-      var response = JSON.parse(xhr.responseText);
-      guestLocation = 'Your time [' + response.city + ', ' + response.country + ']';
-      guestTimeZone = response.timezone;
+    guestLocation = 'Your time [' + data.city + ', ' + data.country + ']';
+    guestTimeZone = datadata.timezone;
 
-      // Set Guest location
-      guestLocationEle.innerHTML = guestLocation;
-    }
-  }
+    // Set Guest location
+    guestLocationEle.innerHTML = guestLocation;
+  })
+  // // Get guest's location & timezone
+  // var xhr;
+  // if(window.AtiveXObject){
+  //   xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  // }else{
+  //   xhr = new XMLHttpRequest();
+  // }
+  // $.get()
+  // xhr.open();
+  // xhr.setRequestHeader('Accept', '*/*')
+  // xhr.send();
+
+
+  // xhr.onreadystatechange= function(){
+  //   if (this.readyState == 4 && this.status == 200) {
+  //     var response = JSON.parse(xhr.responseText);
+  //     guestLocation = 'Your time [' + response.city + ', ' + response.country + ']';
+  //     guestTimeZone = response.timezone;
+
+  //     // Set Guest location
+  //     guestLocationEle.innerHTML = guestLocation;
+  //   }
+  // }
 
 }
 

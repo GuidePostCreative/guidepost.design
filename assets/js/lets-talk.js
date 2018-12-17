@@ -15,9 +15,8 @@ function tickFixedClocks() {
 }
 
 $(document).ready(function() {
-
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZmNlcnV0aS1ncCIsImEiOiJjanA4MmFmMmQxNGRjM3BtbmlsdmZkbWhqIn0.Rk0eQehhU4wqvvY-qfjueQ';
   if(document.getElementById('lets-talk-map')) {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZmNlcnV0aS1ncCIsImEiOiJjanA4MmFmMmQxNGRjM3BtbmlsdmZkbWhqIn0.Rk0eQehhU4wqvvY-qfjueQ';
     var map = new mapboxgl.Map({
       container: 'lets-talk-map',
       style: 'mapbox://styles/mapbox/light-v9',
@@ -26,5 +25,4 @@ $(document).ready(function() {
     });
     window.setInterval(tickFixedClocks, 500);
   }
-
 });

@@ -3142,8 +3142,6 @@ body.padding-top {
   .journal-entry .journal-date {
     margin: 32px 0 0;
     color: #4FB0BB; }
-  .journal-entry .modal-image {
-    max-width: 100%; }
   .journal-entry .journal-caption {
     text-align: center;
     text-transform: uppercase;
