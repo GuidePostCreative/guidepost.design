@@ -2898,31 +2898,35 @@ body.padding-top {
       top: 123px;
       left: 30px; } }
 
-#whiteboard-top-curve {
+.whiteboard-border-curve {
   height: 75px;
-  z-index: 0;
   z-index: 100000;
-  width: 100%;
-  margin-top: -74px;
-  margin-bottom: 100px; }
+  width: 100%; }
+  .whiteboard-border-curve.top {
+    margin-top: -74px;
+    margin-bottom: 100px; }
+  .whiteboard-border-curve.bottom {
+    margin-top: 0;
+    margin-bottom: -74px; }
+    .whiteboard-border-curve.bottom .whiteboard-border-curve-svg {
+      transform: rotate(180deg); }
   @media (max-width: 480px) {
-    #whiteboard-top-curve {
+    .whiteboard-border-curve {
       height: 50px;
       margin-top: -49px; } }
-  #whiteboard-top-curve #whiteboard-top-curve-svg {
+  .whiteboard-border-curve-svg {
     width: 100%;
     height: 75px;
     z-index: 0; }
-    #whiteboard-top-curve #whiteboard-top-curve-svg path {
+    .whiteboard-border-curve-svg path {
       fill: white;
       z-index: 0; }
     @media (max-width: 480px) {
-      #whiteboard-top-curve #whiteboard-top-curve-svg {
+      .whiteboard-border-curve-svg {
         height: 50px; } }
 
 #landing-whiteboard {
-  background: white;
-  flex: 1 0 auto; }
+  background: white; }
 
 #we-build-your-dreams {
   width: 100%;
