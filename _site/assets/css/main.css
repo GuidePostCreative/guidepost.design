@@ -3725,7 +3725,7 @@ body.padding-top {
     color: #D83830; }
 
 .footer {
-  padding: 64px 0;
+  padding: 64px 0 0;
   background-color: #0C2C2D;
   background-image: url(/assets/img/footer/pattern_dot.svg);
   color: #E5E5E5; }
@@ -3795,7 +3795,8 @@ body.padding-top {
         margin-left: 4px;
         font-weight: bold;
         background: transparent;
-        overflow: hidden; }
+        overflow: hidden;
+        font-family: "Bitter"; }
         .footer .contact .newsletter .newsletter-form .newsletter-submit span {
           position: absolute;
           left: 15px;
@@ -3809,17 +3810,23 @@ body.padding-top {
           z-index: 0; }
           .footer .contact .newsletter .newsletter-form .newsletter-submit .newsletter-btn-bg path {
             fill: #647677; }
-        .footer .contact .newsletter .newsletter-form .newsletter-submit:hover span {
-          color: white; }
-        .footer .contact .newsletter .newsletter-form .newsletter-submit:hover .newsletter-btn-bg path {
-          fill: #4FB0BB; }
+        .footer .contact .newsletter .newsletter-form .newsletter-submit:hover {
+          cursor: pointer; }
+          .footer .contact .newsletter .newsletter-form .newsletter-submit:hover span {
+            color: white; }
+          .footer .contact .newsletter .newsletter-form .newsletter-submit:hover .newsletter-btn-bg path {
+            fill: #4FB0BB; }
     .footer .contact .newsletter .newsletter-footer {
       font-size: 12px;
       text-align: left;
       margin-top: 16px;
       color: #647677; }
   .footer .credits {
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    color: #647677; }
     .footer .credits a {
       text-decoration: none;
       color: inherit; }
@@ -3830,6 +3837,32 @@ body.padding-top {
       width: 24px;
       position: relative;
       top: 5px; }
+
+#guidepost-footer-links {
+  position: relative;
+  width: 300px;
+  top: 222px;
+  margin-top: -122px; }
+  #guidepost-footer-links .guidepost-footer-link:hover {
+    fill: white;
+    cursor: pointer; }
+
+.footer-clocks {
+  display: flex;
+  flex-direction: row; }
+  .footer-clocks .clock {
+    margin-bottom: 0; }
+    .footer-clocks .clock:first-child {
+      margin-right: 16px; }
+    .footer-clocks .clock .location {
+      font-size: 12px;
+      color: #647677; }
+    .footer-clocks .clock .time {
+      font-size: 32px;
+      color: white; }
+    .footer-clocks .clock .date {
+      font-size: 12px;
+      color: #647677; }
 
 .fancybox-container {
   z-index: 900000000000; }

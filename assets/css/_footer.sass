@@ -12,7 +12,7 @@ $footer-dim-color: #647677
 
 
 .footer
-  padding: (4 * $gutter) 0
+  padding: (4 * $gutter) 0 0
   background-color: $footer-background
   background-image: url(/assets/img/footer/pattern_dot.svg)
   color: $footer-color
@@ -86,6 +86,7 @@ $footer-dim-color: #647677
           font-weight: bold
           background: transparent
           overflow: hidden
+          font-family: 'Bitter'
           span
             position: absolute
             left: 15px
@@ -101,6 +102,7 @@ $footer-dim-color: #647677
             path
               fill: $footer-dim-color
           &:hover
+            cursor: pointer
             span
               color: white
             .newsletter-btn-bg
@@ -115,6 +117,10 @@ $footer-dim-color: #647677
 
   .credits
     text-align: center
+    display: flex
+    align-items: center
+    height: 80px
+    color: $footer-dim-color
     a
       text-decoration: none
       color: inherit
@@ -126,3 +132,32 @@ $footer-dim-color: #647677
       width: 24px
       position: relative
       top: 5px
+
+
+#guidepost-footer-links
+  position: relative
+  width: 300px
+  top: 222px
+  margin-top: -122px
+  .guidepost-footer-link
+    &:hover
+      fill: white
+      cursor: pointer
+
+
+.footer-clocks
+  display: flex
+  flex-direction: row
+  .clock
+    margin-bottom: 0
+    &:first-child
+      margin-right: $gutter
+    .location
+      font-size: $font-size-small
+      color: $footer-dim-color
+    .time
+      font-size: $font-size-big
+      color: white
+    .date
+      font-size: $font-size-small
+      color: $footer-dim-color
