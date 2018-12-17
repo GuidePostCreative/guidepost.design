@@ -3763,7 +3763,7 @@ body.padding-top {
         margin-right: 16px; }
         @media (max-width: 480px) {
           .footer .contact .newsletter .newsletter-info .newsletter-icon {
-            width: 100%;
+            width: 60%;
             height: auto;
             float: none;
             margin: 16px 16px 16px 0; } }
@@ -3799,7 +3799,8 @@ body.padding-top {
           color: white; }
         @media (max-width: 480px) {
           .footer .contact .newsletter .newsletter-form .newsletter-email-input {
-            width: auto; } }
+            width: auto;
+            padding: 15px; } }
       .footer .contact .newsletter .newsletter-form .newsletter-submit {
         height: 80px;
         padding: 30px 15px;
@@ -3897,7 +3898,7 @@ body.padding-top {
     #guidepost-footer-links {
       width: 100%;
       top: 244px;
-      margin-top: -50px; } }
+      margin-top: -150px; } }
 
 .footer-clocks {
   display: flex;
