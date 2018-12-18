@@ -17,7 +17,7 @@ $footer-dim-color: #647677
   background-image: url(/assets/img/footer/pattern_dot.svg)
   color: $footer-color
 
-  .contact
+  .links-row
     margin: 0 0 6 * $gutter
     display: flex
     align-items: flex-end
@@ -30,124 +30,122 @@ $footer-dim-color: #647677
       @media (max-width: $page-threashold-mobile)
         width: 100%
 
-    .newsletter
+  .newsletter
+    @media (max-width: $page-threashold-mobile)
+      margin-top: 4 * $gutter
+    .newsletter-title
+      color: white
+      font-weight: bold
+      margin-bottom: $gutter
+    .newsletter-info
+      position: relative
+      height: $newsletter-height
       @media (max-width: $page-threashold-mobile)
-        margin-top: 4 * $gutter
-      .newsletter-title
-        color: white
-        font-weight: bold
-        margin-bottom: $gutter
-      .newsletter-info
-        position: relative
+        height: auto
+      .newsletter-icon
         height: $newsletter-height
+        float: left
+        margin-right: $gutter
         @media (max-width: $page-threashold-mobile)
+          width: 60%
           height: auto
-        .newsletter-icon
-          height: $newsletter-height
-          float: left
-          margin-right: $gutter
-          @media (max-width: $page-threashold-mobile)
-            width: 60%
-            height: auto
-            float: none
-            margin: $gutter $gutter $gutter 0
-        .newsletter-lead
-          color: white
+          float: none
+          margin: $gutter $gutter $gutter 0
+      .newsletter-lead
+        color: white
 
+    .newsletter-form
+      margin: 2 * $gutter 0 0
+      padding: 0
+      position: relative
+      height: $newsletter-height
+      transition: all 0.3s
+      background: none
+      display: flex
+      flex-direction: row
+      @media (max-width: $page-threashold-mobile)
+        left: 0
+        width: 100%
+        flex-direction: column
 
-      .newsletter-form
-        margin: 2 * $gutter 0 0
-        padding: 0
-        position: relative
-        height: $newsletter-height
-        transition: all 0.3s
-        background: none
-        display: flex
-        flex-direction: row
+      .newsletter-email-input
+        border: none
+        width: 70%
+        padding: 30px 15px
+        color: white
+        font-style: italic
+        font-size: $font-size
+        height: $newsletter-height - 60px
+        background: $footer-dim-color
+        border-radius: 0
+        &:focus
+          outline: none
+        &::placeholder
+          color: lighten(white, 30%)
         @media (max-width: $page-threashold-mobile)
-          left: 0
-          width: 100%
-          flex-direction: column
+          width: auto
+          padding: 15px
 
-        .newsletter-email-input
-          border: none
-          width: 70%
-          padding: 30px 15px
+      .newsletter-submit
+        height: $newsletter-height
+        padding: 30px 15px
+        border: none
+        font-size: $font-size
+        position: relative
+        width: 40%
+        margin-left: 4px
+        font-weight: bold
+        background: transparent
+        overflow: hidden
+        font-family: 'Bitter'
+        span
+          position: absolute
+          left: 15px
+          top: 30px
           color: white
-          font-style: italic
-          font-size: $font-size
-          height: $newsletter-height - 60px
-          background: $footer-dim-color
-          border-radius: 0
-          &:focus
-            outline: none
-          &::placeholder
-            color: lighten(white, 30%)
-          @media (max-width: $page-threashold-mobile)
-            width: auto
-            padding: 15px
-
-        .newsletter-submit
-          height: $newsletter-height
-          padding: 30px 15px
-          border: none
-          font-size: $font-size
-          position: relative
-          width: 40%
-          margin-left: 4px
-          font-weight: bold
-          background: transparent
-          overflow: hidden
-          font-family: 'Bitter'
+        @media (max-width: $page-threashold-mobile)
+          width: 100%
+          border: 1px solid $footer-dim-color
+          padding: 20px 15px
+          margin: 15px 0 0
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
           span
-            position: absolute
-            left: 15px
-            top: 30px
-            color: white
-          @media (max-width: $page-threashold-mobile)
-            width: 100%
-            border: 1px solid $footer-dim-color
-            padding: 20px 15px
-            margin: 15px 0 0
-            display: flex
-            flex-direction: column
-            align-items: center
-            justify-content: center
-            span
-              position: relative
-              top: 0
-              left: 0
-            &:hover
-              background: white
-              border-color: white
-              span
-                color: $secondary_color_2 !important
-
-
-          .newsletter-btn-bg
-            height: $newsletter-height
-            position: absolute
+            position: relative
             top: 0
-            right: 0
-            z-index: 0
-            path
-              fill: $footer-dim-color
-            @media (max-width: $page-threashold-mobile)
-              right: -15px
-              display: none
+            left: 0
           &:hover
-            cursor: pointer
+            background: white
+            border-color: white
             span
-              color: white
-            .newsletter-btn-bg
-              path
-                fill: $secondary_color_2
+              color: $secondary_color_2 !important
 
-      .newsletter-footer
-        font-size: $font-size-small
-        text-align: left
-        margin-top: $gutter
-        color: $footer-dim-color
+        .newsletter-btn-bg
+          height: $newsletter-height
+          position: absolute
+          top: 0
+          right: 0
+          z-index: 0
+          path
+            fill: $footer-dim-color
+          @media (max-width: $page-threashold-mobile)
+            right: -15px
+            display: none
+        &:hover
+          cursor: pointer
+          span
+            color: white
+          .newsletter-btn-bg
+            path
+              fill: $secondary_color_2
+
+    .newsletter-footer
+      font-size: $font-size-small
+      text-align: left
+      margin-top: $gutter
+      color: $footer-dim-color
 
   .credits
     text-align: center
@@ -222,7 +220,6 @@ $footer-dim-color: #647677
         font-size: 20px
       .date
         text-align: right
-
 
 #footer-guidepost-clock
   margin-bottom: 20px
