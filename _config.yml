@@ -8,10 +8,10 @@ sass:
   sass_dir: assets/css
 
 # Clock configuration
-guidepost_location: "Koh Tao, TH"
-guidepost_timezone: "Asia/Bangkok"
-guidepost_lat: "10.081729"
-guidepost_lng: "99.824654"
+guidepost_location: "Kathmandu, NP"
+guidepost_timezone: "Asia/Kathmandu"
+guidepost_lat: "27.678553"
+guidepost_lng: "85.325931"
 
 defaults:
   - scope:
