@@ -21,7 +21,7 @@ $(document).ready(function() {
       container: 'lets-talk-map',
       style: 'mapbox://styles/mapbox/light-v9',
       center: [guidepostLng, guidepostLat],
-      zoom: 7
+      zoom: 6
     });
     window.setInterval(tickFixedClocks, 500);
   }
