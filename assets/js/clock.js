@@ -18,26 +18,13 @@ function initClocks() {
   // Set GuidePost location
   guidepostLocationEle.innerHTML = 'Our time [' + guidepostLocation + ']';
 
-  // Get guest's location & timezone
-  var xhr;
-  if(window.AtiveXObject){
-    xhr = new ActiveXObject("Microsoft.XMLHTTP");
-  }else{
-    xhr = new XMLHttpRequest();
-  }
-  xhr.open("GET", 'https://ipapi.co/json');
-  xhr.setRequestHeader('Accept', '*/*')
-  xhr.send();
-  xhr.onreadystatechange= function(){
-    if (this.readyState == 4 && this.status == 200) {
-      var response = JSON.parse(xhr.responseText);
-      guestLocation = 'Your time [' + response.city + ', ' + response.country + ']';
-      guestTimeZone = response.timezone;
+  $.getJSON('https://ipapi.co/json', function(data) {
+    guestLocation = 'Your time [' + data.city + ', ' + data.country + ']';
+    guestTimeZone = data.timezone;
 
-      // Set Guest location
-      guestLocationEle.innerHTML = guestLocation;
-    }
-  }
+    // Set Guest location
+    guestLocationEle.innerHTML = guestLocation;
+  })
 
 }
 
@@ -63,7 +50,7 @@ function tickClocks() {
   tick = !tick;
 }
 
-window.addEventListener('load', function() {
+$(document).ready(function() {
   initClocks();
-  this.window.setInterval(tickClocks, 500);
-});
+  window.setInterval(tickClocks, 500);
+})

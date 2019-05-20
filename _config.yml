@@ -8,10 +8,10 @@ sass:
   sass_dir: assets/css
 
 # Clock configuration
-guidepost_location: "Kathmandu, Nepal"
-guidepost_timezone: "Asia/Kathmandu"
-guidepost_lat: "27.678553"
-guidepost_lng: "85.325931"
+guidepost_location: "Istanbul, Turkey"
+guidepost_timezone: "Asia/Istanbul"
+guidepost_lat: "41.028216"
+guidepost_lng: "28.972579"
 
 defaults:
   - scope:
