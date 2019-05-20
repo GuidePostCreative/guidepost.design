@@ -314,3 +314,51 @@ $arrow-height-mobile: 40px
       @media (max-width: $page-threashold-mobile)
         width: 80%
         margin-left: 10%
+
+    .oviedo-portada
+      margin-bottom: 64px
+      width: 100%
+
+    .quote
+      margin-bottom: 64px
+      &-content
+        display: flex
+        flex-direction: row
+        align-items: top
+        margin-bottom: 32px
+        &-quote-left
+          margin-right: 20px
+          &-img
+            width: 40px
+        &-quote-right
+          margin-left: 20px
+          &-img
+            width: 40px
+        &-text
+          font-size: 24px
+          line-height: 1.5em
+
+        @media (max-width: $page-threashold-mobile)
+          &-quote-left
+            display: none
+          &-quote-right
+            display: none
+          &-text
+            font-size: 20px
+            line-height: 1.5em
+            font-style: italic
+            .mobile-only
+              display: inline
+
+      &-author
+        display: flex
+        flex-direction: row
+        align-items: center
+        &-picture
+          margin-right: 32px
+          &-img
+            height: 124px
+            width: 124px
+        &-info
+          &-name
+            font-weight: bold

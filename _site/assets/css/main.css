@@ -3465,6 +3465,49 @@ body.padding-top {
         .portfolio-item-content .late-product-img {
           width: 80%;
           margin-left: 10%; } }
+    .portfolio-item-content .oviedo-portada {
+      margin-bottom: 64px;
+      width: 100%; }
+    .portfolio-item-content .quote {
+      margin-bottom: 64px; }
+      .portfolio-item-content .quote-content {
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        margin-bottom: 32px; }
+        .portfolio-item-content .quote-content-quote-left {
+          margin-right: 20px; }
+          .portfolio-item-content .quote-content-quote-left-img {
+            width: 40px; }
+        .portfolio-item-content .quote-content-quote-right {
+          margin-left: 20px; }
+          .portfolio-item-content .quote-content-quote-right-img {
+            width: 40px; }
+        .portfolio-item-content .quote-content-text {
+          font-size: 24px;
+          line-height: 1.5em; }
+        @media (max-width: 480px) {
+          .portfolio-item-content .quote-content-quote-left {
+            display: none; }
+          .portfolio-item-content .quote-content-quote-right {
+            display: none; }
+          .portfolio-item-content .quote-content-text {
+            font-size: 20px;
+            line-height: 1.5em;
+            font-style: italic; }
+            .portfolio-item-content .quote-content-text .mobile-only {
+              display: inline; } }
+      .portfolio-item-content .quote-author {
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .portfolio-item-content .quote-author-picture {
+          margin-right: 32px; }
+          .portfolio-item-content .quote-author-picture-img {
+            height: 124px;
+            width: 124px; }
+        .portfolio-item-content .quote-author-info-name {
+          font-weight: bold; }
 
 .letstalk-body {
   background: #0C2C2D;
@@ -3731,7 +3774,7 @@ body.padding-top {
   width: 300px;
   top: 222px;
   margin-top: -122px; }
-  #guidepost-footer-links .guidepost-footer-link:hover {
+  #guidepost-footer-links a:hover .guidepost-footer-link {
     fill: white;
     cursor: pointer; }
   @media (max-width: 480px) {
