@@ -3388,6 +3388,8 @@ body.padding-top {
         height: 400px; }
         .portfolio-item-header-content {
           height: 400px; } }
+    .portfolio-item-header.item-05 {
+      background-image: url(/assets/img/portfolio/oviedo/number.svg); }
     .portfolio-item-header.item-04 {
       background-image: url(/assets/img/portfolio/beeinfluencer/number.svg); }
     .portfolio-item-header.item-03 {
@@ -3609,6 +3611,13 @@ body.padding-top {
           float: none;
           height: 500px;
           margin: 0 auto -140px; } }
+    .portfolio-item-content .oviedo-product-img {
+      width: 100%;
+      margin: 0; }
+      @media (max-width: 480px) {
+        .portfolio-item-content .oviedo-product-img {
+          width: 100%;
+          margin: 0; } }
     .portfolio-item-content .beeinfluencer-product-img {
       margin-bottom: -140px; }
     .portfolio-item-content .cdecsic-product-img {
