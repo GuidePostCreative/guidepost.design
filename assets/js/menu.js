@@ -3,7 +3,7 @@ var currentScrollY = 0;
 var ticking = false;
 var idOfHeader = 'navbar';
 var eleHeader = null;
-var threashold = 200;
+var threashold = 1;
 var classes = {
   pinned: 'pin',
   unpinned: 'unpin',
